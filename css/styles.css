@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto+Flex:opsz@8..144&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto Flex',sans-serif;
+}
+
+body{
+    background-color: #040B14;
+    color: #E9EFF3;
+}
+
+/*********************************Nav bar*********************************/
+header, .logo-container , nav, .logo img, .label-logo-container , .logo{
+    display: flex;
+    align-items: center;
+}
+
+header{  
+    height: 104px;
+    background-color: #2B2727;
+    width: 100%;
+    justify-content: space-between;     
+    border-bottom: solid 1.5px #579FE0;
+    
+}
+
+ nav {
+    width: 5%;  
+}
+
+.logo-container{  
+    width: 10%;    
+    flex-flow: column;
+    height: 100px;
+}
+
+
+.logo img{
+    height: 82px;
+    fill: #B3B9BC;
+    flex-flow: row ;
+    justify-content: center;
+}
+
+.label-logo-container , .logo {
+    justify-content: center;
+    flex-direction: row;
+}
+
+.label-logo-container{
+    margin-top: -14px;
+}
+
+.label-logo-container h3{
+    font-family:'Orbitron', sans-serif;
+    font-size: 12px;
+    background: linear-gradient(270deg, #B3B9BC -1.95%, #FFFFFF 140.62%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+    line-height: 15px;
+    letter-spacing: 0.145em;
+    text-indent: 3px; 
+}
+
+.material-icons.md-48{
+    font-size: 48px;    
+    background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+}
+
+/**Menu**/
+.menu{
+    width: 289px;
+    height: 825px;
+    background-color: #2B2727;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top: 106px;
+    right: 0;
+    display: none;
+}
+
+.show{
+    display: block;
+}
+ /**Menu**/
+/*********************************Nav bar*********************************/
