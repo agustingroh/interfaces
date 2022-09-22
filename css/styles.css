@@ -11,6 +11,17 @@ body{
     color: #E9EFF3;
 }
 
+.material-icons{
+    color:E9EFF3;
+}
+
+h2{
+    font-size:24px;
+}
+
+h3{
+    font-size:18px;
+}
 /*********************************Nav bar*********************************/
 header, .logo-container , nav, .logo img, .label-logo-container , .logo{
     display: flex;
@@ -72,6 +83,26 @@ header{
 	cursor: pointer;
 }
 
+.material-icons.md-30{
+    font-size:30px;
+    color:#BBC5D5;
+    padding-right:6px;
+    padding-top:3px;
+}
+
+.material-icons.md-28{
+    font-size:28px;
+}
+
+.material-icons.md-24{
+    font-size:24px;
+}
+
+.material-icons.md-26{
+    font-size:22px;
+    color:#F3851B;
+}
+
 /**Menu**/
 .menu{
     width: 289px;
@@ -85,8 +116,133 @@ header{
     display: none;
 }
 
-.show{
+.show-menu{
     display: block;
+    position: absolute;    
+}
+
+
+
+li{
+    display:flex;
+    align-items: flex-end;
+    list-style:none;
+}
+
+a{
+    text-decoration:inherit;
+    color: inherit;
+    font-size:18px;
+   
+ }
+
+
+.close-container button{
+    background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;    
+}
+
+.close-container{
+ display: flex;
+ flex-flow: row nowrap;
+ justify-content: flex-end; 
+ padding: 12px 17px 0px 0px; 
+}
+
+.label-menu{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-self: start;
+    padding: 0px 0px 0px 25px;
+}
+
+.menu-categories{
+    padding: 10px 0px 20px 45px;
+}
+
+.menu-section-divider{
+    border-bottom: solid 1px #D9D9D9;
+    transform: scaleY(0.5);
+}
+
+.menu-section{  
+    padding: 5px 0px 5px 0px;
+}
+
+.menu-categories-social-network{
+    display: flex;
+    justify-content: flex-start;
+    gap: 4%;
+    align-items: center;
+    margin: 10px 0px 0px 55px;
+}
+
+.menu-categories-social-network .youtube-logo{
+    height: 30px;
+}
+
+.menu-categories-social-network img{
+    height: 25px;
+}
+
+.close-section-container{
+    position: absolute;
+    bottom: 11px;
+    right: 10px;
+}
+
+
+
+.close-section-container ul li{
+    align-items: center;
+    gap: 3px;
 }
  /**Menu**/
+
 /*********************************Nav bar*********************************/
+
+.game{
+    padding:56px;
+}
+;
+.space-game{
+    height:659pxcky;
+    position:sti
+}
+
+ul .instructions{
+    display:flex;
+}
+
+
+.comment-box{
+    background-color:#3272AC;
+     opacity:0.15;
+}
+
+
+    opacity:0.15;
+#3
+
+
+/*********************************Footer*********************************/
+footer{
+    height:622px;
+    background-color:#2B2727;
+}
+
+.fat-footer-section{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+.footer-reserved{
+    display:flex;
+}
+
+
+
+/*********************************Footer*********************************/
