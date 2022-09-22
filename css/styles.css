@@ -107,18 +107,19 @@ header{
 .menu{
     width: 289px;
     height: 825px;
-    background-color: #2B2727;
-    display: block;
+    background-color: #2B2727;  
     position: fixed;
     z-index: 1;
     top: 106px;
-    right: 0;
-    display: none;
+    right: 0;   
+    opacity: 0;
 }
 
 .show-menu{
-    display: block;
+   
     position: absolute;    
+    opacity: 1;
+    transition: 0.4s ease-in-out;
 }
 
 
@@ -223,8 +224,6 @@ ul .instructions{
 }
 
 
-    opacity:0.15;
-#3
 
 
 /*********************************Footer*********************************/
