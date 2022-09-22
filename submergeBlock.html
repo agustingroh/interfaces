@@ -21,45 +21,63 @@
         <nav id="hamburger-menu-container">
             <button id="menu-btn" class="material-icons md-48">menu</button>
             <section id="menu" class="menu">
-                <ul>
-                    <h2>Ariel</h2>
-                    <li><span class="material-icons">person</span><a href="#">Mi perfil</a></li>
-                    <li><span class="material-icons">sports_esports</span><a href="#">Mis juegos</a></li>
-                    <li><span class="material-icons">description</span><a href="#">Publicaciones</a></li>
+            <section class="close-container">
+                <button id="close-menu-btn"><span class="material-icons md-28">close</span></button>
+            </section>        
+            <section class="menu-section">
+                <h2 class="label-menu">Ariel</h2>
+                <ul class="menu-categories">                    
+                        <li><p class="material-icons md-30">person</p><a href="#">Mi perfil</a></li>
+                        <li><p class="material-icons md-30">sports_esports</p><a href="#">Mis juegos</a></li>
+                        <li><p class="material-icons md-30">description</p><a href="#">Publicaciones</a></li>
                 </ul>
-                <ul>
-                    <h2>Configuracion</h2>
-                    <li><span class="material-icons">settings</span><a href="#">Editar perfil</a></li>
-                    <li><span class="material-icons">help</span><a href="#">Ayuda</a></li>
+                <div class="menu-section-divider"></div>
+            </section>
+            <section class="menu-section">
+                <h2 class="label-menu">Configuracion</h2>  
+                <ul class="menu-categories">                   
+                    <li><p class="material-icons md-30">settings</p><a href="#">Editar perfil</a></li>
+                    <li><p class="material-icons md-30">help</p><a href="#">Ayuda</a></li>
                 </ul>
-                <ul>
-                    <h2>Tienda</h2>
-                    <li><span class="material-icons">shopping_cart</span><a href="#">Comprar</a></li>
-                    <li><span class="material-icons">favorite</span><a href="#">Destacados</a></li>
+                <div class="menu-section-divider"></div>
+            </section>
+            <section class="menu-section">
+                <h2 class="label-menu">Tienda</h2>  
+                <ul class="menu-categories">                   
+                    <li><p class="material-icons md-30">shopping_cart</p><a href="#">Comprar</a></li>
+                    <li><p class="material-icons md-30">favorite</p><a href="#">Destacados</a></li>
                 </ul>
-                <ul>
-                    <h2>Redes</h2>
-                    <li><img src="img/instagram.sv"></li>
-                    <li><img src="img/facebook.svg"></li>
-                    <li><img src="img/youtube.svg"></li>
-                    <li><img src="img/message.svg"></li>
+                <div class="menu-section-divider"></div>
+            </section>
+            <section class="menu-section">
+                <h2 class="label-menu">Redes</h2>
+                <ul class="menu-categories-social-network">    
+                    <li><img src="img/instagram.png" alt="instagram icon"></li>                  
+                    <li><img src="img/facebook.png" alt="Facebok icon"></li>                   
+                    <li><img  class="youtube-logo" src="img/youtube.png" alt="Youtube  icon"></li>
+                    <li><img src="img/googlePlay.png" alt="Message  icon"></li>
                 </ul>
+            </section>
+            <section class="close-section-container">
                 <ul>
-                    <li><span class="material-icons">logout</span>Cerrar sesion</li>
+                    <li>Cerrar sesion<p class="material-icons md-24">logout</p></li>
                 </ul>
             </section>
         </nav>     
     </header>
-    <section>
+    <section class="game">
         <div>
+            <h3>Infinity Games</h3>
             <h1>SubmergeBlock</h1>
-            <button type="button"><span class="material-icons">share</span>Compartir</button>
+            <button class="share-btn"><span class="material-icons">share</span>Compartir</button>
             <div>
                 <h1 class="name-game">SubmergeBlock</h1>
-                <button type="button" >Comprar</button>
-                <div>
-                    <button type="button" >Jugar</button>
-                    <h4>Proba el juego por 4 dias</h4>
+                <div class="space-game-btn"></div>
+                    <button class="buy-btn">Comprar</button>
+                    <div>
+                        <button class="play-btn">Jugar</button>
+                        <h4>Proba el juego por 4 dias</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,25 +87,87 @@
         <p>SubmergeBlock es un juego online sobre estrategia y escape. El personaje se encuentra atrapado en la cupula de un edificio de 50 pisos. Para liberarlo se
             deberan superar los niveles necesarios hasta llegar a la base del edificio. En cada nivel se tendra un contrincante. Cada nivel ganado hara que el personaje 
             descienda un piso dentro del edificio.</p>
-    </section>   
-    <footer>
+        <div>
+            <img src="img/sumergeblock.jpeg" alt="Juego Sumerblock">
+        </div>
+    </section>
+    <section class="instructions">
+        <h2>Instrucciones</h2>
         <ul>
-            <li><a href="#">Publicar en Infinity Games</a></li>
-            <li><a href="#">Servicios en linea</a></li>
-            <li><a href="#">Acerca de</a></li>
-            <li><a href="#">Empleo</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Arrepentimiento</a></li>
-            <li><a href="#">Perfil</a></li>
-            <li><a href="#">Recomendaciones para mi</a></li>
-            <li><a href="#">Mis juegos</a></li>
-            <li><a href="#">Lista de deseados</a></li>
-            <li><a href="#">Descargar aplicacion</a></li>
-            <li><a href="#">Terminos de servicio</a></li>
-            <li><a href="#">Politica de privacidad</a></li>
-            <li><a href="#">Seguridad de la cuenta</a></li>
-            <li><a href="#">Politica de reembolso</a></li>
+            <span class="material-icons md-26">arrow_right</span><li>Puede jugarse en modo un solo jugador o  por dos jugadores con la modalidad cooperativa pantalla compartida.</li>
+            <span class="material-icons md-26">arrow_right</span><li>Cada jugador debera acomodar 4 (cuatro) bloques en linea, en cualquiera de sus direcciones, para poder pasar al siguiente nivel.</li>
+            <span class="material-icons md-26">arrow_right</span><li>El jugador que mas rapido acomode los bloques en linea, ganara la partida del piso. Su recompensa es una vida.</li>
+            <span class="material-icons md-26">arrow_right</span><li>Para acomodar los bloques debera tener precaucion de no caer en alguno de los agujeros del tablero, sino perdera una vida. </li>
+            <span class="material-icons md-26">arrow_right</span><li>El jugador posee hasta 3 vidas por nivel. Si pierde estas 3 vidas, el juego retrocedera 2 pisos en su juego. Debera volver a realizarlos.</li>
+            <span class="material-icons md-26">arrow_right</span><li>Cada jugador tendra 3 intentos de perder la totalidad de sus vidas por nivel. Si las pierde, volvera a la cupula del edificio. </li>
+            <span class="material-icons md-26">arrow_right</span><li>Una vez posicionado uno de los bloques debera agregar nuevos bloques, tanto como le falten para poder completar la linea. </li>
+            <span class="material-icons md-26">arrow_right</span><li>Cada nivel posee una dificultad diferente de tiempo, siendo mayor en los primeros niveles y menor acercandose a la salida del edificio.</li>
+            <span class="material-icons md-26">arrow_right</span><li>Una vez que uno de los jugadores haya posicionado 4 bloques en linea, el nivel se desbloqueara a partir de la union generada por los bloques. El
+                                                                     personaje descendera un piso.</li>
         </ul>
+    </section> 
+    <section>
+        <h2>Controles</h2>
+    </section>
+    <section>
+        <h2>Comentarios</h2>
+        <div class="comment-box">
+        </div>
+    </section>
+    <section>
+        <h2>Realizar un comentario</h2>
+        <form>
+            <h3>Escriba su comentario</h3>
+            <h4>460 caracteres</h4>
+            <input type="textarea" rows="10" cols="50"></textarea>
+        </form>
+        <button>Publicar</button>
+    </section>
+    <footer>
+        <section>
+            <ul class="fat-fotter-section">
+                <li><a href="#">Publicar en Infinity Games</a></li>
+                <li><a href="#">Servicios en linea</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Empleo</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Arrepentimiento</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Nuevos Lanzamientos</a></li>
+                <li><a href="#">Destacados</a></li>
+                <li><a href="#">Soporte</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Recomendaciones para mi</a></li>
+                <li><a href="#">Mis juegos</a></li>
+                <li><a href="#">Lista de deseados</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Descargar aplicacion</a></li>
+            </ul>
+        </section>
+        <section>
+            <ul>
+                <li><a href="#">Terminos de servicio</a></li>
+                <li><a href="#">Politica de privacidad</a></li>
+                <li><a href="#">Seguridad de la cuenta</a></li>
+                <li><a href="#">Politica de reembolso</a></li>
+            </ul>
+         </section>
+        <section class="footer-reserved">
+            <div class="logo-container">
+                <div class="logo">
+                  <img src="img/logo.svg" alt="Infinity games logo">
+                </div>
+                <div class="label-logo-container">
+                    <h3>Infinity Games</h3>
+                </div>
+            </div>
+            <h3>© 2022, Infinity Games, Inc. Todos los derechos reservados. Los derechos de juegos de Electronic Arts son de sus respectivos propietarios</h3>
+        </section>
     </footer>
 
 </body>
