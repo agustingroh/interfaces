@@ -37,9 +37,7 @@ header{
     
 }
 
- nav {
-    width: 5%;  
-}
+
 
 .logo-container{  
     width: 10%;    
@@ -77,6 +75,22 @@ header{
 
 .material-icons.md-48{
     font-size: 48px;    
+    background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+}
+
+.material-icons.md-42{
+    font-size: 42px;    
+    background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+}
+
+.material-icons.md-35{
+    font-size: 35px;    
     background: none;
 	color: inherit;
 	border: none;
@@ -133,8 +147,7 @@ li{
 a{
     text-decoration:inherit;
     color: inherit;
-    font-size:18px;
-   
+    font-size:18px;   
  }
 
 
@@ -222,26 +235,113 @@ ul .instructions{
     background-color:#3272AC;
      opacity:0.15;
 }
+/*********************************Nav bar*********************************/
+
+
+
+/********************************BreadCrum******************************/
+
+.breadcrum{
+    display: flex;
+    flex-flow: row;   
+    padding: 20px 0px 0px 38px;
+    align-items: center;
+}
+
+.breadcrum a{
+    font-size: 18px;   
+    margin: 0px -5px 0px -5px;
+}
+
+.breadcrum p{
+    font-size: 18px; 
+    margin: 0px -5px 0px -5px;
+}
+
+.breadcrum .material-icons{
+     color: #E5770E; 
+   
+}
+/********************************BreadCrum******************************/
 
 
 
 
 /*********************************Footer*********************************/
-footer{
-    height:622px;
+footer{    
     background-color:#2B2727;
+    width:100%;
+}
+
+.footer-section-container{
+    display: flex;
+    flex-flow: row nowrap; 
+    justify-content: flex-start;   
 }
 
 .fat-footer-section{
     display: flex;
+    width: 100%;
+    gap: 50px;
+    padding-top:40px;
+    padding-left:40px;
+  
+}
+
+.fat-footer-section li{
+    padding: 12px 0px 12px 0px;
+}
+
+.fat-footer-section ul{    
+    padding:10px 10px;
+  
+}
+.fat-footer-privacy{
+    display:flex;
     flex-flow: row nowrap;
+    padding: 60px 0px 0px 45px;  
+}
+
+.fat-footer-privacy ul li{
+    display: inline;
+    padding: 0px 6px 0px 6px;
 }
 
 
 .footer-reserved{
     display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    
+}
+
+.footer-reserved ul {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left:340px;
+    gap:10px;
 }
 
 
+.copyrights-footer-container{
+    width: 44%;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 26px;   
+}
 
+.copyrights-footer{
+    color: #E9EFF3;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.03em;
+    text-indent: 3px;
+}
+
+.footer-reserved ul li img{
+     width: 36px;
+     height:36px;
+     padding:10px;
+
+}
 /*********************************Footer*********************************/
