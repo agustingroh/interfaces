@@ -218,7 +218,7 @@ a{
 /*********************************Nav bar*********************************/
 
 .game{
-    padding:56px;
+    padding:34px;
 }
 ;
 .space-game{
@@ -264,7 +264,9 @@ ul .instructions{
 }
 /********************************BreadCrum******************************/
 
-
+.game h1, .game h2{
+    text-decoration: underline #87B7DA;
+}
 
 
 /*********************************Footer*********************************/
@@ -280,10 +282,11 @@ footer{
 }
 
 .fat-footer-returns{
-    width:45%;
+    width: 13%;
     position:relative;
     bottom: -27px;
-    left: 1160px;
+    left:1150px;
+
 }
 .fat-footer-section{
     display: flex;
