@@ -22,6 +22,10 @@ h2{
 h3{
     font-size:18px;
 }
+
+h4{
+    font-size: 14px;
+}
 /*********************************Nav bar*********************************/
 header, .logo-container , nav, .logo img, .label-logo-container , .logo{
     display: flex;
@@ -268,7 +272,46 @@ ul .instructions{
     text-decoration: underline #87B7DA;
 }
 
+.game button{
+    font-size:24px;
+}
 
+.comment-box-title{
+    display:flex;
+}
+
+
+.comment-box-title h4{
+    padding:5px;
+}
+
+.comment{
+    width:80%;
+}
+
+input{
+    width: 1044px;
+    height: 182px;
+    border-radius:12px;
+    padding:5px;
+}
+
+form div {
+    display:flex;
+    justify-content: space-between;
+}
+.comment button{
+    width:149px;
+    height:36px;
+    position: relative;
+    left: 910px;
+    bottom: -10px;
+    background-color: #1A4872;
+    border-radius: 5px;
+    font-size: 24px;
+    color:#E9EFF3;
+
+}
 /*********************************Footer*********************************/
 footer{    
     background-color:#2B2727;
