@@ -221,24 +221,6 @@ a{
 
 /*********************************Nav bar*********************************/
 
-.game{
-    padding:34px;
-}
-;
-.space-game{
-    height:659pxcky;
-    position:sti
-}
-
-ul .instructions{
-    display:flex;
-}
-
-
-.comment-box{
-    background-color:#3272AC;
-     opacity:0.15;
-}
 /*********************************Nav bar*********************************/
 
 
@@ -267,15 +249,50 @@ ul .instructions{
    
 }
 /********************************BreadCrum******************************/
+button{
+    width:149px;
+    height:36px;
+    background-color: #1A4872;
+    font-size: 24px;
+    color:#E9EFF3;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.game{
+    padding:34px;
+}
+;
+.space-game{
+    height:659pxcky;
+    position:sti
+}
+
+
+
+ul .instructions{
+    display:flex;
+}
+
+
+.comment-box{
+    background-color:#3272AC;
+     opacity:0.15;
+}
 
 .game h1, .game h2{
     text-decoration: underline #87B7DA;
+    padding:5px 0px 5px 0px;
 }
 
-.game button{
-    font-size:24px;
+.play-btn{
+    background-color: #E9EFF3;
+    color: #040B14;
 }
 
+.buy-btn{
+    background-color:#F3851B;
+    color:#040B14;
+}
 .comment-box-title{
     display:flex;
 }
@@ -286,7 +303,10 @@ ul .instructions{
 }
 
 .comment{
-    width:80%;
+    width:73%;
+}
+.comment-description h3{
+    padding-left:5px;
 }
 
 input{
@@ -300,17 +320,12 @@ form div {
     display:flex;
     justify-content: space-between;
 }
+
 .comment button{
-    width:149px;
-    height:36px;
     position: relative;
     left: 910px;
     bottom: -10px;
-    background-color: #1A4872;
     border-radius: 5px;
-    font-size: 24px;
-    color:#E9EFF3;
-
 }
 /*********************************Footer*********************************/
 footer{    
@@ -328,7 +343,7 @@ footer{
     width: 13%;
     position:relative;
     bottom: -27px;
-    left:1150px;
+    left:1300px;
 
 }
 .fat-footer-section{
