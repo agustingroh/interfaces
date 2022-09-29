@@ -9,6 +9,8 @@
 body{
     background-color: #040B14;
     color: #E9EFF3;
+    width: 100%;
+    height: 100%;
 }
 
 .material-icons{
@@ -20,38 +22,52 @@ h2{
 }
 
 h3{
-    font-size:18px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;    
+    letter-spacing: 0.03em;    
+    color: #E9EFF3;    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);    
 }
 
 h4{
     font-size: 14px;
+    letter-spacing: 0.04em;
+    text-indent: 3px;
+    font-weight: 400;
 }
 /*********************************Nav bar*********************************/
-header, .logo-container , nav, .logo img, .label-logo-container , .logo{
+header, .logo-container ,.logo img, .label-logo-container , .logo{
     display: flex;
     align-items: center;
 }
 
-header{  
-    height: 104px;
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 20%;
+}
+
+header{     
+    height: 78px;
     background-color: #2B2727;
     width: 100%;
     justify-content: space-between;     
-    border-bottom: solid 1.5px #579FE0;
-    
+    border-bottom: solid 1.5px #579FE0;    
 }
 
-
-
 .logo-container{  
-    width: 10%;    
+    width: 35%;    
     flex-flow: column;
-    height: 100px;
+    height: 100px;  
+    justify-content: center;   
 }
 
 
 .logo img{
-    height: 82px;
+    height: 60px;
     fill: #B3B9BC;
     flex-flow: row ;
     justify-content: center;
@@ -60,6 +76,7 @@ header{
 .label-logo-container , .logo {
     justify-content: center;
     flex-direction: row;
+    align-items: center;
 }
 
 .label-logo-container{
@@ -68,17 +85,24 @@ header{
 
 .label-logo-container h3{
     font-family:'Orbitron', sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     background: linear-gradient(270deg, #B3B9BC -1.95%, #FFFFFF 140.62%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
     line-height: 15px;
-    letter-spacing: 0.145em;
-    text-indent: 3px; 
+    letter-spacing: 0.145em;   
 }
 
 .material-icons.md-48{
     font-size: 48px;    
+    background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+}
+
+.material-icons.md-38{
+    font-size: 38px;    
     background: none;
 	color: inherit;
 	border: none;
@@ -123,23 +147,33 @@ header{
 
 /**Menu**/
 .menu{
-    width: 289px;
+    width: 100%;
     height: 825px;
-    background-color: #2B2727;  
+      background-color: transparent;
     position: fixed;
-    z-index: 1;
-    top: 106px;
+    z-index: -1;
+    top: 0px;
     right: 0;   
     opacity: 0;
 }
 
-.show-menu{
-   
-    position: absolute;    
-    opacity: 1;
-    transition: 0.4s ease-in-out;
+.menu-btn{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
+.show-menu{   
+    position: absolute;    
+    opacity: 1;
+    z-index: 1;
+    transition: 0.4s ease-in-out;
+    background-color: #2B2727;
+}
 
 
 li{
@@ -159,14 +193,21 @@ a{
     background: none;
 	color: inherit;
 	border: none;
-	cursor: pointer;    
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;  
+    position: absolute;
+    top:0px;
+    right:-59px;
+    
 }
 
 .close-container{
  display: flex;
  flex-flow: row nowrap;
  justify-content: flex-end; 
- padding: 12px 17px 0px 0px; 
+
 }
 
 .label-menu{
@@ -175,6 +216,61 @@ a{
     justify-self: start;
     padding: 0px 0px 0px 25px;
 }
+
+.account-container{
+    display: flex;
+    width: 100%; 
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding-top: 40px;
+}
+
+.account{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 75%;
+}
+
+.account-img-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 5em;
+    height: 5em;
+    padding-right: 2%;
+}
+
+.account-img-container img {
+    border-radius: 50%;
+    width: 60%;
+    height: 60%;
+}
+
+.email-account-container p {
+    font-size: 11px;
+    color: #E9EFF34d;
+    padding-bottom: 6px;
+    position: relative;
+    top: 13px;
+    
+}
+
+.user-name-container  {
+    font-size: 14px;
+    color: #E9EFF3;
+    position:relative;
+    top: 8px;
+    
+}
+
+.config-account{
+    width: 18%;
+    display: flex;
+    justify-content: flex-start;  
+    align-items: center;
+}
+
 
 .menu-categories{
     padding: 10px 0px 20px 45px;
@@ -185,8 +281,16 @@ a{
     transform: scaleY(0.5);
 }
 
+.menu-section-divider-account{
+    border-bottom: solid 1px #D9D9D9;
+    transform: scaleY(0.5);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
 .menu-section{  
-    padding: 5px 0px 5px 0px;
+    padding-top: 15px;
 }
 
 .menu-categories-social-network{
@@ -229,8 +333,7 @@ a{
 
 .breadcrum{
     display: flex;
-    flex-flow: row;   
-    padding: 20px 0px 0px 38px;
+    flex-flow: row;      ;
     align-items: center;
 }
 
@@ -328,91 +431,138 @@ form div {
     border-radius: 5px;
 }
 /*********************************Footer*********************************/
+
 footer{    
-    background-color:#2B2727;
-    width:100%;
-}
-
-.footer-section-container{
-    display: flex;
-    flex-flow: row nowrap; 
-    justify-content: flex-start;   
-}
-
-.fat-footer-returns{
-    width: 13%;
-    position:relative;
-    bottom: -27px;
-    left:1300px;
-
-}
-.fat-footer-section{
-    display: flex;
     width: 100%;
-    gap: 50px;
-    padding-top:40px;
-    padding-left:40px;
-  
+    background-color:#2B2727;
+    display:grid;
+    grid-template-columns:  140px 30px 170px;
+    grid-template-rows: 30px 100px 68px;
+    grid-gap:15px;
+    grid-template-areas: 
+        ". .  returns"
+        "privacy privacy social-media"
+        "reserved reserved reserved"
+    ;
 }
 
-.fat-footer-section li{
-    padding: 12px 0px 12px 0px;
+.footer-returns{
+    grid-area:returns; 
+    padding-top:7px;
+    margin-left:50px;
 }
 
-.fat-footer-section ul{    
-    padding:10px 10px;
-  
+.services{
+    grid-area:services;
+    display:none;
 }
-.fat-footer-privacy{
+
+.category{
+    grid-area: category;
+    display:none;
+}
+
+
+.privacy{
+    grid-area: privacy;
+    padding-left:20px;
+    border-right: solid 1px #E9EFF340;
+}
+
+.social-media{
+    grid-area: social-media;
     display:flex;
-    flex-flow: row nowrap;
-    padding: 60px 0px 60px 45px 
+    position: relative;
+    bottom: 60px;
 }
-
-.fat-footer-privacy ul li{
-    display: inline;
-    padding: 0px 6px 0px 6px;
-}
-
 
 .footer-reserved{
+    grid-area: reserved;
     display:flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    padding-left:20px;
- 
-    
-    
 }
 
-.footer-reserved ul {
-    display: flex;
-    flex-flow: row nowrap;
-    margin-left:auto;
-    margin-right:10px;
+ a{
+    font-size:14px;
+    padding-bottom:5px;
+    margin-right: 5px;
 }
-
-
-.copyrights-footer-container{
-    width: 64%;
-    display: flex;
-    flex-flow: row wrap;
-    margin-top: 26px;   
+.social-media img{
+    width:26px;
+    padding:6px;
 }
 
 .copyrights-footer{
-    color: #E9EFF3;
-    font-weight: 400;
-    line-height: 21px;
-    letter-spacing: 0.03em;
-    text-indent: 3px;
-    padding-left:10px;
+    font-size:10px;
+    font-weight: lighter;  
 }
 
-.footer-reserved ul li img{
-     width: 36px;
-     height:36px;
-     padding:10px;
+.reserve{
+    width: 100%;   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -30px;
+}
 
+.copyrights-footer-container{
+    display: flex;
+    width: 77%;
+    flex-flow: row wrap;
+}
+
+.copyrights-footer-container h3 {
+    line-height: 12px;
+}
+
+.footer-reserved .logo img{
+    height:37px;
+}
+
+.footer-reserved .logo-container{
+    width: 24%;
+}
+
+
+.footer-reserved .label-logo-container h3{
+    font-size:6px;
+    margin-top: 6px;
 }
 /*********************************Footer*********************************/
+
+
+@media only screen and (max-width: 768px) {
+
+    /*Logo*/
+    .logo-container{
+        width: 18%;
+    }
+
+
+    nav{
+        width: 11%;
+    }
+    .menu{
+        width: 46%;
+        position: absolute;
+        top:80px;
+    }
+
+    footer {
+        grid-template-columns: 35% 10% 55%;
+    }
+
+    .footer-returns{
+        position: relative;
+        left: 211px;
+    }
+
+    .social-media img {
+        width: 26px;
+        position: relative;
+        right: -23px;
+        padding: 9px;
+    }
+
+
+
+}
