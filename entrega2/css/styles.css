@@ -486,6 +486,9 @@ footer{
     padding-bottom:5px;
     margin-right: 5px;
 }
+.title-social-media{
+    display:none;
+}
 .social-media img{
     width:26px;
     padding:6px;
@@ -591,32 +594,72 @@ footer{
 
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
+
+    .menu{
+        width: 30%;
+        height: 680px;
+    }
+
+    .logo-container{
+        width: 12%;
+    }
+    
 
 /*footer*/
 footer {
-    grid-template-columns: 300px 200px 220px 100px 180px;
-    grid-template-rows: 30px 122px 80px;
-    grid-gap:30px;
+    grid-template-columns: 278px 200px 220px 180px 180px 200px;
+    grid-template-rows: 30px 230px 80px;
+    grid-gap:15px;
     grid-template-areas: 
-    ". . . . returns"
-    "services category privacy social-media ."
-    "reserved reserved reserved . ."
+    ". . . . . returns"
+    "services category privacy social-media . ."
+    "reserved reserved reserved reserved . ."
 ;
 }
 a{
     font-size: 18px;
 }
-
+.footer-returns{
+    right: -10px;
+    padding-top:16px;
+}
 .services{
     width:227px;
+    margin-left:44px
 }
 .category{
     display: inline-block;
     border-right: solid 1px #E9EFF340;
 }
 
+.title-social-media{
+    display:inline-block;
+    position:relative;
+    top:40px;
+    left:770px;
+}
 .social-media{
-    right:30px;
+    right:6px;
+    bottom: 147px;
+}
+
+.social-media img{
+    width:35px;
+}
+.copyrights-footer{
+    font-size: 18px;
+}
+.footer-reserved .logo-container {
+    width: 20%;
+}
+.footer-reserved .logo img {
+    height: 58px;
+}
+.footer-reserved .label-logo-container h3 {
+    font-size: 10px;
+}
+.copyrights-footer-container h3 {
+    line-height: 21px;
 }
 }
