@@ -17,8 +17,14 @@ body{
     color:E9EFF3;
 }
 
+h1{
+    font-size:36px;
+    letter-spacing: 7px;
+}
+
 h2{
     font-size:24px;
+    letter-spacing: 0.10em; 
 }
 
 h3{
@@ -100,7 +106,15 @@ header{
 	border: none;
 	cursor: pointer;
 }
-
+/****************************MOVER ARRIBA Y AGRUPAR********/
+.material-icons.md-33{
+    font-size: 33px;
+    background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+    
+}
 .material-icons.md-38{
     font-size: 38px;    
     background: none;
@@ -662,4 +676,219 @@ a{
 .copyrights-footer-container h3 {
     line-height: 21px;
 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************Home*************************/
+.home{
+    padding:30px;
+}
+.home-advertising{
+    display:flex;
+    margin-bottom:70px;
+}
+
+.home-carrousel-lates-releases{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-carrousel-latest-releases button,.home-carrousel-recommended button, .home-carrousel-category button{
+    width:45px;
+    height:80px;
+    border-radius:3px;
+    background: linear-gradient(84.33deg, #1A4872 -75.68%, rgba(26, 72, 114, 0) 472.36%);
+    padding:10px;
+}
+
+.home-carrousel-latest-releases button~ button,.home-carrousel-recommended button ~ button, .home-carrousel-category button ~ button{
+    transform: rotate(180deg);
+    padding-top: 14px;
+}
+
+.home-carrousel-lates-releases-card{
+    width: 250px;
+    height: 315px;
+   /* background-color: #14243B; */
+    background-color: green;
+}
+.home-carrousel-lates-releases-card>div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.home-carrousel-lates-releases-card h2{
+    position: relative;
+    left: 20px;
+}
+.home-carrousel-lates-releases-card h3{
+    position: relative;
+    top: 58px;
+    left:20px;
+}
+.home-carrousel-lates-releases-card h4{
+    position:relative;
+    top:60px;
+    left:18px;
+    color:#B3B9BC;
+    text-decoration:line-through;
+}
+.home-carrousel-lates-releases-card button{
+    font-size:17px;
+    width:110px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    position: relative;
+    left: 130px;
+    top:30px;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    background-color:linear-gradient(93.53deg, rgba(39, 94, 133, 0.96) -11.85%, rgba(95, 170, 225, 0.96) 73.08%, rgba(0, 4, 7, 0.96) 120.55%, rgba(129, 186, 227, 0.96) 140.7%);
+}
+
+.home-carrousel-lates-releases-card button span{
+    position: relative;
+    left: -13px
 }
