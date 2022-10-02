@@ -839,11 +839,23 @@ a{
     margin-bottom:70px;
 }
 
-.home-carrousel-lates-releases{
+.home-carrousel-latest-releases{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-flow: row;
+    gap:15px;
     align-items: center;
 }
+
+.home-carrousel-lates-releases-conteiner{
+    display: flex;
+    gap: 12px;
+    transform: translateX(0px);
+}
+.home-carrousel-lates-releases-conteiner.translated{
+    transform: translateX(-33%);
+}
+
 .home-carrousel-latest-releases button,.home-carrousel-recommended button, .home-carrousel-category button{
     width:45px;
     height:80px;
@@ -852,7 +864,7 @@ a{
     padding:10px;
 }
 
-.home-carrousel-latest-releases button~ button,.home-carrousel-recommended button ~ button, .home-carrousel-category button ~ button{
+.home-carrousel-latest-releases button ~ button,.home-carrousel-recommended button ~ button, .home-carrousel-category button ~ button{
     transform: rotate(180deg);
     padding-top: 14px;
 }
@@ -862,6 +874,10 @@ a{
     height: 315px;
     /* background-color: #14243B; */
     background-color: green;
+}
+.home-carrousel-latest-releases-display{
+    gap: 15px;   
+    overflow: hidden;
 }
 .home-carrousel-lates-releases-card>div{
     display: flex;
@@ -903,3 +919,4 @@ a{
     position: relative;
     left: -13px
 }
+
