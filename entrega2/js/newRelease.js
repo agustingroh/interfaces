@@ -4,7 +4,7 @@ let carouselWidth = carousel.getBoundingClientRect().width;
 let carouselPos =0;
 let btnFordward =  document.querySelector("#newRelease-next-btn");
 let btnBackward =document.querySelector("#newRelease-back-btn");
-const GAP = 6; // GAP between game cards
+const GAP = 4; // GAP between game cards
 
 
 
