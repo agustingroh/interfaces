@@ -1,22 +1,32 @@
 document.addEventListener("DOMContentLoaded", ()=>{
 let carousel = document.querySelector("#newRelease-carousel");
-let carouselWidht = carousel.getBoundingClientRect().width;
+let carouselWidth = carousel.getBoundingClientRect().width;
 let carouselPos =0;
 let btnFordward =  document.querySelector("#newRelease-next-btn");
 let btnBackward =document.querySelector("#newRelease-back-btn");
+const GAP = 6; // GAP between game cards
+
+
+
 
     btnFordward.addEventListener('click',()=>{
-        let visorWidht = document.querySelector(".newRelease-characters-carousel-display").getBoundingClientRect().width;
-        carouselPos = carouselPos + visorWidht + 6;
-
+        let visorWidth = document.querySelector(".newRelease-characters-carousel-display").getBoundingClientRect().width;
+        carouselPos = ((Math.round(Math.floor( carouselPos + visorWidth)/visorWidth)) * visorWidth) + (GAP * ((Math.round(Math.floor( carouselPos + visorWidth )/visorWidth))));
         if(carouselPos>0){
             btnBackward.classList.remove("btn-disabled");
         }
-
-            if(carouselPos<=carouselWidht) {
+            if(carouselPos<=carouselWidth) {
+                if((carouselPos + visorWidth + GAP) > (carouselWidth)){
+                    carouselPos = carouselWidth -  visorWidth;
+                    console.log(carouselPos);
+                    carousel.setAttribute("style", `transform:translate(-${carouselWidth -  visorWidth}px)`);
+                    carousel.style.transition=" all 800ms"
+                    btnFordward.classList.add("btn-disabled");
+                    return;
+                }
                 carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
-                carousel.style.transition=" all 800ms"
-                if((carouselPos + visorWidht + 6) > (carouselWidht)) btnFordward.classList.add("btn-disabled");
+                carousel.style.transition=" all 800ms";
+
             }
             else{
                 btnFordward.classList.add("btn-disabled");
@@ -24,12 +34,8 @@ let btnBackward =document.querySelector("#newRelease-back-btn");
     });
 
     btnBackward.addEventListener('click',()=>{
-        let visorWidht = document.querySelector(".newRelease-characters-carousel-display").getBoundingClientRect().width;
-        carouselPos = carouselPos - visorWidht -6;
-        if(carouselPos<=carouselWidht){
-            btnFordward.classList.remove("btn-disabled");
-        }
-
+        let visorWidth = document.querySelector(".newRelease-characters-carousel-display").getBoundingClientRect().width;
+        carouselPos = carouselPos - visorWidth - GAP;
         if(carouselPos>=0){
             carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
             carousel.style.transition=" all 800ms"
@@ -37,7 +43,10 @@ let btnBackward =document.querySelector("#newRelease-back-btn");
         }
         else{
             carouselPos = 0;
-            btnFordward.classList.add("btn-disabled");
+            carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
+            carousel.style.transition=" all 800ms"
+            btnBackward.classList.add("btn-disabled");
+            btnFordward.classList.remove("btn-disabled");
         }
     });
 
