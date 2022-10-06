@@ -831,32 +831,72 @@ a{
 
 
 /*******************************Home*************************/
-.home{
+.home h1,.home-advertising{
     padding:30px;
 }
 .home-advertising{
-    display:flex;
+   /* display:flex;*/
     margin-bottom:70px;
 }
+.home-latest-releases{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.home-carrousel-latest-releases{
+.home-latest-releases-image{
+    width: 1100px;
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    background-color:#02213F;
+ 
+}
+
+.home-latest-releases-image-container{
+    padding:25px 15px;
+}
+.home-latest-releases-image-container div{
+    display: flex;
+    padding: 6px 0px;
+    width: 344px;
+    height: 91px;
+    margin-top:8px;
+}
+
+.home-latest-releases-image-container div img{
+    padding:0px 6px;
+}
+
+.home-latest-text{
+    justify-content: space-between;
+    align-items: baseline;
+}
+.home-latest-releases .home-latest-see-more{
+    width: 86px;
+    height: 36px;
+    border: 0.5px solid #E9EFF3;
+    background-color: none;
+}
+.home-carrousel{
     width: 100%;
     display: flex;
     flex-flow: row;
-    gap:15px;
+    gap:10px;
     align-items: center;
+    padding:0px 6px;
 }
 
-.home-carrousel-lates-releases-conteiner{
+.home-carrousel-conteiner{
     display: flex;
     gap: 12px;
     transform: translateX(0px);
 }
-.home-carrousel-lates-releases-conteiner.translated{
-    transform: translateX(-33%);
+.home-carrousel-latest-releases-conteiner.translated{
+    transform: translateX(-100%);
 }
 
-.home-carrousel-latest-releases button,.home-carrousel-recommended button, .home-carrousel-category button{
+.home-latest-releases button,.home-carrousel-recommended button, .home-carrousel-category button{
     width:45px;
     height:80px;
     border-radius:3px;
@@ -864,43 +904,44 @@ a{
     padding:10px;
 }
 
-.home-carrousel-latest-releases button ~ button,.home-carrousel-recommended button ~ button, .home-carrousel-category button ~ button{
+.home-latest-releases button ~ button,.home-carrousel-recommended button ~ button, .home-carrousel-category button ~ button{
     transform: rotate(180deg);
     padding-top: 14px;
 }
 
-.home-carrousel-lates-releases-card{
+.home-carrousel-card{
     width: 250px;
     height: 315px;
-    /* background-color: #14243B; */
-    background-color: green;
+    background-color: #14243B;
+    filter: drop-shadow(4px 5px 4px rgb(26, 72, 114, 0.62));
 }
-.home-carrousel-latest-releases-display{
+.home-carrousel-display{
     gap: 15px;   
     overflow: hidden;
 }
-.home-carrousel-lates-releases-card>div{
+.home-carrousel-card>div{
     display: flex;
     width: 100%;
     justify-content: center;
 }
-.home-carrousel-lates-releases-card h2{
+.home-carrousel-card h2{
     position: relative;
     left: 20px;
+    top:8px;
 }
-.home-carrousel-lates-releases-card h3{
+.home-carrousel-card h3{
     position: relative;
     top: 58px;
     left:20px;
 }
-.home-carrousel-lates-releases-card h4{
+.home-carrousel-card h4{
     position:relative;
     top:60px;
     left:18px;
     color:#B3B9BC;
     text-decoration:line-through;
 }
-.home-carrousel-lates-releases-card button{
+.home-carrousel-card button{
     font-size:17px;
     width:110px;
     height: 31px;
@@ -915,8 +956,36 @@ a{
     background-color:linear-gradient(93.53deg, rgba(39, 94, 133, 0.96) -11.85%, rgba(95, 170, 225, 0.96) 73.08%, rgba(0, 4, 7, 0.96) 120.55%, rgba(129, 186, 227, 0.96) 140.7%);
 }
 
-.home-carrousel-lates-releases-card button span{
+.home-carrousel-card button span{
     position: relative;
     left: -13px
 }
 
+.home-card-trial,.home-card-new{
+    height: 28px;
+    width: 63px;
+    transform: skewX(114deg) rotate(41deg);
+    position: fixed;
+    bottom: 244px;
+    right: 120px;
+}
+
+.home-card-trial{
+    background-color: #E5770E;
+}
+
+.home-card-new{
+    background-color: #3272AC;
+    width: 33px;
+}
+
+.home-trial-text{
+    color:white;
+    /*#2B2727;*/
+    position: relative;
+    left: -10px;
+    top: -310px;
+    font-size: 18px;
+            transform:skewX(181deg) rotate(-45deg);
+      }
+    /*;*/
