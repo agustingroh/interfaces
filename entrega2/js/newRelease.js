@@ -1,4 +1,29 @@
 document.addEventListener("DOMContentLoaded", ()=>{
+
+
+        document.querySelector('#menu-btn').addEventListener('click',() => {
+            console.log("click");
+            let menu = document.querySelector("#menu");
+            menu.classList.toggle('show-menu');
+        });
+
+        document.querySelector('#close-menu-btn').addEventListener('click',() => {
+            let menu = document.querySelector("#menu");
+            menu.classList.toggle('show-menu');
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
 let carousel = document.querySelector("#newRelease-carousel");
 let carouselWidth = carousel.getBoundingClientRect().width;
 let carouselPos =0;
@@ -19,16 +44,17 @@ const GAP = 4; // GAP between game cards
                 if((carouselPos + visorWidth + GAP) > (carouselWidth)){
                     carouselPos = carouselWidth -  visorWidth;
                     console.log(carouselPos);
-                    carousel.setAttribute("style", `transform:translate(-${carouselWidth -  visorWidth}px)`);
+                    carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
                     carousel.style.transition=" all 800ms"
                     btnFordward.classList.add("btn-disabled");
                     return;
+                }else {
+                    carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
+                    carousel.style.transition = " all 800ms";
                 }
-                carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
-                carousel.style.transition=" all 800ms";
-
             }
             else{
+                console.log("ACA");
                 btnFordward.classList.add("btn-disabled");
             }
     });
