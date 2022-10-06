@@ -120,7 +120,7 @@ header{
     background: none;
 	color: inherit;
 	border: none;
-	cursor: pointer;
+    display: block;
 }
 
 .material-icons.md-42{
@@ -612,87 +612,72 @@ footer{
 
 
 
-@media only screen and (min-width: 1024px) {
 
-    .menu{
-        width: 30%;
-        height: 680px;
-    }
-
-    .logo-container{
-        width: 12%;
-    }
-    
-
-/*footer*/
-footer {
-    grid-template-columns: 278px 200px 220px 180px 180px 200px;
-    grid-template-rows: 30px 230px 80px;
-    grid-gap:15px;
-    grid-template-areas: 
-    ". . . . . returns"
-    "services category privacy social-media . ."
-    "reserved reserved reserved reserved . ."
-;
-}
-a{
-    font-size: 18px;
-}
-.footer-returns{
-    right: -10px;
-    padding-top:16px;
-}
-.services{
-    width:227px;
-    margin-left:44px
-}
-.category{
-    display: inline-block;
-    border-right: solid 1px #E9EFF340;
-}
-
-.title-social-media{
-    display:inline-block;
-    position:relative;
-    top:40px;
-    left:770px;
-}
-.social-media{
-    right:6px;
-    bottom: 147px;
-}
-
-.social-media img{
-    width:35px;
-}
-.copyrights-footer{
-    font-size: 18px;
-}
-.footer-reserved .logo-container {
-    width: 20%;
-}
-.footer-reserved .logo img {
-    height: 58px;
-}
-.footer-reserved .label-logo-container h3 {
-    font-size: 10px;
-}
-.copyrights-footer-container h3 {
-    line-height: 21px;
-}
-}
 
 /*************new release**********************/
 
+.newRelease-main{
+  position: relative;
+    overflow: hidden;
+}
+
+.newRelease-smoke-right{
+    background: url("../img/smoke-right-new-release.png") no-repeat;
+    position: absolute;
+    width: 80em;
+    top:46em;
+    left: 44em;
+    z-index: -4;
+    height: 80em;
+}
+
+.newRelease-smoke-left{
+    background: url("../img/smoke-left-newRelease.png") no-repeat;
+    position: absolute;
+    width: 80em;
+    top:52em;
+    left: 0em;
+    z-index: -4;
+    height: 80em;
+}
+
+.newRelease-lighting{
+    background: url("../img/lighting.png") no-repeat;
+    position: absolute;
+    width: 80em;
+    top:57em;
+    left: 10em;
+    z-index: -4;
+    height: 48em;
+
+}
+
 .newRelease-img-container{
     display: flex;
+    overflow: hidden;
     width: 100%;
+    position: relative;
     padding: 10px 0px 10px 0px;
 }
 
+.newRelease-img-container > div{
+    position: absolute;
+    top: 14em;
+    left: 8em;
+}
+
+.newRelease-img-container  h1 {
+    font-size: 100px;
+    line-height: 117px;
+    letter-spacing: 0.145em;
+    text-indent: 3px;
+    color: #E9EFF3;
+    text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.25);
+}
+
 .newRelease-img-container img {
-    max-height: 100%;
-    max-width: 100%;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 .newRelease-btn-wish-container{
@@ -700,22 +685,39 @@ a{
     justify-content: center;
     align-items: center;
     display: flex;
-    padding: 0px 0 10px 0;
+    padding: 1.5em 0 10px 0;
 }
 
 .newRelease-btn-wish-container button {
-    width: 190px;
-    font-size: 12px;
+    width: 14em;
+    font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2px;
     border-radius: 3px;
-    height: 28px;
+    height: 2em;
+    transition: background 300ms ease-in-out;
+    background-position: 0%;
+    background-image: -webkit-linear-gradient(30deg, rgb(26, 72, 114) 50%, transparent 50%);
+    background-image: linear-gradient(30deg,rgb(26, 72, 114) 50%, transparent 50%);
+    background-size: 800px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+
+.newRelease-btn-wish-container button:hover{
+    background-color: #F3851B;
+    background-position: 100%;
+    cursor: pointer;
+
 }
 
 .newRelease-new-sale{
     display: flex;
+    width: 40em;
     flex-flow: column;
     padding: 0px 10px 10px 10px;
 }
@@ -750,13 +752,13 @@ a{
 }
 
 .newRelease-promotion-label{
-    font-size: 11px;
+    font-size: 14px;
     color: #C1BDBD;
     padding: 5px 3px 0px 3px;
 
 }
 .newRelease-label p{
-    font-size: 12px;
+    font-size: 16px;
 
 }
 .newRelease-price-label{
@@ -778,7 +780,7 @@ a{
 .newRelease-new-release-header > section ~ section {
     background-color: #02213F;
     padding: 0px 0px 0px 2px;
-    width: 45%;
+    width: 38%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -787,6 +789,8 @@ a{
 
 .newRelease-new-sale article {
     display: flex;
+    height: 4.5em;
+    align-items: center;
     width: 100%;
     flex-flow: row;
     background-color: #091829;
@@ -794,13 +798,88 @@ a{
 
 .newRelease-new-sale article div{
     display: flex;
-    width: 60%;
-    height: 30px;
+    width: 63%;
+    height: 2em;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     padding: 10px 10px 10px 10px;
 
+}
+
+
+.buy-now {
+    text-decoration: none;
+    font-size: 24px;
+}
+.buy-now span {
+    padding: 8px 8px 8px 1px;
+    transition: .5s;
+    position: relative;
+}
+.buy-now span:nth-child(1) {
+    color: #fff;
+    background: #262626;
+}
+.buy-now span:nth-child(2) {
+    color: #fff;
+
+}
+.buy-now span:nth-child(1):before {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #F3851B;
+    padding: 8px 8px 8px 8px;
+    transition: 0.5S;
+    transform-origin: top;
+    transform: rotateX(90deg) translateY(-50%);
+}
+.buy-now:hover span:nth-child(1):before {
+    transform: rotateX(0deg) translateY(0%);
+}
+.buy-now span:nth-child(2):before {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #262626;
+    padding: 8px 8px 8px 1px;
+    transition: 0.5S;
+    transform-origin: bottom;
+    transform: rotateX(90deg) translateY(50%);
+}
+.buy-now:hover span:nth-child(2):before {
+    transform: rotateX(0deg) translateY(0%);
+}
+.buy-now  span:nth-child(1):after {
+    content: attr(data-attr);
+    padding: 8px 8px 8px 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #262626;
+    transform-origin: bottom;
+    transform: rotateX(0deg) translateY(0%);
+    transition: 0.5s;
+}
+.buy-now:hover span:nth-child(1):after {
+    transform: rotateX(90deg) translateY(50%);
+}
+.buy-now span:nth-child(2):after {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #F3851B;
+    padding: 8px 8px 8px 1px;
+    transition: 0.5S;
+    transform-origin: top;
+    transform: rotateX(0deg) translateY(0%);
+}
+.buy-now:hover span:nth-child(2):after {
+    transform: rotateX(90deg) translateY(-50%);
 }
 
 
@@ -816,14 +895,19 @@ a{
 
 .newRelease-new-sale article button {
     background-color: #F3851B;
-    width: 100px;
-    height: 30px;
+    width: 12em;
+    height: 2em;
+    font-size: 1.1em;
+
 }
 
-
+.newRelease-game-history {
+    padding-left: 1em;
+}
 
 .newRelease-game-history {
     padding-top: 55px;
+    gap: 0.5em;
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -841,44 +925,69 @@ a{
     line-height: 1px;
     text-underline-offset: 6px;
     text-decoration-thickness:0.05em;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .newRelease-game-history p {
     color: #E9EFF3;
-    font-size: 12px;
     letter-spacing: 0.06em;
+    font-weight: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
 }
 
 .newRelease-game-feature-container{
     width: 100%;
-    padding-top: 35px;
-    padding-left: 10px;
+    display: flex;
+    flex-flow: column;
+    gap: 0.3em;
+    padding-top: 5em;
+    padding-left: 1.6em;
 }
 
 .newRelease-game-feature-container section {
     padding-top: 5px;
     display: flex;
     width: 100%;
-    gap:5px;
+    gap:10px;
     justify-content: flex-start;
     align-items: center;
     flex-flow: row  wrap;
 }
 
 .newRelease-feature{
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     background-color: #4D4949;
     border: solid 2px #888282;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
+
+}
+
+.newRelease-feature:hover{
+    transition: all 400ms ease-in-out;
+    border-color: #F3851B;
+    transform: scale(1.1);
+}
+
+.newRelease-feature:hover  .material-icons  {
+    color: #F3851B;
+    transition: all 200ms ease-in-out;
+    transform: scale(1.3);
+}
+
+.newRelease-feature:hover  p{
+    color: #F3851B;
+    transition: all 200ms ease-in-out;
+    transform: scale(0.9);
 }
 
 .newRelease-feature p {
-    font-size: 11px;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -901,24 +1010,18 @@ a{
 .newRelease-characters-carousel-display{
     overflow: hidden;
     width: 100%;
-
-
+    padding-top: 5em;
 }
-
 
 .newRelease-carousel{
     min-width: fit-content;
-
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 5px;
     flex-flow: row;
     transform: translate(0px);
-
 }
-
-
 
 .newRelease-card{
     background: rgba(20, 36, 59, 0.56);
@@ -991,6 +1094,51 @@ a{
 .newRelease-character-card-container img {
     max-width: 100%;
     max-height: 100%;
+}
+
+.newRelease-superpower-container{
+    display: none;
+}
+
+.newRelease-superpower-container li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
+    font-weight: 600;
+    color: #E9EFF3;
+    font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+    font-size: 1.20em;
+    letter-spacing: 0.065em;
+
+}
+
+.newRelease-superpower-container ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.4em;
+}
+
+.newRelease-list-superpower{
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, #3272AC 17.71%, rgba(26, 72, 114, 0) 86.98%);
+}
+.newRelease-card-footer{
+    display: none;
+}
+
+.newRelease-card-smoke-container{
+    height: 220em;
+    width: 14em;
+    z-index: -4;
+    display: none;
+
+
 }
 
 /*************new release********/
@@ -1068,4 +1216,237 @@ a{
 .home-carrousel-lates-releases-card button span{
     position: relative;
     left: -13px
+}
+
+
+
+
+
+@media only screen and (min-width: 1024px ) {
+
+    .menu{
+        width: 30%;
+        height: 680px;
+    }
+
+    .logo-container{
+        width: 12%;
+    }
+
+
+    /*footer*/
+    footer {
+        grid-template-columns: 278px 200px 220px 180px 180px 200px;
+        grid-template-rows: 30px 230px 80px;
+        grid-gap:15px;
+        grid-template-areas:
+    ". . . . . returns"
+    "services category privacy social-media . ."
+    "reserved reserved reserved reserved . ."
+    ;
+    }
+    a{
+        font-size: 18px;
+    }
+    .footer-returns{
+        right: -10px;
+        padding-top:16px;
+    }
+    .services{
+        width:227px;
+        margin-left:44px
+    }
+    .category{
+        display: inline-block;
+        border-right: solid 1px #E9EFF340;
+    }
+
+    .title-social-media{
+        display:inline-block;
+        position:relative;
+        top:40px;
+        left:770px;
+    }
+    .social-media{
+        right:6px;
+        bottom: 147px;
+    }
+
+    .social-media img{
+        width:35px;
+    }
+    .copyrights-footer{
+        font-size: 18px;
+    }
+    .footer-reserved .logo-container {
+        width: 20%;
+    }
+    .footer-reserved .logo img {
+        height: 58px;
+    }
+    .footer-reserved .label-logo-container h3 {
+        font-size: 10px;
+    }
+    .copyrights-footer-container h3 {
+        line-height: 21px;
+    }
+
+
+    .newRelease-card{
+        width: 235px;
+        height: 413px;
+    }
+
+    .newRelease-character-description{
+        width: 95%;
+        height: 35%;
+       }
+
+    .newRelease-character-description::-webkit-scrollbar {
+        display: none;
+    }
+
+    .newRelease-character-description p{
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 21px;
+        letter-spacing: 0.03em;
+    }
+
+    .newRelease-character-card-container{
+        width: 95%;
+        height: 40%;
+    }
+
+    .newRelease-card-label{
+        width: 95%;
+        height: 10%;
+    }
+
+    .newRelease-card-label h3{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.065em;
+    }
+
+    .newRelease-card:hover{
+        position: relative;
+    }
+
+    .newRelease-card:hover > .newRelease-card-label  {
+        border-top: 3px solid rgba(138, 155, 181, 0.38);
+        box-shadow: none;
+        width: 93%;
+        transition: all 800ms;
+        z-index: 4;
+        position: relative;
+        top:1em;
+        background: transparent radial-gradient(92.51% 92.51% at 0% 3.55%, rgba(20, 36, 59, 0.56) 0%, rgba(20, 36, 59, 0) 100%);
+
+    }
+
+    .newRelease-card:hover > .newRelease-card-label h3 {
+        font-size: 27px;
+        transition: all 800ms;
+        z-index: 4;
+
+    }
+
+
+    .newRelease-card:hover > .newRelease-character-description {
+        height: 0;
+        width: 0;
+        display: none;
+        z-index: 4;
+        position: relative;
+        transition: all 100ms;
+    }
+
+    .newRelease-card:hover >  .newRelease-character-card-container{
+        width: 60%;
+        position: relative;
+        bottom: -2.2em;
+        transition: all 300ms;
+        z-index: 4;
+    }
+
+    .newRelease-card:hover > .newRelease-character-description p {
+        display: none;
+        position: relative;
+    }
+
+    .newRelease-card:hover{
+        background: transparent radial-gradient(92.51% 92.51% at 0% 3.55%, rgba(20, 36, 59, 0.56) 0%, rgba(20, 36, 59, 0) 100%);
+        transition: all 800ms;
+        z-index: 4;
+    }
+
+    .newRelease-card:hover > .newRelease-superpower-container{
+        display: block;
+        position: relative;
+        top: 2em;
+        z-index: 4;
+    }
+
+    .newRelease-card:hover > .newRelease-card-footer{
+        width: 93%;
+        display: flex;
+        justify-content: center;
+        border-top: 3px solid rgba(138, 155, 181, 0.38);
+        box-shadow: 0px 5px 10px #3272AC;
+        background-color: transparent;
+        position: relative;
+        bottom: -0.4em;
+        z-index: 4;
+    }
+
+
+    .newRelease-card:hover > .newRelease-card-smoke-container{
+        display: block;
+        z-index: -1;
+        position: absolute;
+        background-image: url('../img/Smoke-release-card.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: -1em;
+        height: 23em;
+        width: 18em;
+    }
+
+    .newRelease-new-sale-container{
+        display: flex;
+        padding-top: 1.5em;
+        align-items: center;
+        justify-content: center;
+    }
+
+   nav button{
+       position: relative;
+       right: 2em;
+       top:0.3em;
+   }
+
+   .breadcrumb{
+    padding:1em 0 0.5em 1em;
+   }
+
+   .breadcrumb ul {
+       display: flex;
+       flex-flow: row;
+       align-items: center;
+   }
+
+   .breadcrumb li , .breadcrumb ul li span a  {
+       font-size: 20px;
+   }
+
+   .breadcrumb-tab-selected{
+       color: #F3851B;
+   }
+
+   .breadcrumb .material-icons {
+       font-size: 24px;
+       color: #F3851B;
+   }
 }
