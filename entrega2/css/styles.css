@@ -639,14 +639,47 @@ footer{
 
 
 
+    
 
-
-/*************new release**********************/
+/*footer*/
+footer {
+    grid-template-columns: 278px 200px 220px 180px 180px 200px;
+    grid-template-rows: 30px 230px 80px;
+    grid-gap:15px;
+    grid-template-areas: 
+    ". . . . . returns"
+    "services category privacy social-media . ."
+    "reserved reserved reserved reserved . ."
+;
+}
+a{
+    font-size: 18px;
+}
+.footer-returns{
+    right: -10px;
+    padding-top:16px;
+}
+.services{
+    width:227px;
+    margin-left:44px
+}
+.category{
+    display: inline-block;
+    border-right: solid 1px #E9EFF340;
+}
 
 .newRelease-main{
-  position: relative;
+    position: relative;
     overflow: hidden;
 }
+
+.title-social-media{
+    display:inline-block;
+    position:relative;
+    top:40px;
+    left:770px;
+}
+
 
 .newRelease-smoke-right{
     background: url("../img/smoke-right-new-release.png") no-repeat;
@@ -678,6 +711,33 @@ footer{
     height: 48em;
 
 }
+
+.social-media{
+    right:6px;
+    bottom: 147px;
+}
+
+.social-media img{
+    width:35px;
+}
+.copyrights-footer{
+    font-size: 18px;
+}
+.footer-reserved .logo-container {
+    width: 20%;
+}
+.footer-reserved .logo img {
+    height: 58px;
+}
+.footer-reserved .label-logo-container h3 {
+    font-size: 10px;
+}
+.copyrights-footer-container h3 {
+    line-height: 21px;
+}
+
+
+/*************new release**********************/
 
 .newRelease-img-container{
     display: flex;
@@ -742,7 +802,16 @@ footer{
 
 }
 
+.newRelease-sale-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 13px 13px 0px;
+}
+
 .newRelease-new-sale{
+    height: 150px;
     display: flex;
     width: 40em;
     flex-flow: column;
@@ -769,6 +838,12 @@ footer{
     display: flex;
     height: 100%;
     padding: 5px 2px 0px 6px;
+}
+
+.newRelease-release-date-container{
+    display: flex;
+    flex-flow: column;
+    width: 63%;
 }
 
 .newRelease-new-release-header > section{
@@ -802,6 +877,18 @@ footer{
     font-size: 14px;
     text-align: center;
     letter-spacing: 0.065em;
+}
+
+
+.newRelease-price-label-container{
+    background-color: #02213F;
+    border-left: 1px solid grey;
+    padding: 0px 0px 0px 2px;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
 }
 
 .newRelease-new-release-header > section ~ section {
@@ -925,7 +1012,6 @@ footer{
     width: 12em;
     height: 2em;
     font-size: 1.1em;
-
 }
 
 .newRelease-game-history {
@@ -1173,20 +1259,95 @@ footer{
 
 
 /*******************************Home*************************/
-.home{
+.home h1,.home-advertising{
     padding:30px;
 }
 .home-advertising{
-    display:flex;
+   /* display:flex;*/
     margin-bottom:70px;
+    height: 200px;
 }
 
-.home-carrousel-lates-releases{
+.home-advertising img:last-child{
+    position: absolute;
+    top: 110px;
+    left: 769px;
+}
+.home-latest-releases{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-latest-releases-image {
+    width: 1080px;
+    height: 340px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    background-color: #02213F;
+    margin: 10px;
 }
-.home-carrousel-latest-releases button,.home-carrousel-recommended button, .home-carrousel-category button{
+
+.home-latest-releases-image{
+    width: 1080px;
+    height: 340px;
+    background-color:#02213F;
+    margin:10px;
+
+}
+
+.home-latest-releases-image-container{
+    padding:25px 10px;
+}
+.home-latest-releases-image-container div{
+    display: flex;
+    padding: 6px 0px;
+    width: 344px;
+    height: 91px;
+    margin-top:8px;
+}
+
+.home-latest-releases-image-container div img{
+    padding:0px 6px;
+    filter: blur(1px);
+}
+
+.home-latest-releases-image-container div img:hover{
+    box-shadow:none;
+    filter:inherit;
+}
+.home-latest-text{
+    justify-content: space-between;
+    align-items: baseline;
+}
+.home-latest-releases .home-latest-see-more{
+    width: 72px;
+    height: 34px;
+    border: 0.5px solid #E9EFF3;
+    background: transparent;
+    padding: 0PX;
+    border-radius: 0PX;
+    overflow: hidden;
+    transition: all .5s;
+}
+.home-carrousel{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    padding:0px 6px;
+}
+
+
+.home-carrousel-conteiner {
+    display: flex;
+    gap: 12px;
+    transform: translateX(0px);
+}
+.home-carrousel-latest-releases-conteiner.translated{
+    transform: translateX(-100%);
+}
+
+.home-latest-releases button,.home-carrousel-recommended button, .home-carrousel-category button{
     width:45px;
     height:80px;
     border-radius:3px;
@@ -1194,39 +1355,49 @@ footer{
     padding:10px;
 }
 
-.home-carrousel-latest-releases button~ button,.home-carrousel-recommended button ~ button, .home-carrousel-category button ~ button{
+.home-latest-releases button ~ button,.home-carrousel-recommended button ~ button, .home-carrousel-category button ~ button{
     transform: rotate(180deg);
     padding-top: 14px;
 }
+/*home-latest-realeses button{ //COLOR CUANDO CIRCLE ESTA EN 1 PARA EL BOTON IZQUIERDO, 2 PARA EL BOTON DERECHO.
+        background: linear-gradient(258.4deg, rgba(50, 114, 172, 0.15) 9.17%, rgba(2, 33, 63, 0) 220.5%);
+}*/
 
-.home-carrousel-lates-releases-card{
+.home-carrousel-card{
     width: 250px;
     height: 315px;
-    /* background-color: #14243B; */
-    background-color: green;
+    background-color: #14243B;
+    filter: drop-shadow(4px 5px 4px rgb(26, 72, 114, 0.62));
 }
-.home-carrousel-lates-releases-card>div{
+.home-carrousel-display{
+    gap: 13px;
+    overflow: hidden;
+    margin:0px 8px 0px 8px;
+}
+
+.home-carrousel-card>div{
     display: flex;
     width: 100%;
     justify-content: center;
 }
-.home-carrousel-lates-releases-card h2{
+.home-carrousel-card h2{
     position: relative;
     left: 20px;
+    top:8px;
 }
-.home-carrousel-lates-releases-card h3{
+.home-carrousel-card h3{
     position: relative;
-    top: 58px;
-    left:20px;
+    top: 57px;
+    left:19px;
 }
-.home-carrousel-lates-releases-card h4{
+.home-carrousel-card h4{
     position:relative;
-    top:60px;
+    top:57px;
     left:18px;
     color:#B3B9BC;
     text-decoration:line-through;
 }
-.home-carrousel-lates-releases-card button{
+.home-carrousel-card button{
     font-size:17px;
     width:110px;
     height: 31px;
@@ -1235,17 +1406,66 @@ footer{
     padding-left: 20px;
     position: relative;
     left: 130px;
-    top:30px;
+    top:22px;
     border-radius: 5px;
     letter-spacing: 3px;
     background-color:linear-gradient(93.53deg, rgba(39, 94, 133, 0.96) -11.85%, rgba(95, 170, 225, 0.96) 73.08%, rgba(0, 4, 7, 0.96) 120.55%, rgba(129, 186, 227, 0.96) 140.7%);
 }
 
-.home-carrousel-lates-releases-card button span{
+.home-carrousel-card h3.free{
+    top: 72px;
+}
+
+.home-carrousel-card button.free{
+    top: 45px;
+}
+.home-carrousel-card h3.more-text{
+    top: 41px;
+}
+
+.home-carrousel-card button.more-text{
+    top: 12px;
+}
+
+.home-carrousel-card button span{
     position: relative;
     left: -13px
 }
 
+.home-card-trial,.home-card-new{
+    height: 28px;
+    width: 63px;
+    transform: skewX(114deg) rotate(41deg);
+    position: fixed;
+    bottom: 244px;
+    right: 120px;
+}
+
+.home-card-trial{
+    background-color: #E5770E;
+}
+
+.home-card-new{
+    background-color: #3272AC;
+    width: 33px;
+}
+
+.home-trial-text{
+    color:#2B2727;
+    position: relative;
+    left: -10px;
+    top: -310px;
+    font-size: 18px;
+}
+
+.home-carrousel-category, .home-carrousel-recommended,.home-latest{
+    margin-bottom: 50px;
+}
+
+.home-carrousel-pointer{
+    display:flex;
+    width:0px;
+}
 
 
 
@@ -1328,7 +1548,7 @@ footer{
     .newRelease-character-description{
         width: 95%;
         height: 35%;
-       }
+    }
 
     .newRelease-character-description::-webkit-scrollbar {
         display: none;
@@ -1449,38 +1669,38 @@ footer{
         justify-content: center;
     }
 
-   nav button{
-       position: relative;
-       right: 2em;
-       top:0.3em;
-   }
+    nav button{
+        position: relative;
+        right: 2em;
+        top:0.3em;
+    }
 
-   .breadcrumb{
-    padding:1em 0 0.5em 1em;
-   }
+    .breadcrumb{
+        padding:1em 0 0.5em 1em;
+    }
 
-   .breadcrumb ul {
-       display: flex;
-       flex-flow: row;
-       align-items: center;
-   }
+    .breadcrumb ul {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+    }
 
-   .breadcrumb li , .breadcrumb ul li span a  {
-       font-size: 20px;
-   }
+    .breadcrumb li , .breadcrumb ul li span a  {
+        font-size: 20px;
+    }
 
-   .breadcrumb-tab-selected{
-       color: #F3851B;
-   }
+    .breadcrumb-tab-selected{
+        color: #F3851B;
+    }
 
-   .breadcrumb .material-icons {
-       font-size: 24px;
-       color: #F3851B;
-   }
+    .breadcrumb .material-icons {
+        font-size: 24px;
+        color: #F3851B;
+    }
 
-   .btn-carousel {
-       font-size: 55px;
-   }
+    .btn-carousel {
+        font-size: 55px;
+    }
 
 
 }
