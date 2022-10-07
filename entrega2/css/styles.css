@@ -837,6 +837,13 @@ a{
 .home-advertising{
    /* display:flex;*/
     margin-bottom:70px;
+    height: 200px;
+}
+
+.home-advertising img:last-child{
+    position: absolute;
+    top: 110px;
+    left: 769px;
 }
 .home-latest-releases{
     display: flex;
@@ -845,16 +852,17 @@ a{
 }
 
 .home-latest-releases-image{
-    width: 1100px;
+    width: 1080px;
     height: 340px;
     display: flex;
     justify-content: center;
     background-color:#02213F;
+    margin:10px;
  
 }
 
 .home-latest-releases-image-container{
-    padding:25px 15px;
+    padding:25px 10px;
 }
 .home-latest-releases-image-container div{
     display: flex;
@@ -866,26 +874,36 @@ a{
 
 .home-latest-releases-image-container div img{
     padding:0px 6px;
+    filter: blur(1px);
 }
 
+.home-latest-releases-image-container div img:hover{
+    box-shadow:none;
+    filter:inherit;
+}
 .home-latest-text{
     justify-content: space-between;
     align-items: baseline;
 }
 .home-latest-releases .home-latest-see-more{
-    width: 86px;
-    height: 36px;
+    width: 72px;
+    height: 34px;
     border: 0.5px solid #E9EFF3;
-    background-color: none;
+    background: transparent;
+    padding: 0PX;
+    border-radius: 0PX;
+    overflow: hidden;
+    transition: all .5s;
+
 }
 .home-carrousel{
     width: 100%;
     display: flex;
     flex-flow: row;
-    gap:10px;
     align-items: center;
     padding:0px 6px;
 }
+
 
 .home-carrousel-conteiner{
     display: flex;
@@ -909,6 +927,10 @@ a{
     padding-top: 14px;
 }
 
+/*home-latest-realeses button{ //COLOR CUANDO CIRCLE ESTA EN 1 PARA EL BOTON IZQUIERDO, 2 PARA EL BOTON DERECHO.
+        background: linear-gradient(258.4deg, rgba(50, 114, 172, 0.15) 9.17%, rgba(2, 33, 63, 0) 220.5%);
+}*/
+
 .home-carrousel-card{
     width: 250px;
     height: 315px;
@@ -916,8 +938,9 @@ a{
     filter: drop-shadow(4px 5px 4px rgb(26, 72, 114, 0.62));
 }
 .home-carrousel-display{
-    gap: 15px;   
+    gap: 13px;   
     overflow: hidden;
+    margin:0px 8px 0px 8px;
 }
 .home-carrousel-card>div{
     display: flex;
@@ -931,12 +954,12 @@ a{
 }
 .home-carrousel-card h3{
     position: relative;
-    top: 58px;
-    left:20px;
+    top: 57px;
+    left:19px;
 }
 .home-carrousel-card h4{
     position:relative;
-    top:60px;
+    top:57px;
     left:18px;
     color:#B3B9BC;
     text-decoration:line-through;
@@ -950,12 +973,26 @@ a{
     padding-left: 20px;
     position: relative;
     left: 130px;
-    top:30px;
+    top:22px;
     border-radius: 5px;
     letter-spacing: 3px;
     background-color:linear-gradient(93.53deg, rgba(39, 94, 133, 0.96) -11.85%, rgba(95, 170, 225, 0.96) 73.08%, rgba(0, 4, 7, 0.96) 120.55%, rgba(129, 186, 227, 0.96) 140.7%);
 }
 
+.home-carrousel-card h3.free{
+    top: 72px;
+}
+
+.home-carrousel-card button.free{
+    top: 45px;
+}
+.home-carrousel-card h3.more-text{
+    top: 41px;
+}
+
+.home-carrousel-card button.more-text{
+    top: 12px;
+}
 .home-carrousel-card button span{
     position: relative;
     left: -13px
@@ -980,12 +1017,18 @@ a{
 }
 
 .home-trial-text{
-    color:white;
-    /*#2B2727;*/
+    color:2B2727;
     position: relative;
     left: -10px;
     top: -310px;
     font-size: 18px;
-            transform:skewX(181deg) rotate(-45deg);
-      }
-    /*;*/
+}
+
+.home-carrousel-category, .home-carrousel-recommended,.home-latest{
+    margin-bottom: 50px;
+}
+  
+.home-carrousel-pointer{
+    display:flex;
+    width:0px;
+}
