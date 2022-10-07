@@ -551,6 +551,33 @@ footer{
 /*********************************Footer*********************************/
 
 
+.carousel-pos{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding-bottom: 3em;
+}
+
+.bullet-carousel-position{
+    border-radius: 100%;
+    height: 0.6em;
+    width: 0.6em;
+}
+
+.bullet-inactive{
+    background-color: #414141;
+}
+
+.bullet-active{
+    background: radial-gradient(50% 50% at 50% 50%, #3272AC 17.71%, rgba(26, 72, 114, 0) 86.98%);
+    width: 1em;
+    height: 1em;
+}
+
+
+
 @media only screen and (min-width: 768px) {
 
     /*Logo*/
@@ -1000,7 +1027,7 @@ footer{
     align-items: center;
     width: 100%;
     flex-flow: row;
-    padding-bottom: 50px;
+    padding-bottom: 14px;
 }
 
 .newRelease-characters-container button{
@@ -1009,8 +1036,9 @@ footer{
 
 .newRelease-characters-carousel-display{
     overflow: hidden;
-    width: 100%;
+    width: 235%;
     padding-top: 5em;
+    display: block;
 }
 
 .newRelease-carousel{
@@ -1449,4 +1477,10 @@ footer{
        font-size: 24px;
        color: #F3851B;
    }
+
+   .btn-carousel {
+       font-size: 55px;
+   }
+
+
 }
