@@ -1154,6 +1154,11 @@ button{
     color:#E9EFF3;
     border-radius: 5px ;
     font-weight: 600;
+    font-size: 20px;
+    width: 6em;
+    letter-spacing: 0.09em;
+    height: 2em;
+    cursor: pointer;
 }
 .game{
     padding:34px;
@@ -2272,7 +2277,7 @@ form div {
 
 
     .submergeBlock-instructions li {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .submergeBlock-controls {
@@ -2464,4 +2469,41 @@ form div {
         color: #BBC5D5;
         font-size: 14px;
     }
+
+    .submergeBlock-publish-form{
+        display: flex;
+        width: 100%;
+        padding-top: 0.3em;
+        justify-content: flex-end;
+    }
+
+    .submergeBlock-publish-form button{
+        transition: all 0.5s;
+        position: relative;
+        display: inline-block;
+    }
+
+    .submergeBlock-publish-form button:after {
+        content: '»';
+        position: absolute;
+        opacity: 0;
+        top: 8px;
+        right: -28px;
+        transition: 0.5s;
+    }
+
+    .submergeBlock-publish-form button:hover{
+        padding-right: 24px;
+        padding-left:8px;
+        box-shadow: 0.1em 0 0.9em #2364a0;
+
+    }
+
+    .submergeBlock-publish-form button:hover:after {
+        opacity: 1;
+        right: 10px;
+    }
+
+
+
 }
