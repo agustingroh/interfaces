@@ -1259,75 +1259,76 @@ a{
 
 
 /*******************************Home*************************/
-.home h1,.home-advertising{
-    padding:30px;
-}
 .home-advertising{
-   /* display:flex;*/
-    margin-bottom:70px;
-    height: 200px;
+   display:none;
+}
+.home h1{
+    font-size: 16px;
+    letter-spacing: 4px;
+    padding: 30px 0px 0px 13px;
 }
 
-.home-advertising img:last-child{
-    position: absolute;
-    top: 110px;
-    left: 769px;
+.home h2{
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+.home h3{
+    font-size: 10px;
+    padding:5px 10px;
+}
+
+.home-latest-releases button{
+    display: none;
 }
 .home-latest-releases{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0px 11px 0px 11px;
 }
 .home-latest-releases-image {
-    width: 1080px;
-    height: 340px;
-    display: flex;
-    justify-content: center;
+    width: 100%;
     background-color: #02213F;
     margin: 10px;
 }
 
-.home-latest-releases-image{
-    width: 1080px;
-    height: 340px;
-    background-color:#02213F;
-    margin:10px;
-
+.home-latest-releases-image>div>img{
+    height: 140px;
+    width: 298px;
 }
 
 .home-latest-releases-image-container{
-    padding:25px 10px;
+    padding:4px 9px;
 }
+
 .home-latest-releases-image-container div{
     display: flex;
-    padding: 6px 0px;
-    width: 344px;
-    height: 91px;
-    margin-top:8px;
+    padding: 4px 0px;
+    width: 100%;
+    height: 73px;
+    justify-content: space-between;
 }
 
 .home-latest-releases-image-container div img{
     padding:0px 6px;
-    filter: blur(1px);
 }
 
-.home-latest-releases-image-container div img:hover{
-    box-shadow:none;
-    filter:inherit;
-}
-.home-latest-text{
-    justify-content: space-between;
-    align-items: baseline;
+.home-latest-releases .home-latest-text{
+    height:26px;
+   
 }
 .home-latest-releases .home-latest-see-more{
-    width: 72px;
-    height: 34px;
+    display:block;
+    width: 63px;
+    height: 21px;
+    font-size: 10px;
     border: 0.5px solid #E9EFF3;
     background: transparent;
-    padding: 0PX;
-    border-radius: 0PX;
-    overflow: hidden;
-    transition: all .5s;
+    padding: 0;
+    border-radius: 0px;
+    position: relative;
+    top: 4px;
 }
 .home-carrousel{
     width: 100%;
@@ -1335,97 +1336,94 @@ a{
     flex-flow: row;
     align-items: center;
     padding:0px 6px;
+    overflow: hidden;
 }
 
 
 .home-carrousel-conteiner {
     display: flex;
     gap: 12px;
+    width: fit-content; 
     transform: translateX(0px);
+ 
 }
 .home-carrousel-latest-releases-conteiner.translated{
     transform: translateX(-100%);
 }
 
 .home-latest-releases button,.home-carrousel-recommended button, .home-carrousel-category button{
-    width:45px;
-    height:80px;
+    width:25px;
+    height:40px;
     border-radius:3px;
     background: linear-gradient(84.33deg, #1A4872 -75.68%, rgba(26, 72, 114, 0) 472.36%);
-    padding:10px;
+    padding:5px;
 }
 
 .home-latest-releases button ~ button,.home-carrousel-recommended button ~ button, .home-carrousel-category button ~ button{
     transform: rotate(180deg);
-    padding-top: 14px;
 }
 /*home-latest-realeses button{ //COLOR CUANDO CIRCLE ESTA EN 1 PARA EL BOTON IZQUIERDO, 2 PARA EL BOTON DERECHO.
         background: linear-gradient(258.4deg, rgba(50, 114, 172, 0.15) 9.17%, rgba(2, 33, 63, 0) 220.5%);
 }*/
 
 .home-carrousel-card{
-    width: 250px;
-    height: 315px;
+    width: 126px;
+    height: 191px;
     background-color: #14243B;
     filter: drop-shadow(4px 5px 4px rgb(26, 72, 114, 0.62));
 }
 .home-carrousel-display{
-    gap: 13px;
+    gap: 9px;     
+    margin:0px 4px 0px 4px;
     overflow: hidden;
-    margin:0px 8px 0px 8px;
 }
 
 .home-carrousel-card>div{
     display: flex;
     width: 100%;
     justify-content: center;
+    height: 91px;
 }
-.home-carrousel-card h2{
-    position: relative;
-    left: 20px;
-    top:8px;
-}
+
 .home-carrousel-card h3{
     position: relative;
-    top: 57px;
-    left:19px;
+    top:33px;
+    font-size: 10px;
 }
 .home-carrousel-card h4{
+    font-size:8px;
     position:relative;
-    top:57px;
-    left:18px;
+    top:40px;
+    left:7px;
     color:#B3B9BC;
     text-decoration:line-through;
 }
 .home-carrousel-card button{
-    font-size:17px;
-    width:110px;
-    height: 31px;
+    font-size: 10px;
+    width: 66px;
+    height: 24px;
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 9px;
     position: relative;
-    left: 130px;
-    top:22px;
+    left: 55px;
     border-radius: 5px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     background-color:linear-gradient(93.53deg, rgba(39, 94, 133, 0.96) -11.85%, rgba(95, 170, 225, 0.96) 73.08%, rgba(0, 4, 7, 0.96) 120.55%, rgba(129, 186, 227, 0.96) 140.7%);
 }
 
 .home-carrousel-card h3.free{
-    top: 72px;
+    top: 38px;
 }
 
-.home-carrousel-card button.free{
-    top: 45px;
+.home-carrousel-card button.free {
+    top: 10px;
+    left: 55px;
 }
 .home-carrousel-card h3.more-text{
-    top: 41px;
+    top: 32px;
 }
 
-.home-carrousel-card button.more-text{
-    top: 12px;
-}
 
 .home-carrousel-card button span{
     position: relative;
@@ -1458,14 +1456,7 @@ a{
     font-size: 18px;
 }
 
-.home-carrousel-category, .home-carrousel-recommended,.home-latest{
-    margin-bottom: 50px;
-}
 
-.home-carrousel-pointer{
-    display:flex;
-    width:0px;
-}
 
 
 
@@ -1702,5 +1693,238 @@ a{
         font-size: 55px;
     }
 
+    .home h1{
+        font-size:40px;
+        letter-spacing: 7px;
+    }
+    .home h2{
+        font-size: revert;
+        padding: 5px 0px;
+    }
+    .home h3{
+        font-size: revert;
 
+    }
+    .home h4{
+        font-size: revert;
+
+    }
+    .home h1,.home-advertising{
+        padding:30px;
+    }
+    .home-advertising{
+       display:block;
+       width:100%;
+        margin-bottom:70px;
+        height: 200px;
+    }
+    .home-advertising img:first-child{
+        width:70%;
+    }
+    .home-advertising img:last-child{
+        position: absolute;
+        top: 110px;
+        left: 769px;
+        width:40%;
+    }
+    .home-latest-releases{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-latest-releases-image {
+        width: 100%;
+        height: 325px;
+        display: flex;
+        justify-content: center;
+        background-color: #02213F;
+        margin: 10px;
+    }
+    
+    .home-latest-releases-image>div{
+        width:70%;
+    }
+    .home-latest-releases-image-container{
+        padding:25px 10px;
+    }
+    
+    .home-latest-releases-image-container{
+        margin-bottom: 20px;
+    }
+    .home-latest-releases-image-container div{
+        display: flex;
+        padding: 6px 0px;
+       /* width: 344px;*/
+       width: 100%;
+        height: 78px;
+        margin-top:8px;
+    }
+    .home-latest-releases-image>div>img{
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+    }
+    .home-latest-releases-image-container div img{
+        padding:0px 6px;
+        filter: blur(1px);
+    }
+    
+    .home-latest-releases-image-container div img:hover{
+        box-shadow:none;
+        filter:inherit;
+    }
+    .home-latest-text{
+        justify-content: space-between;
+        align-items: baseline;
+        position: relative;
+        top: 13px;
+    }
+    .home-latest-releases .home-latest-see-more{
+        width: 72px;
+        height: 34px;
+        border: 0.5px solid #E9EFF3;
+        background: transparent;
+        padding: 0PX;
+        border-radius: 0PX;
+        margin-right: 6px;
+    }
+    .home-carrousel{
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        padding:0px 6px;
+        overflow: hidden;
+    }
+    
+    
+    .home-carrousel-conteiner {
+        display: flex;
+        gap: 12px;
+        width: fit-content; 
+        transform: translateX(0px);
+     
+    }
+    .home-carrousel-latest-releases-conteiner.translated{
+        transform: translateX(-100%);
+    }
+    
+    .home-latest-releases button,.home-carrousel-recommended button, .home-carrousel-category button{
+        width:45px;
+        height:80px;
+        border-radius:3px;
+        background: linear-gradient(84.33deg, #1A4872 -75.68%, rgba(26, 72, 114, 0) 472.36%);
+        padding:10px;
+    }
+    
+    .home-latest-releases button ~ button,.home-carrousel-recommended button ~ button, .home-carrousel-category button ~ button{
+        transform: rotate(180deg);
+        padding-top: 14px;
+    }
+    /*home-latest-realeses button{ //COLOR CUANDO CIRCLE ESTA EN 1 PARA EL BOTON IZQUIERDO, 2 PARA EL BOTON DERECHO.
+            background: linear-gradient(258.4deg, rgba(50, 114, 172, 0.15) 9.17%, rgba(2, 33, 63, 0) 220.5%);
+    }*/
+    
+    .home-carrousel-card{
+        width: 250px;
+        height: 315px;
+        background-color: #14243B;
+        filter: drop-shadow(4px 5px 4px rgb(26, 72, 114, 0.62));
+    }
+    .home-carrousel-display{
+        gap: 13px;     
+        margin:0px 8px 0px 8px;
+        overflow: hidden;
+    }
+    
+    .home-carrousel-card>div{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        height:auto;
+    }
+    .home-carrousel-card h2{
+        position: relative;
+        left: 20px;
+        top:8px;
+    }
+    .home-carrousel-card h3{
+        position: relative;
+        top: 39px;
+        left: 11px;
+    }
+    .home-carrousel-card h4{
+        position:relative;
+        top:57px;
+        left:18px;
+        color:#B3B9BC;
+        text-decoration:line-through;
+    }
+    .home-carrousel-card button{
+        font-size:17px;
+        width:110px;
+        height: 31px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        position: relative;
+        left: 130px;
+        top:22px;
+        border-radius: 5px;
+        letter-spacing: 3px;
+        background-color:linear-gradient(93.53deg, rgba(39, 94, 133, 0.96) -11.85%, rgba(95, 170, 225, 0.96) 73.08%, rgba(0, 4, 7, 0.96) 120.55%, rgba(129, 186, 227, 0.96) 140.7%);
+    }
+    
+    .home-carrousel-card h3.free{
+        top: 60px;
+    }
+    
+    .home-carrousel-card button.free{
+        top: 31px;
+        left:129px;
+    }
+    .home-carrousel-card h3.more-text{
+        top: 41px;
+    }
+    
+    .home-carrousel-card button.more-text{
+        top: 12px;
+    }
+    
+    .home-carrousel-card button span{
+        position: relative;
+        left: -13px
+    }
+    
+    .home-card-trial,.home-card-new{
+        height: 28px;
+        width: 63px;
+        transform: skewX(114deg) rotate(41deg);
+        position: fixed;
+        bottom: 244px;
+        right: 120px;
+    }
+    
+    .home-card-trial{
+        background-color: #E5770E;
+    }
+    
+    .home-card-new{
+        background-color: #3272AC;
+        width: 33px;
+    }
+    
+    .home-trial-text{
+        color:#2B2727;
+        position: relative;
+        left: -10px;
+        top: -310px;
+        font-size: 18px;
+    }
+    
+    .home-carrousel-category, .home-carrousel-recommended,.home-latest{
+        margin-bottom: 50px;
+    }
+    
+    
+    
 }
