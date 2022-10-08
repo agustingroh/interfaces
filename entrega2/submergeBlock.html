@@ -94,40 +94,91 @@
                 </section>
         </nav>
     </header>
-    <main>
-        <div class="breadcrum">
-            <a href="index.html">Infinity Games</a><span class="material-icons md-35">chevron_right</span>
-            <p>Estrategia</p><span class="material-icons md-35">chevron_right</span>
-            <p>SubmergeBlock</p>
-        </div>
-        <section class="game">
-            <section>
+    <main class="submergeBlock-main">
+        <!--breadcrumb-->
+        <section class="breadcrumb">
+            <ul>
+                <li><span><a href="index.html">Infinity Games</a></span></li>
+                <li><span class="material-icons md-24">chevron_right</span></li>
+                <li>Recomendados</li>
+                <li><span class="material-icons md-24">chevron_right</span></li>
+                <li class="breadcrumb-tab-selected">SubmergeBlock</li>
+            </ul>
+        </section>
+        <!--submerge block title-->
+        <section class="submergeBlock-title">
+            <div>
+                <h1 class="name-game">SubmergeBlock</h1>
+            </div>
+            <div>
+                <button class="share-btn"><span class="material-icons ">share</span>Compartir</button>
+            </div>
+        </section>
+        <!--submerge game-->
+        <section class="submergeBlock-game">
+            <div class="submergeBlock-img-container">
                 <div>
-                    <button class="share-btn"><span class="material-icons ">share</span>Compartir</button>
+                    <img src="img/submergeBlock-main-2.png">
+                </div>
+            </div>
+            <div>
+                <h1>SubmergeBlock</h1>
+                <div class="submergeBlock-game-btn">
+                    <button>Comprar</button>
                     <div>
-                        <h1 class="name-game">SubmergeBlock</h1>
-                        <div class="space-game-btn"></div>
-                        <button class="buy-btn">Comprar</button>
+                        <button><span class="material-icons md-24 submergeBlock-play">play_arrow</span>Jugar</button>
                         <div>
-                            <button class="play-btn">Jugar</button>
-                            <h4>Proba el juego por 4 dias</h4>
+                            <p>Proba el juego por 4 dias</p>
                         </div>
                     </div>
                 </div>
-                </div>
-            </section>
-            <section class="history">
+            </div>
+        </section>
+        <!--submerge history-->
+        <section class="submergeBlock-history-container">
                 <h1>Sobre SubmergeBlock</h1>
-                <p>SubmergeBlock es un juego online sobre estrategia y escape. El personaje se encuentra atrapado en la
+                <div>
+                    <p>SubmergeBlock es un juego online sobre estrategia y escape. El personaje se encuentra atrapado en la
                     cupula de un edificio de 50 pisos. Para liberarlo se
                     deberan superar los niveles necesarios hasta llegar a la base del edificio. En cada nivel se tendra
                     un contrincante. Cada nivel ganado hara que el personaje
                     descienda un piso dentro del edificio.</p>
-                <div>
-                    <img src="img/sumergeblock.jpeg" alt="Juego Sumerblock">
                 </div>
             </section>
-            <section class="instructions">
+        <!--submerge carousel-->
+        <section id="submergeBlock-carousel-container" class="submergeBlock-carousel-container">
+            <div class="submergeBlock-carousel-video">
+                <img src="img/game-video.png">
+            </div>
+            <div id="submergeBlock-characters-carousel-display" class="submerge-characters-carousel-display">
+                <div id="submergeBlock-carousel" class="submergeBlock-carousel">
+                    <div>
+                        <img src="img/game-one.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="img/Jardine-House.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="img/game-three.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="img/game-four.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="img/game-five.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="img/game-six.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--submerge divider-->
+        <div class="submergeBlock-divider">
+            <div></div>
+        </div>
+        <!--submerge instructions-->
+        <section class="submergeBlock-instructions">
                 <h2>Instrucciones</h2>
                 <ul>
                     <li><span class="material-icons md-26">arrow_right</span>Puede jugarse en modo un solo jugador o por
@@ -154,29 +205,178 @@
                         personaje descendera un piso.</li>
                 </ul>
             </section>
-            <section class="controls">
+        <!--submerge controls-->
+        <section class="submergeBlock-controls-container">
                 <h2>Controles</h2>
-            </section>
-            <section>
-                <div class="comment-box-title">
-                    <h2>Comentarios</h2>
-                    <h4>(250 valoraciones)</h4>
-                </div>
-                <div class="comment-box">
-                </div>
-            </section>
-            <section class="comment">
-                <h2>Realizar un comentario</h2>
-                <form>
-                    <div class="comment-description">
-                        <h3>Escriba su comentario</h3>
-                        <h4>460 caracteres</h4>
-                    </div>
-                    <!-- <input type="textarea"></textarea>
-        </form>
-        <button>Publicar</button>-->
+            <section class="submergeBlock-controls">
+                    <article class="submergeBlock-player1">
+                        <div>
+                            <h3>Controles Jugador 1</h3>
+                        </div>
+                        <section class="keyword-controls">
+                            <div>
+                                <img src="img/p1-controls.png">
+                            </div>
+                            <div>
+                                <img src="img/p1-control-2.png">
+                            </div>
+                        </section>
+                        <section class="keyword-instructions">
+                            <ul>
+                                <li>A/D Mover hacia los laterales</li>
+                                <li>W/S Mover arriba - abajo</li>
+                                <li>Doble presion en rota el cubo</li>
+                            </ul>
+                            <ul>
+                                <li>Anclar bloque</li>
+                            </ul>
+                        </section>
+                    </article>
+                    <article class="submergeBlock-player2">
+                        <div>
+                            <h3>Controles Jugador 2</h3>
+                        </div>
+                        <section class="keyword-controls">
+                            <div>
+                                <img src="img/p1-controls.png">
+                            </div>
+                            <div>
+                                <img src="img/p1-control-2.png">
+                            </div>
+                        </section>
+                        <section class="keyword-instructions">
+                            <ul>
+                                <li>A/D Mover hacia los laterales</li>
+                                <li>W/S Mover arriba - abajo</li>
+                                <li>Doble presion en rota el cubo</li>
+                            </ul>
+                            <ul>
+                                <li>Anclar bloque</li>
+                            </ul>
+
+                        </section>
+
+                    </article>
             </section>
         </section>
+        <!--submergeBlock comments-->
+        <section class="submergeBlock-comments-container">
+            <h2>
+                Realizar comentario
+            </h2>
+            <article>
+                <ul>
+                    <li>
+                        Escriba su comentario
+                    </li>
+                    <li>460 caracteres</li>
+
+                </ul>
+                <div class="submergeBlock-comment-area">
+                    <textarea></textarea>
+                </div>
+            </article>
+
+        </section>
+
+        <!--submergeBlock comment reviews-->
+       <section class="submergeBlock-comment-review-container">
+           <h2>
+               Comentarios
+           </h2>
+           <section class="comments-submergeBlock">
+               <!--comment 1-->
+               <article class="comments">
+                   <section class="submergeBlock-user-data">
+                       <div class="submergeBlock-comment-review-photo">
+                       </div>
+                       <div class="submergeBlock-comment-label">
+                           <div>
+                               <p>Richard Smith</p>
+                           </div>
+                           <div>
+                               <p>PUBLICADO 17 DE SEPTIEMBRE</p>
+                           </div>
+                       </div>
+                   </section>
+                   <section class="submergeBlock-comment-review">
+                       <div>
+                           <p>Excelente juego. Me paso horas en el.</p>
+                       </div>
+                       <div class="submergeBlock-comments-votes-container">
+                           <div>
+                            <p class="material-icons md-16">thumb_up</p><p>3</p>
+                           </div>
+                           <div>
+                            <p class="material-icons md-16">thumb_down</p><p>3</p>
+                           </div>
+                       </div>
+                   </section>
+               </article>
+                <!--comment 2-->
+                <article class="comments">
+                       <section class="submergeBlock-user-data">
+                           <div class="submergeBlock-comment-review-photo">
+                           </div>
+                           <div class="submergeBlock-comment-label">
+                               <div>
+                                   <p>Juan Gonzalez</p>
+                               </div>
+                               <div>
+                                   <p>PUBLICADO 1 DE SEPTIEMBRE</p>
+                               </div>
+                           </div>
+                       </section>
+                       <section class="submergeBlock-comment-review">
+                           <div>
+                               <p>Deberia existir la posibilidad de jugar de a dos players de manera online </p>
+                           </div>
+                           <div class="submergeBlock-comments-votes-container">
+                               <div>
+                                   <p class="material-icons md-16">thumb_up</p><p>180</p>
+                               </div>
+                               <div>
+                                   <p class="material-icons md-16">thumb_down</p><p>50</p>
+                               </div>
+                           </div>
+                       </section>
+                   </article>
+                <!--comment 3-->
+                <article class="comments">
+                       <section class="submergeBlock-user-data">
+                           <div class="submergeBlock-comment-review-photo">
+                           </div>
+                           <div class="submergeBlock-comment-label">
+                               <div>
+                                   <p>Maria Jose Guagni</p>
+                               </div>
+                               <div>
+                                   <p>PUBLICADO 2 DE JUNIO</p>
+                               </div>
+                           </div>
+                       </section>
+                       <section class="submergeBlock-comment-review">
+                           <div>
+                               <p>Una joyita. Las partidas son siempre diferentes cuando perdes una vida, por ende los niveles que ya has pasado, tenes
+                                   que volver a pensarlo. Eso me parece algo positivo, ya que no pasas los niveles automatizado. De los mejores juegos
+                                   de estrategia que he jugado. Siempre lo juego con mi hermano. Esta bueno que podes guardar la sesion de juego, por
+                                   ende si nos llaman a comer podemos guardala y luego continuar jugando en el nivel que quedamos.
+                                   Estaria bueno que se pueda jugar online con otras personas.
+                                   Agregen mas niveles, que me lo estoy por dar vuelta!!! </p>
+                           </div>
+                           <div class="submergeBlock-comments-votes-container">
+                               <div>
+                                   <p class="material-icons md-16">thumb_up</p><p>129</p>
+                               </div>
+                               <div>
+                                   <p class="material-icons md-16">thumb_down</p><p>63</p>
+                               </div>
+                           </div>
+                       </section>
+
+                   </article>
+           </section>
+       </section>
     </main>
     <footer>
         <ul class="footer-returns">
