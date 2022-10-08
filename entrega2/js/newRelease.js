@@ -15,16 +15,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
  });
 
 
-
-
-
-
-
-
-
-
-
-
 let carousel = document.querySelector("#newRelease-carousel");
 let carouselWidth = carousel.getBoundingClientRect().width;
 let carouselPos =0;

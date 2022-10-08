@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(){
-    console.log("Content loaded");
+
+
+document.querySelector("#submergeBlock-carousel").classList.add("submergeBlock-carousel-slide");
+
  document.querySelector('#menu-btn').addEventListener('click',() => {
      console.log("click");
     let menu = document.querySelector("#menu");
@@ -10,4 +13,8 @@ document.addEventListener("DOMContentLoaded", function(){
     let menu = document.querySelector("#menu");
         menu.classList.toggle('show-menu');
  });
+
+document.querySelector("#submergeBlock-carousel").addEventListener("hover",()=>{
+
+});
 });
