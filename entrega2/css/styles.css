@@ -1154,11 +1154,14 @@ button{
     color:#E9EFF3;
     border-radius: 5px ;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.submergeBlock-publish-form button{
     font-size: 20px;
     width: 6em;
     letter-spacing: 0.09em;
     height: 2em;
-    cursor: pointer;
 }
 .game{
     padding:34px;
@@ -1290,6 +1293,15 @@ form div {
     height: 140px;
     width: 100%;
 }
+.home-latest-releases-display{
+    overflow: hidden;
+    width: 100%;
+}
+.home-latest-releases-container{
+    display: flex;
+    overflow: scroll;
+
+}
 
 .home-latest-releases-image-container{
     padding:4px 9px;
@@ -1318,7 +1330,6 @@ form div {
     width: 63px;
     height: 21px;
     font-size: 10px;
-    border: 0.5px solid #E9EFF3;
     background: transparent;
     padding: 0;
     border-radius: 0px;
@@ -1328,10 +1339,14 @@ form div {
 
 .home-latest-releases .home-latest-see-more a{
     text-decoration: none;
-    font-size: 14px;
+    font-size: 10px;
     padding: 0px;
     margin: 0px;
     cursor:pointer;
+    outline: 2px solid;
+    outline-color: #E9EFF380;
+    outline-offset: 6px;
+    transition: all 600ms cubic-bezier(0.2, 0, 0, 0.8);
 }
 
 .home-carrousel{
@@ -1556,7 +1571,7 @@ form div {
     }
 
     .footer-returns {
-        right: -10px;
+        right: -159px;
         padding-top: 16px;
     }
 
@@ -1793,13 +1808,14 @@ form div {
     }
 
     .home h1, .home-advertising {
-        padding: 30px 0px 30px 30px;
+        padding: 15px 0px 15px 30px;
     }
 
     .home-advertising {
         display: flex;
         width: 100%;
         height: 240px;
+        margin-bottom:60px;
     }
 
     .home-advertising > img:first-child {
@@ -1875,7 +1891,7 @@ form div {
         display: flex;
         overflow: hidden;
         width: fit-content;
-        gap: 20px;
+        gap: 12px;
     }
 
     .home-latest-releases-display{
@@ -1888,7 +1904,6 @@ form div {
         justify-content: center;
         align-items: center;
         height: 36px;
-        border: 0.5px solid #E9EFF3;
         background: transparent;
         border-radius: 0PX;
         margin-right: 6px;
@@ -1898,6 +1913,25 @@ form div {
         text-decoration: none;
         font-size: 16px;
         padding:0px;
+        cursor:pointer;
+        outline: 2px solid;
+        outline-color: #E9EFF380;
+        outline-offset: 15px;
+        transition: all 600ms cubic-bezier(0.2, 0, 0, 0.8);
+    }
+
+    .home-latest-releases .home-latest-see-more a{
+        text-decoration: none;
+        font-size: 14px;
+        padding: 0px;
+        margin: 0px;
+        
+    }
+    .home-latest-releases .home-latest-see-more a:hover {
+      color: #f3831bdf;
+      outline-color: rgba(71, 126, 232, 0);
+      outline-offset: 200px;
+      font-size: 25px;
     }
     .home .material-icons.md-33 {
         font-size: 33px;
@@ -2489,7 +2523,7 @@ form div {
         font-size: 14px;
     }
 
-   .btn-disabled-latest-realeses{
+    .home-latest-releases .btn-disabled-latest-realeses{
         pointer-events: none;
         color: #353535;
         background:linear-gradient(258.4deg, rgba(50, 114, 172, 0.15) 9.17%, rgba(2, 33, 63, 0) 220.5%);
