@@ -1,67 +1,57 @@
-document.addEventListener("DOMContentLoaded",function (){ 
-	let carousel = document.querySelector("#home-latest-releases-container");
-	let carouselWidth = carousel.getBoundingClientRect().width;
-	let carouselPos =0;
-	let btnFordward =  document.querySelector("#home-latest-releases-back-btn");
-	let btnBackward =document.querySelector("#home-latest-releases-next-btn");
-	const GAP = 12; // GAP between game cards
-	let v = document.querySelector("#home-latest-releases-display").getBoundingClientRect().width;
-	let clickPosition = 0;
+
+	let carouselLatestReleases = document.querySelector("#home-latest-releases-container");
+	let carouselWidthLatestReleases = carouselLatestReleases.getBoundingClientRect().width;
+	let carouselPosLatestReleases = 0;
+	let btnForwardLatestReleases = document.querySelector("#home-latest-releases-back-btn");
+	let btnBackwardLatestReleases = document.querySelector("#home-latest-releases-next-btn");
+	const GAP_CAROUSEL_LATEST_RELEASE = 12; // GAP between game cards
+	let visorLatestReleases = document.querySelector("#home-latest-releases-display").getBoundingClientRect().width;
+	let clickPositionLatestRelease = 0;
 
 
-	btnFordward.addEventListener('click',()=>{
-		clickPosition +=1;	 
+	btnForwardLatestReleases.addEventListener('click', () => {
+		clickPositionLatestRelease += 1;
 		let visorWidth = document.querySelector(".home-latest-releases-display").getBoundingClientRect().width;
-		console.log(visorWidth);
-		 console.log("carousel pos",carouselPos);
-		 console.log("carousel width",carouselWidth);
-
-		let carouselContainer = document.querySelector("#home-latest-releases-container");
-	   
-		carouselPos = ((Math.round(Math.floor( carouselPos + visorWidth)/visorWidth)) * visorWidth) + (GAP * ((Math.round(Math.floor( carouselPos + visorWidth )/visorWidth))));
-		console.log("carousel pos",carouselPos);
-		if(carouselPos>0){
-			btnBackward.classList.remove("btn-disabled-latest-realeses");
+		carouselPosLatestReleases = ((Math.round(Math.floor(carouselPosLatestReleases + visorWidth) / visorWidth)) * visorWidth) + (GAP_CAROUSEL_LATEST_RELEASE * ((Math.round(Math.floor(carouselPosLatestReleases + visorWidth) / visorWidth))));
+		if (carouselPosLatestReleases > 0) {
+			btnBackwardLatestReleases.classList.remove("btn-disabled-latest-realeses");
 		}
-			if(carouselPos<=carouselWidth) {
-				if((carouselPos + visorWidth + GAP) > (carouselWidth)){
-					carouselPos = carouselWidth -  visorWidth;
-					console.log(carouselPos);
-					carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
-					carousel.style.transition=" all 800ms"
-					btnFordward.classList.add("btn-disabled-latest-realeses");
-					return;
-				}else {
-					carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
-					carousel.style.transition = " all 800ms";
-				}
+		if (carouselPosLatestReleases <= carouselWidthLatestReleases) {
+			if ((carouselPosLatestReleases + visorWidth + GAP_CAROUSEL_LATEST_RELEASE) > (carouselWidthLatestReleases)) {
+				carouselPosLatestReleases = carouselWidthLatestReleases - visorWidth;
+				console.log(carouselPosLatestReleases);
+				carouselLatestReleases.setAttribute("style", `transform:translate(-${carouselPosLatestReleases}px)`);
+				carouselLatestReleases.style.transition = " all 800ms"
+				btnForwardLatestReleases.classList.add("btn-disabled-latest-realeses");
+				return;
+			} else {
+				carouselLatestReleases.setAttribute("style", `transform:translate(-${carouselPosLatestReleases}px)`);
+				carouselLatestReleases.style.transition = " all 800ms";
 			}
-			else{
-				btnFordward.classList.add("btn-disabled-latest-realeses");
-			}
+		} else {
+			btnForwardLatestReleases.classList.add("btn-disabled-latest-realeses");
+		}
 	});
 
-	btnBackward.addEventListener('click',()=>{
-		clickPosition -=1;
-		
+	btnBackwardLatestReleases.addEventListener('click', () => {
+		clickPositionLatestRelease -= 1;
+
 
 		let visorWidth = document.querySelector("#home-latest-releases-display").getBoundingClientRect().width;
-		carouselPos = carouselPos - visorWidth - GAP;
-		if(carouselPos>=0){
-			carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
-			carousel.style.transition=" all 800ms";
-			if(carouselPos<=0) btnBackward.classList.add("btn-disabled-latest-realeses");
-		}
-		else{
-			carouselPos = 0;
-			carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
-			carousel.style.transition=" all 800ms";			
-			btnBackward.classList.add("btn-disabled-latest-realeses");
-			btnFordward.classList.remove("btn-disabled-latest-realeses");
+		carouselPosLatestReleases = carouselPosLatestReleases - visorWidth - GAP_CAROUSEL_LATEST_RELEASE;
+		if (carouselPosLatestReleases >= 0) {
+			carouselLatestReleases.setAttribute("style", `transform:translate(-${carouselPosLatestReleases}px)`);
+			carouselLatestReleases.style.transition = " all 800ms";
+			if (carouselPosLatestReleases <= 0) btnBackwardLatestReleases.classList.add("btn-disabled-latest-realeses");
+		} else {
+			carouselPosLatestReleases = 0;
+			carouselLatestReleases.setAttribute("style", `transform:translate(-${carouselPosLatestReleases}px)`);
+			carouselLatestReleases.style.transition = " all 800ms";
+			btnBackwardLatestReleases.classList.add("btn-disabled-latest-realeses");
+			btnForwardLatestReleases.classList.remove("btn-disabled-latest-realeses");
 		}
 	});
 
 
 
 
-});
