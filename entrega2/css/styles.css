@@ -2053,30 +2053,47 @@ form div {
     }
 
     .home-card-trial, .home-card-new {
-        height: 28px;
+      /*  height: 28px;
         width: 63px;
         transform: skewX(114deg) rotate(41deg);
         position: fixed;
         bottom: 244px;
-        right: 120px;
+        right: 120px;*/
+        display: block;
+        position: absolute;
+        top: -12px;
+        left: -1px;
+        width: 97px;
+        height: 46px;
+        line-height: 50px;
+        text-align: initial;
+        transform:rotate(2deg) skewY(320deg);
+        padding-left: 11px;
+    
     }
+    .home-card-trial > p, .home-card-new > p{
+        transform: skewX(25deg) rotate(359deg);
+        position: absolute;
+        left: 14px;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: -0.5px;
 
+    }
+    .home-card-trial > p{
+        font-size: 20px;
+        left:19px;
+    }
     .home-card-trial {
         background-color: #E5770E;
+        color:#040B14;
     }
 
     .home-card-new {
         background-color: #3272AC;
-        width: 33px;
+        color:#E9EFF3;
     }
 
-    .home-trial-text {
-        color: #2B2727;
-        position: relative;
-        left: -10px;
-        top: -310px;
-        font-size: 18px;
-    }
 
     .home-carrousel-category, .home-carrousel-recommended, .home-latest {
         margin-bottom: 50px;
