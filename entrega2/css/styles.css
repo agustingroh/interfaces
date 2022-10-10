@@ -462,6 +462,10 @@ form div {
     padding-bottom: 3em;
 }
 
+.home-carrousel-recommended .carousel-pos{
+    padding-bottom: 0em;
+}
+
 .bullet-carousel-position , .bullet-carousel-position-category{
     border-radius: 100%;
     height: 0.6em;
@@ -1930,7 +1934,7 @@ form div {
         display: flex;
         justify-content: center;
         background-color: #02213F;
-        margin: 10px;
+        margin: 3px;
     }
 
     .home-latest-releases-image > div {
@@ -1948,7 +1952,7 @@ form div {
     .home-latest-releases-image-container div {
         display: flex;
         padding: 6px 0px;
-        height: 114px;
+        height: 99px;
         width: auto;
         margin-top: 5px;
     }
@@ -1972,7 +1976,7 @@ form div {
         justify-content: space-between;
         align-items: baseline;
         position: relative;
-        top: 13px;
+        top: 31px;
     }
 
     .home-latest .home-latest-releases-container {
