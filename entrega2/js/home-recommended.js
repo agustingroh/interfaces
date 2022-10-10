@@ -41,10 +41,11 @@
         clickPositionRecommended += 1;
         positionBulletRecommended(clickPositionRecommended);
         let visorWidth = document.querySelector("#home-carousel-recommended-display").getBoundingClientRect().width;
-        carouselPosRecommended = ((Math.round(Math.floor(carouselPosRecommended + visorWidth) / visorWidth)) * visorWidth) + (GAP_CAROUSEL_RECOMMENDED * ((Math.round(Math.floor(carouselPosRecommended + visorWidth) / visorWidth))));
+        carouselPosRecommended =  carouselPosRecommended + visorWidth + GAP_CAROUSEL_RECOMMENDED;
         if (carouselPosRecommended > 0) {
             btnBackwardRecommended.classList.remove("btn-disabled");
         }
+
         if (carouselPosRecommended <= carouselWidthRecommended) {
             if ((carouselPosRecommended + visorWidth + GAP_CAROUSEL_RECOMMENDED) >= (carouselWidthRecommended)) {
                 carouselPosRecommended = carouselWidthRecommended - visorWidth;

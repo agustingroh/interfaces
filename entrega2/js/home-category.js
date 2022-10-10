@@ -31,7 +31,7 @@
 		positionBullet(clickPositionCategory);
 		let visorWidth = document.querySelector("#home-carousel-category-display").getBoundingClientRect().width;
 
-		carouselPosCategory = ((Math.round(Math.floor(carouselPosCategory + visorWidth) / visorWidth)) * visorWidth) + (GAP_CAROUSEL_CATEGORY * ((Math.round(Math.floor(carouselPosCategory + visorWidth) / visorWidth))));
+		carouselPosCategory = carouselPosCategory + visorWidth + GAP_CAROUSEL_CATEGORY; //((Math.round(Math.floor(carouselPosCategory + visorWidth) / visorWidth)) * visorWidth) + (GAP_CAROUSEL_CATEGORY * ((Math.round(Math.floor(carouselPosCategory + visorWidth) / visorWidth))));
 		if (carouselPosCategory > 0) {
 			btnBackwardCategory.classList.remove("btn-disabled");
 		}
@@ -56,11 +56,9 @@
 		clickPositionCategory -= 1;
 		positionBullet(clickPositionCategory);
 
-
 		if(carouselPosCategory < carouselWidthCategory){
 			btnForwardCategory.classList.remove("btn-disabled");
 		}
-
 
 		let visorWidth = document.querySelector("#home-carousel-category-display").getBoundingClientRect().width;
 		carouselPosCategory = carouselPosCategory - visorWidth - GAP_CAROUSEL_CATEGORY;
