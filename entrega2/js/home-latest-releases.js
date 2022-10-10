@@ -30,7 +30,6 @@
 				btnBackwardLatestReleases.classList.remove("btn-disabled-latest-realeses");
 			}
 		} else {
-			console.log("aca");
 			btnForwardLatestReleases.classList.add("btn-disabled-latest-realeses");
 
 		}
