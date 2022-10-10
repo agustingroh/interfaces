@@ -1810,7 +1810,7 @@ form div {
     }
 
     .breadcrumb {
-        padding: 1em 0 0.5em 1em;
+        padding: 1em 0 0.5em 1.5em;
     }
 
     .breadcrumb ul {
@@ -2161,7 +2161,7 @@ form div {
         width: 97%;
         justify-content: space-between;
         flex-flow: row;
-        padding-left: 1em;
+        padding-left: 1.5em;
         padding-top: 1.5em;
         padding-right: 1em;
     }
@@ -2176,6 +2176,13 @@ form div {
         font-size: 21px;
         line-height: 28px;
         letter-spacing: 0.065em;
+        transition: all 0.3s ease-out;
+    }
+
+    .share-btn:hover {
+        box-shadow: 0 0.5em 0.5em -0.4em  #F3851B;
+        transform: translateY(-0.25em);
+        transform:scale(1.1);
     }
 
     .submergeBlock-game {
@@ -2187,7 +2194,7 @@ form div {
         height: 30em;
         overflow: hidden;
         top: 95px;
-        margin-left: 1em;
+        margin-left: 1.5em;
         margin-right: 1em;
         margin-top: 0.5em;
         z-index: -5;
@@ -2336,7 +2343,7 @@ form div {
         width: 100%;
         justify-content: flex-start;
         flex-flow: column;
-        padding: 4em 0 0 1.1em;
+        padding: 4em 0 0 1.5em;
         gap: 1.5em;
     }
 
@@ -2377,7 +2384,7 @@ form div {
     }
 
     .submergeBlock-instructions, .submergeBlock-controls-container, .submergeBlock-comments-container, .submergeBlock-comment-review-container {
-        padding: 0 1.1em 1.5em 1.1em;
+        padding: 0 1.1em 1.5em 1.5em;
     }
 
     .submergeBlock-instructions h2, .submergeBlock-controls-container h2, .submergeBlock-comments-container h2, .submergeBlock-comment-review-container h2 {
@@ -2493,6 +2500,7 @@ form div {
         display: flex;
         flex-flow: column;
         gap: 0.8em;
+        padding-left: 1.3em;
 
     }
 
@@ -2535,7 +2543,7 @@ form div {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 7%;
+        width: 6%;
         background-color: #F3851B;
         height: 3.4em;
     }
