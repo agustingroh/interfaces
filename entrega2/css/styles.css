@@ -84,12 +84,10 @@ h4{
 
 .logo-loader-index-container img {
     position: relative;
-    top:1em;
+    top:1.8em;
+    left: -0.4em;
     width: 10em;
 }
-
-
-
 
 
     /*********************************Nav bar*********************************/
@@ -593,7 +591,7 @@ footer{
     background: url("../img/smoke-right-new-release.png") no-repeat;
     position: absolute;
     width: 80em;
-    top:46em;
+    top:50em;
     left: 44em;
     z-index: -4;
     height: 80em;
@@ -1065,6 +1063,20 @@ footer{
    width:690px;
     height:412px;
 }
+
+.submergeBlock-img-video{
+    position: relative;
+    z-index: -1;
+    top:-116px;
+}
+
+.submergeBlock-img-btn-video{
+    position: relative;
+    z-index: 10;
+    top: 140px;
+    left: 269px;
+}
+
 .submergeBlock-carousel-slide{
     animation: slide 20s infinite;;
 
@@ -2376,7 +2388,6 @@ form div {
 
     .submergeBlock-history-container {
         display: flex;
-        width: 100%;
         justify-content: flex-start;
         flex-flow: column;
         padding: 4em 0 0 1.5em;
@@ -2569,6 +2580,7 @@ form div {
 
     .submergeBlock-user-data {
         display: flex;
+        padding-top: 0.4em;
         justify-content: flex-start;
         gap: 0.2em;
         width: 100%;
@@ -2577,17 +2589,17 @@ form div {
 
     .submergeBlock-comment-review-photo {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        width: 6%;
-        background-color: #F3851B;
-        height: 3.4em;
+        padding-left: 0.8em;
+        width: 4%;
+        height: 2.4em;
     }
 
     .submergeBlock-comment-label {
         display: flex;
         width: 60%;
-        height: 3.4em;
+        height: 2.4em;
         justify-content: space-evenly;
         flex-flow: column;
     }
@@ -2608,7 +2620,7 @@ form div {
 
     .submergeBlock-comment-review > div {
         padding-top: 0.3em;
-        padding-left: 5em;
+        padding-left: 4em;
     }
 
     .submergeBlock-comments-votes-container {
