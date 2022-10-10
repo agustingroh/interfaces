@@ -743,7 +743,14 @@ footer{
     background-color: #3272AC36;
     display: flex;
     height: 100%;
+    display: flex;
+    flex-flow: column;
     padding: 5px 2px 0px 6px;
+}
+
+.newRelease-label p{
+    color:#E9EFF3;
+    font-size: 12px;
 }
 
 .newRelease-release-date-container{
@@ -765,10 +772,7 @@ footer{
     padding: 5px 3px 0px 3px;
 
 }
-.newRelease-label p{
-    font-size: 16px;
 
-}
 .newRelease-price-label{
     display: flex;
     justify-content: center;
@@ -780,7 +784,7 @@ footer{
 .newRelease-price-label h3 {
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;
     letter-spacing: 0.065em;
 }
@@ -905,7 +909,7 @@ footer{
 
 .newRelease-new-sale article div p {
     font-size: 11px;
-    color: #C1BDBDAB;
+    color: #ebebebab;;
 }
 
 .newRelease-new-sale article div ~ div {
