@@ -500,6 +500,7 @@ footer{
 .footer-returns{
     grid-area:returns; 
     padding-top:7px;
+    width: 47%;
 }
 
 
@@ -1439,6 +1440,44 @@ form div {
     background-color: #14243B;
     filter: drop-shadow(4px 5px 4px rgb(26, 72, 114, 0.62));
 }
+.home-card-trial, .home-card-new {
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: -1px;
+    width: 63px;
+    height: 23px;
+    line-height: 50px;
+    text-align: initial;
+    transform:rotate(2deg) skewY(320deg);
+    padding-left: 11px;
+
+}
+
+
+.home-card-trial > p, .home-card-new > p{
+    transform: skewX(198deg) rotate(716deg);
+    position: absolute;
+    left: 2px;
+    top: -12px;
+    font-size: 10px;
+    font-weight: bold;
+
+}
+
+.home-card-trial > p{
+    left:10px;
+}
+
+.home-card-trial {
+    background-color: #E5770E;
+    color:#040B14;
+}
+
+.home-card-new {
+    background-color: #3272AC;
+    color:#E9EFF3;
+}
 .home-carrousel-display{
     gap: 9px;
     margin:0px 3px 0px 3px;
@@ -1497,31 +1536,6 @@ form div {
     left: -13px
 }
 
-.home-card-trial,.home-card-new{
-    height: 28px;
-    width: 63px;
-    transform: skewX(114deg) rotate(41deg);
-    position: fixed;
-    bottom: 244px;
-    right: 120px;
-}
-
-.home-card-trial{
-    background-color: #E5770E;
-}
-
-.home-card-new{
-    background-color: #3272AC;
-    width: 33px;
-}
-
-.home-trial-text{
-    color:#2B2727;
-    position: relative;
-    left: -10px;
-    top: -310px;
-    font-size: 18px;
-}
 
 @media only screen and (min-width: 768px) {
 
@@ -1605,7 +1619,7 @@ form div {
 
     /*footer*/
     footer {
-        grid-template-columns: 278px 200px 220px 180px 180px 200px;
+        grid-template-columns: 278px 200px 220px 180px 160px 307px;
         grid-template-rows: 30px 230px 80px;
         grid-gap: 15px;
         grid-template-areas:
@@ -1855,17 +1869,22 @@ form div {
 
     }
 
-    .home h1, .home-advertising {
+    .home h1{
         padding: 15px 0px 15px 30px;
     }
 
     .home-advertising {
         display: flex;
-        width: 100%;
         height: 240px;
         margin-bottom:60px;
-    }
+        position: relative;
+        left: 70px;
+        top: 31px;
 
+    }
+    .home-advertising-container{
+        overflow: hidden;
+    }
     .home-advertising > img:first-child {
         width: 61%;
     }
@@ -1874,7 +1893,10 @@ form div {
         position: relative;
         left: -220px;
         width: 39%;
+    }
 
+    .home-advertising div:last-child:hover{
+        filter:drop-shadow(2px 4px 15px #579FE0);
     }
 
     .home-latest-releases {
@@ -1990,7 +2012,7 @@ form div {
         display: flex;
         flex-flow: row;
         align-items: center;
-        padding: 18px 6px;
+        padding: 18px 0px;
         overflow: hidden;
     }
 
@@ -2072,7 +2094,36 @@ form div {
         position: relative;
         left: 130px;
         top: 6px;
+        z-index: 1;
+        overflow: hidden;
     }
+
+      .home-carrousel-card button::after {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        color:#040B14;
+        transform: scale(0, 0) rotate(-180deg);
+        content: "";
+         background: #f3851b;
+        position: absolute;
+        z-index: -1;
+        padding: 0.85em 0.75em;
+        display: block;
+        transition: all 0.3s ease;
+
+      }
+      .home-carrousel-card button:hover::after {
+        transform: scale(1,1) rotate(0deg);
+        transition: all 0.4s ease-out;
+
+
+      }
+      .home-carrousel-card button:hover{
+        color:#040B14;
+        box-shadow: 0 0 8px #f3851b;
+      }
 
     .home-carrousel-card button .material-icons.md-42 {
         font-size: 60px;
@@ -2101,24 +2152,17 @@ form div {
     }
 
     .home-card-trial, .home-card-new {
-      /*  height: 28px;
-        width: 63px;
-        transform: skewX(114deg) rotate(41deg);
-        position: fixed;
-        bottom: 244px;
-        right: 120px;*/
         display: block;
         position: absolute;
         top: -12px;
         left: -1px;
         width: 97px;
         height: 46px;
-        line-height: 50px;
-        text-align: initial;
-        transform:rotate(2deg) skewY(320deg);
+        transform:rotate(2deg) skewY(322deg);
         padding-left: 11px;
     
     }
+
     .home-card-trial > p, .home-card-new > p{
         transform: skewX(25deg) rotate(359deg);
         position: absolute;
@@ -2126,20 +2170,11 @@ form div {
         font-size: 18px;
         font-weight: bold;
         letter-spacing: -0.5px;
-
+        line-height: 71px;
     }
     .home-card-trial > p{
         font-size: 20px;
         left:19px;
-    }
-    .home-card-trial {
-        background-color: #E5770E;
-        color:#040B14;
-    }
-
-    .home-card-new {
-        background-color: #3272AC;
-        color:#E9EFF3;
     }
 
 
@@ -2636,8 +2671,6 @@ form div {
         right: 10px;
     }
 
-
-
     .modal {
         position: fixed;
         left: 0;
@@ -2743,6 +2776,5 @@ form div {
         border-radius: 15px;
         background-color:#02213F;
     }
-
 
 }
