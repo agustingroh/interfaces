@@ -500,7 +500,7 @@ footer{
 .footer-returns{
     grid-area:returns; 
     padding-top:7px;
-    width: 47%;
+    width: 100%;
 }
 
 
@@ -1633,6 +1633,7 @@ form div {
     }
 
     .footer-returns {
+        width: 47%;
         right: -159px;
         padding-top: 16px;
     }
