@@ -592,7 +592,7 @@ footer{
     position: absolute;
     width: 80em;
     top:50em;
-    left: 44em;
+    left: 50em;
     z-index: -4;
     height: 80em;
 }
@@ -1893,10 +1893,10 @@ form div {
     .home-advertising {
         display: flex;
         height: 240px;
-        margin-bottom:60px;
+        margin-bottom:100px;
         position: relative;
-        left: 70px;
-        top: 31px;
+        left: 90px;
+        top: 51px;
 
     }
     .home-advertising-container{
@@ -2194,8 +2194,10 @@ form div {
         left:19px;
     }
 
-
-    .home-carrousel-category, .home-carrousel-recommended, .home-latest {
+    .home-latest{
+        margin-bottom:95px;
+    }
+    .home-carrousel-category, .home-carrousel-recommended {
         margin-bottom: 50px;
     }
 
