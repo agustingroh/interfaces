@@ -27,9 +27,12 @@
 			} else {
 				carouselLatestReleases.setAttribute("style", `transform:translate(-${carouselPosLatestReleases}px)`);
 				carouselLatestReleases.style.transition = " all 800ms";
+				btnBackwardLatestReleases.classList.remove("btn-disabled-latest-realeses");
 			}
 		} else {
+			console.log("aca");
 			btnForwardLatestReleases.classList.add("btn-disabled-latest-realeses");
+
 		}
 	});
 
