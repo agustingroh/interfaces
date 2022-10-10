@@ -52,7 +52,6 @@ let clickPosition = 0;
             if(carouselPos<=carouselWidth) {
                 if((carouselPos + visorWidth + GAP) > (carouselWidth)){
                     carouselPos = carouselWidth -  visorWidth;
-                    console.log(carouselPos);
                     carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
                     carousel.style.transition=" all 800ms"
                     btnFordward.classList.add("btn-disabled");
