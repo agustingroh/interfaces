@@ -6,11 +6,14 @@ class Coin {
     boardY
     ctx
     color
-    constructor(ctx,color) {
+
+    constructor(ctx,color,radio) {
         this.ctx =  ctx;
         this.color = color;
         this.x =  null;
         this.y =  null;
+        this.radio = radio;
+
     }
 
 
@@ -51,40 +54,42 @@ class Coin {
         this.y = this.boardY;
     }
 
+    getRadio(){
+        return this.radio;
+    }
+
     getY(){
         return this.y;
     }
 
     returnToBoard(){
         ctx.beginPath();
-        ctx.arc(this.boardX, this.boardY, 25, 0, 2 * Math.PI, true);
+        ctx.arc(this.boardX, this.boardY, this.getRadio(), 0, 2 * Math.PI, true);
         ctx.strokeStyle = "#000b23";
         ctx.stroke();
         ctx.fillStyle = this.color;
         this.ctx.beginPath();
-        this.ctx.arc(this.boardX,this.boardY ,25,0,2*Math.PI,true);
+        this.ctx.arc(this.boardX,this.boardY ,this.getRadio(),0,2*Math.PI,true);
         this.ctx.fill();
     }
-
-
 
     draw(stroke){
         if(stroke) {
             ctx.beginPath();
-            ctx.arc(this.x, this.y, 25, 0, 2 * Math.PI, true);
+            ctx.arc(this.x, this.y, this.getRadio(), 0, 2 * Math.PI);
             ctx.strokeStyle = "#000b23";
             ctx.stroke();
         }
         ctx.fillStyle = this.color;
         this.ctx.beginPath();
-        this.ctx.arc(this.x,this.y ,25,0,2*Math.PI,true);
+        this.ctx.arc(this.x,this.y ,this.getRadio(),0,2*Math.PI);
         this.ctx.fill();
     }
 
     isSelected(x,y){
         let aux = (this.x - x) * (this.x - x) + (this.y - y) * (this.y - y);
         let dist = Math.sqrt(aux);
-        let r = 25;
+        let r = this.getRadio();
         if(dist < r) return true;
         return false;
     }

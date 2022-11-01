@@ -2,12 +2,10 @@ class Game {
 
     constructor(config) {
         this.config = config;
-        this.board = new Board(config.ctx,config.boardConfig);
-       // this.board.init();
+        this.board = new Board(config.ctx,config);
         this.player1 = new Player(this.config.namePlayer1,this);
         this.player2 = new Player(this.config.namePlayer2,this);
         this.init();
-       // this.initEvents();
         this.selectedCoin = null;
     }
 
@@ -16,7 +14,6 @@ class Game {
         let coinsPlayer1 = this.getCoins(this.config.colorCoinPlayer1);
         this.drawCoinsOnBoard(coinsPlayer1,this.board.getPositionX() -  50);
         this.player1.setCoins(coinsPlayer1);
-
         let coinsPlayer2 =  this.getCoins(this.config.colorCoinPlayer2);
         this.drawCoinsOnBoard(coinsPlayer2,this.board.getPositionX() + this.board.getSize() + 50);
         this.player2.setCoins(coinsPlayer2);
@@ -29,14 +26,14 @@ class Game {
         let coinsPlayer = [];
         let coins = (this.config.boardConfig * this.config.boardConfig / 2)
         for(let i=0; i<coins ; i++){
-            coinsPlayer.push(new Coin(this.config.ctx,color));
+            coinsPlayer.push(new Coin(this.config.ctx,color,this.config.coinSize));
         }
         return coinsPlayer;
     }
 
     drawCoinsOnBoard(coins,x){
         let posX = x;
-        let posY =  this.board.getPositionY() + this.board.getSize() - 25;
+        let posY =  this.board.getPositionY() + this.board.getSize() - 20;
         coins.forEach((c,index)=>{
             c.setX(posX);
             c.setInitX(posX);
@@ -44,7 +41,7 @@ class Game {
             c.setIndex(index);
             c.setY(posY);
             c.draw(true);
-            posY = posY - 20;
+            posY = posY - 15;
         });
     }
 
@@ -78,9 +75,9 @@ class Game {
 
 
     getMousePosition(event){
-        let rect = this.config.canvas.getBoundingClientRect();
-        let x = event.clientX - rect.left;
-        let y = event.clientY - rect.top;
+        const transform = this.config.ctx.getTransform();
+        let x = event.offsetX - transform.e;
+        let y = event.offsetY - transform.f;
         return { x, y};
     }
 
@@ -91,6 +88,7 @@ class Game {
 
     mouseMove(event){
             if (this.selectedCoin) {
+                let rect = this.config.canvas.getBoundingClientRect();
             this.reDraw();
             let pos = this.getMousePosition(event);
             this.selectedCoin.setX(pos.x);
