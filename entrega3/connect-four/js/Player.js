@@ -4,7 +4,7 @@ class Player {
 
 
     constructor(name) {
-        this.name= name;
+        this.name = name;
         this.init();
         this.coins =[];
     }
