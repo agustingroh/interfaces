@@ -1,16 +1,18 @@
 class Game {
-
+actualPlayer = null;
     constructor(config) {
         this.config = config;
         this.board = new Board(config.ctx,config);
         this.player1 = new Player(this.config.namePlayer1,this);
         this.player2 = new Player(this.config.namePlayer2,this);
+        this.shifter =  new Shifter(this.player1,this.player2,this);
         this.init();
         this.selectedCoin = null;
     }
 
     init() {
         this.board.init();
+
         let coinsPlayer1 = this.getCoins(this.config.colorCoinPlayer1);
         this.drawCoinsOnBoard(coinsPlayer1,this.board.getPositionX() -  50);
         this.player1.setCoins(coinsPlayer1);
@@ -19,6 +21,9 @@ class Game {
         this.player2.setCoins(coinsPlayer2);
         this.initEvents();
         this.selectedCoin = null;
+
+
+     this.actualPlayer =   this.shifter.getInitPlayer();
     }
 
 
@@ -72,8 +77,6 @@ class Game {
         });
     }
 
-
-
     getMousePosition(event){
         const transform = this.config.ctx.getTransform();
         let x = event.offsetX - transform.e;
@@ -83,12 +86,11 @@ class Game {
 
     mouseDown(event) {
       let pos = this.getMousePosition(event);
-      this.selectedCoin = this.player1.getCoinByPosition(pos.x,pos.y);
+      this.selectedCoin = this.actualPlayer.getCoinByPosition(pos.x,pos.y);
     }
 
     mouseMove(event){
             if (this.selectedCoin) {
-                let rect = this.config.canvas.getBoundingClientRect();
             this.reDraw();
             let pos = this.getMousePosition(event);
             this.selectedCoin.setX(pos.x);
@@ -106,7 +108,8 @@ class Game {
              this.board.addCoin(column,Object.assign(this.selectedCoin));
               this.reDraw();
               this.selectedCoin = null;
-             if(this.player1.getCoins().length ===0) setTimeout(this.notify,10);
+              this.actualPlayer=this.shifter.getNext();
+             if(this.actualPlayer.getCoins().length ===0) setTimeout(this.notify,10);
           }else {
               this.returnCoinToInitPosition();
           }
@@ -121,9 +124,9 @@ class Game {
     }
 
     returnCoinToInitPosition(){
-        let coins = this.player1.getCoins();
+        let coins = this.actualPlayer.getCoins();
         coins.splice(this.selectedCoin.getIndex(), 0, this.selectedCoin)
-        this.player1.setCoins(coins);
+        this.actualPlayer.setCoins(coins);
         this.selectedCoin = null;
         this.reDraw();
     }
@@ -144,6 +147,13 @@ class Game {
             this.mouseOut(e)
         });
 
+    }
+
+    finishTurn(){
+        console.log("Termino el turno");
+        this.returnCoinToInitPosition();
+        this.actualPlayer = null;
+        this.actualPlayer = this.shifter.getNext();
     }
 
 
