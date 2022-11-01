@@ -2801,4 +2801,13 @@ form div {
         background-color:#02213F;
     }
 
+    .game{
+        display: flex;
+        flex-flow: row;
+        border: 0.001em solid #1b1919;
+        margin-left: 1.5em;
+        margin-right: 1em;
+        margin-top: 0.5em;
+    }
+
 }

@@ -1,17 +1,24 @@
 class Board {
 board = [];
-space = 65;
-positionX = 200;
-positionY = 120;
+space = 70;
+positionX = 0;
+positionY = 0;
 coinThrowHeigh = 60;
 boundary
-    constructor(ctx,boardConfig) {
+    constructor(ctx,config) {
         this.ctx = ctx;
-        this.boardConfig = boardConfig;
+        this.boardConfig = config.boardConfig;
         this.boundary =  this.boardConfig;
+        this.config = config;
+
     }
 
     init() {
+        const size = this.boardConfig * this.config.coinBoardSpace;
+        let canvasHeight = this.config.canvas.height;
+        let canvasWidth = this.config.canvas.width;
+        this.positionY = (   canvasHeight/2) - (size/2) + (this.config.coinSize * 2) ;
+        this.positionX = (canvasWidth/2) - (size/2) ;
         this.drawBoard();
         this.buildBoard();
     }
@@ -24,9 +31,9 @@ boundary
         if(column<0 || column> this.boundary) return;
         for (let i = this.boundary-1; i >= 0; i--) {
             if (!this.board[i][column]) {
-                let xPos = ((this.space / 2)) + this.positionX + (this.space * column);
+                let xPos = ((this.config.coinBoardSpace / 2)) + this.positionX + (this.config.coinBoardSpace * column);
                 coin.setX(xPos);
-                let yPos = (this.positionY + (i + 1) * (this.space) - (this.space / 2));
+                let yPos = (this.positionY + (i + 1) * (this.config.coinBoardSpace) - (this.config.coinBoardSpace / 2));
                 coin.setY(yPos);
                 this.board[i][column] = coin;
                 return
@@ -52,12 +59,15 @@ boundary
 
 
     drawBoard(){
-        const size = this.boardConfig * this.space;
-        this.ctx.fillStyle = ("#000a34");
-        this.ctx.fillRect (this.positionX , this.positionY, size, size);
-        let posX = this.positionX + (this.space/2);
+        const size = this.boardConfig * this.config.coinBoardSpace;
+        this.ctx.fillStyle = ("green");
+        let canvasHeight = this.config.canvas.height;
+        let canvasWidth = this.config.canvas.width;
+
+         this.ctx.fillRect (this.positionX ,this.positionY, size, size);
+        let posX = this.positionX + (this.config.coinBoardSpace/2);
         for(let i=0 ; i< this.boardConfig ; i++){
-            let posY = this.positionY + (this.space/2);
+            let posY = this.positionY + (this.config.coinBoardSpace/2);
             for(let j=0; j< this.boardConfig ; j++){
                 this.ctx.fillStyle = 'white';
                 this.ctx.beginPath();
@@ -66,11 +76,11 @@ boundary
                 ctx.shadowOffsetX = 5;
                 ctx.shadowOffsetY = 5;
                 this.ctx.shadowInset = true;
-                this.ctx.arc(posX,posY ,25,0,2*Math.PI,true);
+                this.ctx.arc(posX,posY ,this.config.coinSize,0,2*Math.PI,true);
                 this.ctx.fill();
-                posY = posY + this.space;
+                posY = posY + this.config.coinBoardSpace;
             }
-            posX = posX + this.space;
+            posX = posX + this.config.coinBoardSpace;
         }
 
     //    this.ctx.globalCompositeOperation = "source-over";
@@ -81,7 +91,7 @@ boundary
     }
 
     getSize(){
-        return this.boardConfig * this.space;
+        return this.boardConfig * this.config.coinBoardSpace;
     }
 
     getPositionY(){
@@ -105,7 +115,7 @@ boundary
 
     getColumn(x,y){
         if(y<this.positionY && y> this.positionY - this.coinThrowHeigh && x > this.positionX &&  x <  this.positionX + this.getSize() ){
-            const column = Math.floor((x-this.positionX) / this.space);
+            const column = Math.floor((x-this.positionX) / this.config.coinBoardSpace);
             return column;
         }
         return null;
