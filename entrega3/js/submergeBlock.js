@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(){
 
+    document.querySelector("#submergeBlock-play-btn").addEventListener("click",()=>{
+        document.querySelector("#submergeBlock-game").classList.add("hide");
+        document.querySelector("#four-in-line-game").classList.remove("hide");
+    });
 
     const modal = document.querySelector("#modal");
     const main =  document.querySelector("#submergeBlock-main");
@@ -8,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
     socialMediaBtn.addEventListener("click", toggleModal);
     closeButton.addEventListener("click", toggleModal);
     window.addEventListener("click", windowOnClick);
+
 
 document.querySelector("#submergeBlock-carousel").classList.add("submergeBlock-carousel-slide");
 
@@ -32,7 +37,6 @@ document.querySelector("#submergeBlock-carousel").classList.add("submergeBlock-c
             toggleModal();
         }
     }
-
 
 
 });

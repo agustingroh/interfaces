@@ -7,7 +7,6 @@ class Shifter {
      1:null
  };
 
-timer = 0;
     constructor(player1,player2,game) {
         this.playerMapper[0] = player1;
         this.playerMapper[1] = player2;
@@ -16,8 +15,6 @@ timer = 0;
 
 getInitPlayer(){
    this.turn =   Math.floor(Math.random() * 2);
-   console.log(this.turn);
-   this.initTurnTimer();
     return this.playerMapper[this.turn];
 }
 
@@ -29,7 +26,6 @@ getNext(){
         console.log(this.turn);
         if(this.turn===1)this.turn=0;
         else this.turn=1;
-        this.initTurnTimer();
         return this.playerMapper[this.turn];
 }
 
