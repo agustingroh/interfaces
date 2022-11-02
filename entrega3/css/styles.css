@@ -2810,4 +2810,59 @@ form div {
         margin-top: 0.5em;
     }
 
+    .four-in-line-config{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height:690px;
+        flex-flow: column;
+        width:100%;
+        gap:20px;
+    }
+
+    .submergeBlock-game-mode{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-top: -7px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .submergeBlock-game-mode select {
+        background-color: #0563af;
+        color: white;
+        padding: 2px;
+        margin-top: -2px;
+        width: 250px;
+        border: none;
+        font-size: 25px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        -webkit-appearance: button;
+        outline: none;
+        border-radius: 3px;
+        text-align: center;
+    }
+
+    .submergeBlock-game-mode select option {
+        padding: 30px;
+    }
+
+    .game .submergeBlock-start-game-btn{
+        margin-top: 60px;
+        background-color: #f3851b;
+        width: 200px;
+        height: 55px;
+        font-size: 32px;
+        opacity: 0.85;
+
+    }
+
+
+    .hide{
+        display: none;
+    }
+
+
 }
