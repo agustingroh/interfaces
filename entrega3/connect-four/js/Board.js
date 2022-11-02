@@ -3,7 +3,7 @@ board = [];
 space = 70;
 positionX = 0;
 positionY = 0;
-coinThrowHeigh = 100;
+coinThrowHeigh = 90;
 boundary
     constructor(ctx,config) {
         this.ctx = ctx;

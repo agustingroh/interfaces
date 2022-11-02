@@ -1,18 +1,20 @@
-const canvas = document.querySelector("#four-in-line");
-const ctx = canvas.getContext("2d");
+
+    const canvas = document.querySelector("#four-in-line");
+    const ctx = canvas.getContext("2d");
+   const configPanel = document.querySelector("#four-in-line-config");
 
 
-    const coinSizeMapper = {4: 25, 5: 23, 6: 21, 7: 19};
-    const coinBoardSpace = {4: 70, 5: 60, 6: 60, 7: 50};
+    const coinSizeMapper = {4: 40, 5: 35, 6: 33, 7: 30};
+    const coinBoardSpace = {4: 120, 5: 100, 6: 90, 7: 80};
     let gameConfig = {
         namePlayer1: "player1",
         namePlayer2: "player2",
         boardConfig: 4,
         colorCoinPlayer1: null,
         colorCoinPlayer2: null,
+        ctx: ctx,
+        canvas:canvas,
     }
-gameConfig.ctx = ctx;
-gameConfig.canvas = canvas;
 
 
 
@@ -39,11 +41,10 @@ gameConfig.canvas = canvas;
     );
 
 
-
-    const cantFichas= document.querySelector("#submergeBlock-game-boardConfig-coins");
-    cantFichas.addEventListener("change",(e)=>{
+    const cantFichas = document.querySelector("#submergeBlock-game-boardConfig-coins");
+    cantFichas.addEventListener("change", (e) => {
         console.log(cantFichas.value);
-        gameConfig.boardConfig= Number(cantFichas.value);
+        gameConfig.boardConfig = Number(cantFichas.value);
     });
 
     function onCoinSelectionPlayer1(value) {
@@ -57,10 +58,14 @@ gameConfig.canvas = canvas;
 
     function start() {
         console.log(gameConfig);
+        canvas.classList.remove("hide");
+        console.log(configPanel);
+            configPanel.classList.add("hide");
         gameConfig.coinSize = coinSizeMapper[gameConfig.boardConfig];
         gameConfig.coinBoardSpace = coinBoardSpace[gameConfig.boardConfig];
         console.log(gameConfig);
         new Game(gameConfig);
     }
+
 
 
