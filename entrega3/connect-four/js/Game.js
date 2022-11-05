@@ -1,6 +1,11 @@
 class Game {
 actualPlayer = null;
+timer = 0;
+sec = 0;
+minutes = 0;
+timerContainer = document.querySelector("#time");
     constructor(config) {
+        this.timerContainer.innerHTML = (this.minutes < 10 ? "0" + this.minutes : this.minutes) + ":" + (this.sec < 10 ? "0" + this.sec : this.sec);
         this.config = config;
         this.board = new Board(config.ctx,config);
         this.player1 = new Player(this.config.namePlayer1,this);
@@ -8,11 +13,12 @@ actualPlayer = null;
         this.shifter =  new Shifter(this.player1,this.player2,this);
         this.init();
         this.selectedCoin = null;
+
     }
 
     init() {
+        this.timer = setInterval(this.updateTimer,1000,this);
         this.board.init();
-
         let coinsPlayer1 = this.getCoins(this.config.colorCoinPlayer1);
         this.drawCoinsOnBoard(coinsPlayer1,this.board.getPositionX() -  50);
         this.player1.setCoins(coinsPlayer1);
@@ -21,9 +27,19 @@ actualPlayer = null;
         this.player2.setCoins(coinsPlayer2);
         this.initEvents();
         this.selectedCoin = null;
+        this.actualPlayer =   this.shifter.getInitPlayer();
+    }
 
-
-     this.actualPlayer =   this.shifter.getInitPlayer();
+    updateTimer(game){
+        game.timer =  game.timer + 1;
+        game.sec = game.sec + 1;
+        let sec =   game.sec;
+        if(game.sec === 60){
+            game.sec = 0;
+            sec = game.sec;
+            game.minutes = game.minutes + 1;
+        }
+        game.timerContainer.innerHTML = (game.minutes < 10 ? "0" + game.minutes : game.minutes) + ":" + (sec < 10 ? "0" + sec : sec);
     }
 
 

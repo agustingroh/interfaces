@@ -144,10 +144,8 @@
                 <button id="social-media-btn" class="share-btn"><span class="material-icons">share</span>Compartir</button>
             </div>
         </section>
-       <!-- <section class="game" id="four-in-line-game">-->
-        <canvas id="four-in-line" class="hide" width="1400" height="690"></canvas>
-        <div id="four-in-line-config" class="four-in-line-config hide">
-            
+       <!-- <section class="game hide" id="four-in-line-game">-->
+            <div id="four-in-line-config" class="four-in-line-config hide">
             <h1>Configuracion</h1>
             <h3>Modalidad de juego</h3>
             <div>
@@ -176,7 +174,18 @@
             <button class="submergeBlock-start-game-btn" id="submergeBLock-game-start-btn">Start</button>
 
         </div>
-       <!--  </section> -->
+        <section  id="submergeBlock-four-in-line" class="submergeBlock-four-in-line hide">
+            <div>
+                <canvas id="four-in-line" width="800" height="690"></canvas>
+            </div>
+            <div id="submergeBlock-game-status" class="submergeBlock-game-status">
+                <h1>Tiempo</h1>
+                <h1 id="time"></h1>
+                <div>
+
+                </div>
+            </div>
+        </section>
         <!--submerge game-->
         <section class="submergeBlock-game" id="submergeBlock-game">
 
