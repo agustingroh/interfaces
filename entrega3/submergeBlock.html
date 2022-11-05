@@ -144,9 +144,10 @@
                 <button id="social-media-btn" class="share-btn"><span class="material-icons">share</span>Compartir</button>
             </div>
         </section>
-        <section class="game hide" id="four-in-line-game">
+       <!-- <section class="game" id="four-in-line-game">-->
         <canvas id="four-in-line" class="hide" width="1400" height="690"></canvas>
-        <div id="four-in-line-config" class="four-in-line-config">
+        <div id="four-in-line-config" class="four-in-line-config hide">
+            
             <h1>Configuracion</h1>
             <h3>Modalidad de juego</h3>
             <div>
@@ -160,22 +161,22 @@
                 </div>
             </div>
 
-            <div>
+            <div class="submergerBlock-game-config-coins">
                 <h3>Player 1</h3>
-                <button class="submergeBlock-player1-btn" value="green">Green</button>
-                <button class="submergeBlock-player1-btn" value="blue">Blue</button>
-                <button class="submergeBlock-player1-btn" value="yellow">Yellow</button>
+                <button class="submergeBlock-player1-btn btn1" value="green"></button>
+                <button class="submergeBlock-player1-btn btn2" value="blue"></button>
+                <button class="submergeBlock-player1-btn btn3" value="yellow"></button>
             </div>
-            <div>
+            <div  class="submergerBlock-game-config-coins">
                 <h3>Player 2</h3>
-                <button  class="submergeBlock-player2-btn" value="violet">Violet</button>
-                <button  class="submergeBlock-player2-btn" value="orange">Orange</button>
-                <button  class="submergeBlock-player2-btn" value="red">Red</button>
+                <button  class="submergeBlock-player2-btn btn4" value="violet"></button>
+                <button  class="submergeBlock-player2-btn btn5" value="orange"></button>
+                <button  class="submergeBlock-player2-btn btn6" value="red"></button>
             </div>
             <button class="submergeBlock-start-game-btn" id="submergeBLock-game-start-btn">Start</button>
 
         </div>
-        </section>
+       <!--  </section> -->
         <!--submerge game-->
         <section class="submergeBlock-game" id="submergeBlock-game">
 

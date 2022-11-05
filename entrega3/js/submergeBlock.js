@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     document.querySelector("#submergeBlock-play-btn").addEventListener("click",()=>{
         document.querySelector("#submergeBlock-game").classList.add("hide");
-        document.querySelector("#four-in-line-game").classList.remove("hide");
+        document.querySelector("#four-in-line-config").classList.remove("hide");
     });
 
     const modal = document.querySelector("#modal");
