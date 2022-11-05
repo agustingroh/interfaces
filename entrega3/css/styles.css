@@ -2913,23 +2913,23 @@ form div {
     }
 
     .btn1{
-        background-image: url("../img/coin4.jpg.png");
+        background-image: url("../img/coin4.png");
         transition:box-shadow .2s;
     }
     .btn2{
-        background-image: url("../img/coin1.jpg.png");
+        background-image: url("../img/coin1.png");
     }
     .btn3{
-        background-image: url("../img/coin2.jpg.png");
+        background-image: url("../img/coin2.png");
     }
     .btn4{
-        background-image: url("../img/coin3.jpg.png");
+        background-image: url("../img/coin3.png");
     }
     .btn5{
-        background-image: url("../img/coin4.jpg.png");
+        background-image: url("../img/coin4.png");
     }
     .btn6{
-        background-image: url("../img/coin1.jpg.png");
+        background-image: url("../img/coin1.png");
     }
     .bt1:active{
         box-shadow: inset 5px 5px 10px 0 #424242,
@@ -2971,6 +2971,7 @@ form div {
         width: 60px;
         height: 60px;
         border-radius:50%;
+        background-size: cover;
     }
 
 

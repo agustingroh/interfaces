@@ -15,9 +15,8 @@ class Shifter {
         this.playerMapper[0] = player1;
         this.playerMapper[1] = player2;
         this.game = game;
-        console.log(game);
-        this.player1Coin.style.backgroundColor = game.config.colorCoinPlayer1;
-        this.player2Coin.style.backgroundColor = game.config.colorCoinPlayer2;
+        this.player1Coin.style.backgroundImage = `url(${game.config.colorCoinPlayer1})`;
+        this.player2Coin.style.backgroundImage = `url(${game.config.colorCoinPlayer2})`;
         this.player2CoinContainer.style.filter = "blur(4px)";
         this.player1CoinContainer.style.filter = "blur(4px)";
 
@@ -36,7 +35,6 @@ endTurn(){
 }
 
 getNext(){
-        console.log(this.turn);
         if(this.turn===1){
             this.turn=0;
             this.player1CoinContainer.style.filter = "blur(0px)";
