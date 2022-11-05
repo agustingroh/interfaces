@@ -17,7 +17,7 @@ boundary
         const size = this.boardConfig * this.config.coinBoardSpace;
         let canvasHeight = this.config.canvas.height;
         let canvasWidth = this.config.canvas.width;
-        this.positionY = (   canvasHeight/2) - (size/2) + (this.config.coinSize * 2) ;
+        this.positionY = (   canvasHeight/2) - (size/2) + (this.config.coinSize * 2) -25;
         this.positionX = (canvasWidth/2) - (size/2) ;
         this.drawBoard();
         this.buildBoard();
