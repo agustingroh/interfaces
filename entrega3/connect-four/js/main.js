@@ -1,11 +1,13 @@
 
-  const canvas = document.querySelector("#four-in-line");
-  const ctx = canvas.getContext("2d");
-  const configPanel = document.querySelector("#four-in-line-config");
-  const game = document.querySelector("#submergeBlock-four-in-line");
+    const canvas = document.querySelector("#four-in-line");
+    const ctx = canvas.getContext("2d");
+    const configPanel = document.querySelector("#four-in-line-config");
+    const startBtn = document.querySelector("#submergeBLock-game-start-btn");
+    const game = document.querySelector("#submergeBlock-four-in-line");
 
-    const coinSizeMapper = {4: 35, 5: 30, 6: 28, 7: 26};
-    const coinBoardSpace = {4: 90, 5: 80, 6: 70, 7: 68};
+
+    const coinSizeMapper = {4: 40, 5: 35, 6: 33, 7: 30};
+    const coinBoardSpace = {4: 120, 5: 100, 6: 90, 7: 80};
     let gameConfig = {
         namePlayer1: "player1",
         namePlayer2: "player2",
@@ -30,7 +32,7 @@
         })
     });
 
-    let startBtn = document.querySelector("#submergeBLock-game-start-btn");
+
     startBtn.addEventListener("click", () => {
             start();
         }
@@ -44,10 +46,22 @@
 
     function onCoinSelectionPlayer1(value) {
         gameConfig.colorCoinPlayer1 = value;
+        isFormCompleted();
     }
 
     function onCoinSelectionPlayer2(value) {
         gameConfig.colorCoinPlayer2 = value;
+        isFormCompleted();
+    }
+
+    function isFormCompleted() {
+        if(gameConfig.boardConfig && gameConfig.colorCoinPlayer1 && gameConfig.colorCoinPlayer2){
+            startBtn.style.opacity = 1;
+            startBtn.disabled=false;
+        }
+
+
+
     }
 
 

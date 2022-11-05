@@ -2863,9 +2863,11 @@ form div {
         width: 200px;
         height: 55px;
         font-size: 32px;
-        opacity: 0.85;
+        opacity: 0.45;
+        color:#e2dddd;
+    }
 
-}
+
     .submergeBlock-four-in-line{
         display: flex;
         flex-flow: row;
@@ -2884,11 +2886,14 @@ form div {
     }
 
     .submergeBlock-start-game-btn:hover{
-        /*   box-shadow: 10px 10px 100px 6px #f1933a; */
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         background-color: #fb912e;
-        color:#040B14;
+        color:#f7fafb;
         text-decoration: double;
         font-size: 36px;
+      /*  opacity: 1;*/
+        transform: scale(1.1);
+        animation: glowing 20s linear infinite;
 
 
     }
@@ -2909,6 +2914,7 @@ form div {
 
     .btn1{
         background-image: url("../img/coin4.jpg.png");
+        transition:box-shadow .2s;
     }
     .btn2{
         background-image: url("../img/coin1.jpg.png");
@@ -2924,6 +2930,10 @@ form div {
     }
     .btn6{
         background-image: url("../img/coin1.jpg.png");
+    }
+    .bt1:active{
+        box-shadow: inset 5px 5px 10px 0 #424242,
+        inset 0 0 100px 0 #424242;
     }
 
 

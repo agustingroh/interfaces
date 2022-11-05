@@ -52,18 +52,19 @@ timerContainer = document.querySelector("#time");
         return coinsPlayer;
     }
 
-    drawCoinsOnBoard(coins,x){
+    async drawCoinsOnBoard(c,x){
         let posX = x;
         let posY =  this.board.getPositionY() + this.board.getSize() - 20;
-        coins.forEach((c,index)=>{
-            c.setX(posX);
-            c.setInitX(posX);
-            c.setInitY(posY);
-            c.setIndex(index);
-            c.setY(posY);
-            c.draw(true);
+        for ( let i = 0 ; i< c.length ; i ++){
+        
+            c[i].setX(posX);
+            c[i].setInitX(posX);
+            c[i].setInitY(posY);
+            c[i].setIndex(i);
+            c[i].setY(posY);
+            c[i].draw(true);
             posY = posY - 15;
-        });
+        }
     }
 
     clean(){
