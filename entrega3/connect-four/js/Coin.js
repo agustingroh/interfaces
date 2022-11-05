@@ -1,3 +1,4 @@
+
 class Coin {
     x
     y
@@ -7,6 +8,7 @@ class Coin {
     ctx
     color
     image
+
 
     constructor(ctx,color,radio) {
         this.ctx =  ctx;
@@ -94,7 +96,7 @@ class Coin {
             this.image.addEventListener('load', () => {                
                 resolve(true);
             });
-           this.image.src =  'C:/Users/Lara/Desktop/Lara/Interfaces/entrega3/img/coin2.png';
+           this.image.src = this.color;
            
         });
 }
@@ -105,20 +107,8 @@ class Coin {
         this.ctx.arc(this.x,this.y ,this.getRadio(),0,2*Math.PI); 
         this.ctx.fill();
         this.ctx.closePath();
-
-
-     
-
-            this.ctx.drawImage(this.image,this.x,this.y,this.getRadio(),this.getRadio());
-            this.image.src = 'C:/Users/Lara/Desktop/Lara/Interfaces/entrega3/img/coin2.png';
-
-          
-           
-   
-         
-         
-           
-        
+        this.ctx.drawImage(this.image,this.x,this.y,this.getRadio(),this.getRadio());
+        this.image.src = this.color;
 
        /*  if(stroke) {
             ctx.beginPath();
@@ -132,10 +122,8 @@ class Coin {
         this.ctx.beginPath();
         this.ctx.arc(this.x,this.y ,this.getRadio(),0,2*Math.PI);  */  
         // this.ctx.fill();
-   
-         //this.image.src = 'C:/Users/Lara/Desktop/Lara/Interfaces/entrega3/img/coin2.png';
-       
-    
+        //this.image.src = 'C:/Users/Lara/Desktop/Lara/Interfaces/entrega3/img/coin2.png';
+
     }
 
   

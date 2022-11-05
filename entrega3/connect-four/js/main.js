@@ -4,8 +4,6 @@
     const configPanel = document.querySelector("#four-in-line-config");
     const startBtn = document.querySelector("#submergeBLock-game-start-btn");
     const game = document.querySelector("#submergeBlock-four-in-line");
-
-
     const coinSizeMapper = {4: 35, 5: 30, 6: 28, 7: 26};
     const coinBoardSpace = {4: 90, 5: 80, 6: 70, 7: 68};
     let gameConfig = {
@@ -59,15 +57,12 @@
             startBtn.style.opacity = 1;
             startBtn.disabled=false;
         }
-
-
-
     }
 
 
     function start() {
         game.classList.remove("hide");
-            configPanel.classList.add("hide");
+        configPanel.classList.add("hide");
         gameConfig.coinSize = coinSizeMapper[gameConfig.boardConfig];
         gameConfig.coinBoardSpace = coinBoardSpace[gameConfig.boardConfig];
         new Game(gameConfig);
