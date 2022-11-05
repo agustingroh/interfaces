@@ -2,6 +2,7 @@
     const canvas = document.querySelector("#four-in-line");
     const ctx = canvas.getContext("2d");
    const configPanel = document.querySelector("#four-in-line-config");
+   const game = document.querySelector("#submergeBlock-four-in-line")
 
 
     const coinSizeMapper = {4: 40, 5: 35, 6: 33, 7: 30};
@@ -58,7 +59,7 @@
 
     function start() {
         console.log(gameConfig);
-        canvas.classList.remove("hide");
+        game.classList.remove("hide");
         console.log(configPanel);
             configPanel.classList.add("hide");
         gameConfig.coinSize = coinSizeMapper[gameConfig.boardConfig];
