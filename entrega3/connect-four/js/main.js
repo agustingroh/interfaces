@@ -6,8 +6,8 @@
     const game = document.querySelector("#submergeBlock-four-in-line");
 
 
-    const coinSizeMapper = {4: 40, 5: 35, 6: 33, 7: 30};
-    const coinBoardSpace = {4: 120, 5: 100, 6: 90, 7: 80};
+    const coinSizeMapper = {4: 35, 5: 30, 6: 28, 7: 26};
+    const coinBoardSpace = {4: 90, 5: 80, 6: 70, 7: 68};
     let gameConfig = {
         namePlayer1: "player1",
         namePlayer2: "player2",

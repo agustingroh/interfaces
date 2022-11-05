@@ -6,6 +6,7 @@ class Coin {
     boardY
     ctx
     color
+    image
 
     constructor(ctx,color,radio) {
         this.ctx =  ctx;
@@ -13,7 +14,8 @@ class Coin {
         this.x =  null;
         this.y =  null;
         this.radio = radio;
-
+        this.image = null;
+        this.isImgLoaded = false;
     }
 
 
@@ -39,6 +41,19 @@ class Coin {
 
     setY(y){
         this.y=y;
+    }
+
+   async loadImage(){
+    console.log(this.index);
+    return new Promise((resolve,reject)=>{
+        this.image.onload = () => {
+            this.ctx.drawImage(this.image,this.x,this.y,this.getRadio(),this.getRadio());
+            console.log(this.index);
+            resolve(true);
+        }
+    });
+      
+       
     }
 
     setInitX(x){
@@ -73,8 +88,39 @@ class Coin {
         this.ctx.fill();
     }
 
-   async draw(stroke){
-        if(stroke) {
+     loadImage() {        
+        return new  Promise(resolve => {
+             this.image = new Image();
+            this.image.addEventListener('load', () => {                
+                resolve(true);
+            });
+           this.image.src =  'C:/Users/Lara/Desktop/Lara/Interfaces/entrega3/img/coin2.png';
+           
+        });
+}
+
+
+    draw(stroke){        
+        this.ctx.beginPath();
+        this.ctx.arc(this.x,this.y ,this.getRadio(),0,2*Math.PI); 
+        this.ctx.fill();
+        this.ctx.closePath();
+
+
+     
+
+            this.ctx.drawImage(this.image,this.x,this.y,this.getRadio(),this.getRadio());
+            this.image.src = 'C:/Users/Lara/Desktop/Lara/Interfaces/entrega3/img/coin2.png';
+
+          
+           
+   
+         
+         
+           
+        
+
+       /*  if(stroke) {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.getRadio(), 0, 2 * Math.PI);
             ctx.strokeStyle = "#000b23";
@@ -84,11 +130,11 @@ class Coin {
         ctx.fillStyle = this.color;
         console.log("value",this.color);
         this.ctx.beginPath();
-        this.ctx.arc(this.x,this.y ,this.getRadio(),0,2*Math.PI);   
-         this.ctx.fill();
-     // const image = new Image();
-     // image.onload = () => {this.ctx.drawImage(image,0,0,image.naturalWidth,image.naturalHeight);}
-    // image.src =`${this.color}`;
+        this.ctx.arc(this.x,this.y ,this.getRadio(),0,2*Math.PI);  */  
+        // this.ctx.fill();
+   
+         //this.image.src = 'C:/Users/Lara/Desktop/Lara/Interfaces/entrega3/img/coin2.png';
+       
     
     }
 
