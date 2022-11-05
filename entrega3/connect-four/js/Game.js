@@ -15,7 +15,7 @@ timerContainer = document.querySelector("#time");
         this.selectedCoin = null;
     }
 
-    init() {
+    async init() {
         this.timer = setInterval(this.updateTimer,1000,this);
         this.board.init();
         let coinsPlayer1 = this.getCoins(this.config.colorCoinPlayer1);
@@ -52,18 +52,20 @@ timerContainer = document.querySelector("#time");
         return coinsPlayer;
     }
 
-    drawCoinsOnBoard(coins,x){
+      async drawCoinsOnBoard(c,x){
         let posX = x;
         let posY =  this.board.getPositionY() + this.board.getSize() - 20;
-        coins.forEach((c,index)=>{
-            c.setX(posX);
-            c.setInitX(posX);
-            c.setInitY(posY);
-            c.setIndex(index);
-            c.setY(posY);
-            c.draw(true);
+        for ( let i = 0 ; i< c.length ; i ++){
+        
+            c[i].setX(posX);
+            c[i].setY(posY);
+            c[i].setInitX(posX);
+            c[i].setInitY(posY);
+            c[i].setIndex(i);
+            await  c[i].loadImage();
+            c[i].draw(true);
             posY = posY - 15;
-        });
+        }
     }
 
     clean(){
