@@ -13,21 +13,21 @@ timerContainer = document.querySelector("#time");
         this.shifter =  new Shifter(this.player1,this.player2,this);
         this.init();
         this.selectedCoin = null;
-
     }
 
     init() {
         this.timer = setInterval(this.updateTimer,1000,this);
         this.board.init();
         let coinsPlayer1 = this.getCoins(this.config.colorCoinPlayer1);
-        this.drawCoinsOnBoard(coinsPlayer1,this.board.getPositionX() -  50);
+        this.drawCoinsOnBoard(coinsPlayer1,this.board.getPositionX()  -75);
         this.player1.setCoins(coinsPlayer1);
         let coinsPlayer2 =  this.getCoins(this.config.colorCoinPlayer2);
-        this.drawCoinsOnBoard(coinsPlayer2,this.board.getPositionX() + this.board.getSize() + 50);
+        this.drawCoinsOnBoard(coinsPlayer2,this.board.getPositionX() + this.board.getSize() + 75);
         this.player2.setCoins(coinsPlayer2);
         this.initEvents();
         this.selectedCoin = null;
         this.actualPlayer =   this.shifter.getInitPlayer();
+
     }
 
     updateTimer(game){

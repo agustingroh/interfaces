@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -176,13 +175,23 @@
         </div>
         <section  id="submergeBlock-four-in-line" class="submergeBlock-four-in-line hide">
             <div>
-                <canvas id="four-in-line" width="800" height="690"></canvas>
+                <canvas id="four-in-line" width="1000" height="550"></canvas>
             </div>
             <div id="submergeBlock-game-status" class="submergeBlock-game-status">
-                <h1>Tiempo</h1>
-                <h1 id="time"></h1>
-                <div>
-
+                <div class="time-container">
+                    <h1 id="time"></h1>
+                </div>
+                <div class="turn-container">
+                    <div class="player-turn-container" id="player-1-coin-container">
+                        <h2>Player 1</h2>
+                        <div id="player-1-coin" class="player-1-coin">
+                        </div>
+                    </div>
+                    <div class="player-turn-container" id="player-2-coin-container" >
+                            <h2>Player 2</h2>
+                            <div id="player-2-coin" class="player-2-coin">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -3,6 +3,7 @@ class Player {
     coinsCount = 0;
 
 
+
     constructor(name) {
         this.name = name;
         this.init();
