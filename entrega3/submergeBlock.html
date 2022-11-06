@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,26 +26,26 @@
                 <section class="close-container">
                     <button id="close-menu-btn"><span class="material-icons md-24">close</span></button>
                 </section>
-                    <section class="account-container">
-                        <div class="account">
-                            <div class="account-img-container">
-                                <img src="img/account.jpeg">
+                <section class="account-container">
+                    <div class="account">
+                        <div class="account-img-container">
+                            <img src="img/account.jpeg">
+                        </div>
+                        <div>
+                            <div class="user-name-container">
+                                <h4>Ariel</h4>
                             </div>
-                            <div>
-                                <div class="user-name-container">
-                                    <h4>Ariel</h4>
-                                </div>
-                                <div class="email-account-container">
-                                    <p>ariel@gmail.com</p>
-                                </div>
+                            <div class="email-account-container">
+                                <p>ariel@gmail.com</p>
                             </div>
                         </div>
-                        <div class="config-account">
-                            <p class="material-icons md-24">settings</p>
-                        </div>
-                    </section>
-                    <div class="menu-section-divider-account"></div>
-           
+                    </div>
+                    <div class="config-account">
+                        <p class="material-icons md-24">settings</p>
+                    </div>
+                </section>
+                <div class="menu-section-divider-account"></div>
+
                 <section class="menu-section">
                     <h3 class="label-menu">Categorias</h3>
                     <ul class="menu-categories">
@@ -100,7 +101,8 @@
                 <span id="close-modal-btn" class="close-button">&times;</span>
             </section>
             <section class="share-modal-section">
-                <span class="material-icons md-35 share-modal">share</span> <h1>Compartir</h1>
+                <span class="material-icons md-35 share-modal">share</span>
+                <h1>Compartir</h1>
             </section>
             <section class="modal-social-media-icons">
                 <div>
@@ -140,40 +142,42 @@
                 <h1 class="name-game">SubmergeBlock</h1>
             </div>
             <div>
-                <button id="social-media-btn" class="share-btn"><span class="material-icons">share</span>Compartir</button>
+                <button id="social-media-btn" class="share-btn"><span
+                        class="material-icons">share</span>Compartir</button>
             </div>
         </section>
-       <!-- <section class="game hide" id="four-in-line-game">-->
-            <div id="four-in-line-config" class="four-in-line-config hide">
-            <h1>Configuracion</h1>
-            <h3>Modalidad de juego</h3>
-            <div>
-                <div class="submergeBlock-game-mode">
-                    <select  id="submergeBlock-game-boardConfig-coins">
-                        <option value="4">4 en linea</option>
-                        <option value="5">5 en linea</option>
-                        <option value="6">6 en linea</option>
-                        <option value="7">7 en linea</option>
-                    </select>
+        <!-- <section class="game hide" id="four-in-line-game">-->
+        <div id="four-in-line-config" class="four-in-line-config hide">
+            <div class="four-in-line-display">
+                <h3>Modalidad de juego</h3>
+                <div class="submergeBlock-game-config">
+                    <div class="submergeBlock-game-mode">
+                        <select id="submergeBlock-game-boardConfig-coins">
+                            <option value="4">4 en linea</option>
+                            <option value="5">5 en linea</option>
+                            <option value="6">6 en linea</option>
+                            <option value="7">7 en linea</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="submergerBlock-game-config-coins">
-                <h3>Player 1</h3>
-                <button class="submergeBlock-player1-btn btn1" value="img/coin1.png"></button>
-                <button class="submergeBlock-player1-btn btn2" value="img/coin2.png"></button>
-                <button class="submergeBlock-player1-btn btn3" value="img/coin3.png"></button>
+                <div class="submergerBlock-game-config-coins">
+                    <h3>Player 1</h3>
+                    <button class="submergeBlock-player1-btn btn1" value="img/coin1.png"></button>
+                    <button class="submergeBlock-player1-btn btn2" value="img/coin2.png"></button>
+                    <button class="submergeBlock-player1-btn btn3" value="img/coin3.png"></button>
+                </div>
+                <div class="submergerBlock-game-config-coins">
+                    <h3>Player 2</h3>
+                    <button class="submergeBlock-player2-btn btn4" value="img/coin4.png"></button>
+                    <button class="submergeBlock-player2-btn btn5" value="img/coin4.png"></button>
+                    <button class="submergeBlock-player2-btn btn6" value="img/coin2.png"></button>
+                </div>
+                <button disabled=true class="submergeBlock-start-game-btn"
+                    id="submergeBLock-game-start-btn">Start</button>
             </div>
-            <div  class="submergerBlock-game-config-coins">
-                <h3>Player 2</h3>
-                <button  class="submergeBlock-player2-btn btn4" value="img/coin4.png"></button>
-                <button  class="submergeBlock-player2-btn btn5" value="img/coin4.png"></button>
-                <button  class="submergeBlock-player2-btn btn6" value="img/coin2.png"></button>
-            </div>
-            <button disabled=true class="submergeBlock-start-game-btn" id="submergeBLock-game-start-btn">Start</button>
-
         </div>
-        <section  id="submergeBlock-four-in-line" class="submergeBlock-four-in-line hide">
+        <section id="submergeBlock-four-in-line" class="submergeBlock-four-in-line hide">
             <div>
                 <canvas id="four-in-line" width="1000" height="550"></canvas>
             </div>
@@ -187,9 +191,9 @@
                         <div id="player-1-coin" class="player-1-coin">
                         </div>
                     </div>
-                    <div class="player-turn-container" id="player-2-coin-container" >
-                            <h2>Player 2</h2>
-                            <div id="player-2-coin" class="player-2-coin">
+                    <div class="player-turn-container" id="player-2-coin-container">
+                        <h2>Player 2</h2>
+                        <div id="player-2-coin" class="player-2-coin">
                         </div>
                     </div>
                 </div>
@@ -211,7 +215,8 @@
                 <div class="submergeBlock-game-btn">
                     <button>Comprar</button>
                     <div>
-                        <button id="submergeBlock-play-btn"><span class="material-icons md-24 submergeBlock-play" >play_arrow</span>Jugar</button>
+                        <button id="submergeBlock-play-btn"><span
+                                class="material-icons md-24 submergeBlock-play">play_arrow</span>Jugar</button>
                         <div>
                             <p>Proba el juego por 4 dias</p>
                         </div>
@@ -221,15 +226,15 @@
         </section>
         <!--submerge history-->
         <section class="submergeBlock-history-container">
-                <h1>Sobre SubmergeBlock</h1>
-                <div>
-                    <p>SubmergeBlock es un juego online sobre estrategia y escape. El personaje se encuentra atrapado en la
+            <h1>Sobre SubmergeBlock</h1>
+            <div>
+                <p>SubmergeBlock es un juego online sobre estrategia y escape. El personaje se encuentra atrapado en la
                     cupula de un edificio de 50 pisos. Para liberarlo se
                     deberan superar los niveles necesarios hasta llegar a la base del edificio. En cada nivel se tendra
                     un contrincante. Cada nivel ganado hara que el personaje
                     descienda un piso dentro del edificio.</p>
-                </div>
-            </section>
+            </div>
+        </section>
         <!--submerge carouselCategory-->
         <section id="submergeBlock-carousel-container" class="submergeBlock-carousel-container">
             <div class="submergeBlock-carousel-video">
@@ -265,84 +270,84 @@
         </div>
         <!--submerge instructions-->
         <section class="submergeBlock-instructions">
-                <h2>Instrucciones</h2>
-                <ul>
-                    <li><span class="material-icons md-26">arrow_right</span>Puede jugarse en modo un solo jugador o por
-                        dos jugadores con la modalidad cooperativa pantalla compartida.</li>
-                    <li><span class="material-icons md-26">arrow_right</span>Cada jugador debera acomodar 4 (cuatro)
-                        bloques en linea, en cualquiera de sus direcciones, para poder pasar al siguiente nivel.</li>
-                    <li><span class="material-icons md-26">arrow_right</span>El jugador que mas rapido acomode los
-                        bloques en linea, ganara la partida del piso. Su recompensa es una vida.</li>
-                    <li><span class="material-icons md-26">arrow_right</span>Para acomodar los bloques debera tener
-                        precaucion de no caer en alguno de los agujeros del tablero, sino perdera una vida. </li>
-                    <li><span class="material-icons md-26">arrow_right</span>El jugador posee hasta 3 vidas por nivel.
-                        Si pierde estas 3 vidas, el juego retrocedera 2 pisos en su juego. Debera volver a realizarlos.
-                    </li>
-                    <li><span class="material-icons md-26">arrow_right</span>Cada jugador tendra 3 intentos de perder la
-                        totalidad de sus vidas por nivel. Si las pierde, volvera a la cupula del edificio. </li>
-                    <li><span class="material-icons md-26">arrow_right</span>Una vez posicionado uno de los bloques
-                        debera agregar nuevos bloques, tanto como le falten para poder completar la linea. </li>
-                    <li><span class="material-icons md-26">arrow_right</span>Cada nivel posee una dificultad diferente
-                        de tiempo, siendo mayor en los primeros niveles y menor acercandose a la salida del edificio.
-                    </li>
-                    <li><span class="material-icons md-26">arrow_right</span>Una vez que uno de los jugadores haya
-                        posicionado 4 bloques en linea, el nivel se desbloqueara a partir de la union generada por los
-                        bloques. El
-                        personaje descendera un piso.</li>
-                </ul>
-            </section>
+            <h2>Instrucciones</h2>
+            <ul>
+                <li><span class="material-icons md-26">arrow_right</span>Puede jugarse en modo un solo jugador o por
+                    dos jugadores con la modalidad cooperativa pantalla compartida.</li>
+                <li><span class="material-icons md-26">arrow_right</span>Cada jugador debera acomodar 4 (cuatro)
+                    bloques en linea, en cualquiera de sus direcciones, para poder pasar al siguiente nivel.</li>
+                <li><span class="material-icons md-26">arrow_right</span>El jugador que mas rapido acomode los
+                    bloques en linea, ganara la partida del piso. Su recompensa es una vida.</li>
+                <li><span class="material-icons md-26">arrow_right</span>Para acomodar los bloques debera tener
+                    precaucion de no caer en alguno de los agujeros del tablero, sino perdera una vida. </li>
+                <li><span class="material-icons md-26">arrow_right</span>El jugador posee hasta 3 vidas por nivel.
+                    Si pierde estas 3 vidas, el juego retrocedera 2 pisos en su juego. Debera volver a realizarlos.
+                </li>
+                <li><span class="material-icons md-26">arrow_right</span>Cada jugador tendra 3 intentos de perder la
+                    totalidad de sus vidas por nivel. Si las pierde, volvera a la cupula del edificio. </li>
+                <li><span class="material-icons md-26">arrow_right</span>Una vez posicionado uno de los bloques
+                    debera agregar nuevos bloques, tanto como le falten para poder completar la linea. </li>
+                <li><span class="material-icons md-26">arrow_right</span>Cada nivel posee una dificultad diferente
+                    de tiempo, siendo mayor en los primeros niveles y menor acercandose a la salida del edificio.
+                </li>
+                <li><span class="material-icons md-26">arrow_right</span>Una vez que uno de los jugadores haya
+                    posicionado 4 bloques en linea, el nivel se desbloqueara a partir de la union generada por los
+                    bloques. El
+                    personaje descendera un piso.</li>
+            </ul>
+        </section>
         <!--submerge controls-->
         <section class="submergeBlock-controls-container">
-                <h2>Controles</h2>
+            <h2>Controles</h2>
             <section class="submergeBlock-controls">
-                    <article class="submergeBlock-player1">
+                <article class="submergeBlock-player1">
+                    <div>
+                        <h3>Controles Jugador 1</h3>
+                    </div>
+                    <section class="keyword-controls">
                         <div>
-                            <h3>Controles Jugador 1</h3>
+                            <img src="img/p1-controls.png">
                         </div>
-                        <section class="keyword-controls">
-                            <div>
-                                <img src="img/p1-controls.png">
-                            </div>
-                            <div>
-                                <img src="img/p1-control-2.png">
-                            </div>
-                        </section>
-                        <section class="keyword-instructions">
-                            <ul>
-                                <li>A/D Mover hacia los laterales</li>
-                                <li>W/S Mover arriba - abajo</li>
-                                <li>Doble presion en rota el cubo</li>
-                            </ul>
-                            <ul>
-                                <li>Anclar bloque</li>
-                            </ul>
-                        </section>
-                    </article>
-                    <article class="submergeBlock-player2">
                         <div>
-                            <h3>Controles Jugador 2</h3>
+                            <img src="img/p1-control-2.png">
                         </div>
-                        <section class="keyword-controls">
-                            <div>
-                                <img src="img/p1-controls.png">
-                            </div>
-                            <div>
-                                <img src="img/p1-control-2.png">
-                            </div>
-                        </section>
-                        <section class="keyword-instructions">
-                            <ul>
-                                <li>A/D Mover hacia los laterales</li>
-                                <li>W/S Mover arriba - abajo</li>
-                                <li>Doble presion en rota el cubo</li>
-                            </ul>
-                            <ul>
-                                <li>Anclar bloque</li>
-                            </ul>
+                    </section>
+                    <section class="keyword-instructions">
+                        <ul>
+                            <li>A/D Mover hacia los laterales</li>
+                            <li>W/S Mover arriba - abajo</li>
+                            <li>Doble presion en rota el cubo</li>
+                        </ul>
+                        <ul>
+                            <li>Anclar bloque</li>
+                        </ul>
+                    </section>
+                </article>
+                <article class="submergeBlock-player2">
+                    <div>
+                        <h3>Controles Jugador 2</h3>
+                    </div>
+                    <section class="keyword-controls">
+                        <div>
+                            <img src="img/p1-controls.png">
+                        </div>
+                        <div>
+                            <img src="img/p1-control-2.png">
+                        </div>
+                    </section>
+                    <section class="keyword-instructions">
+                        <ul>
+                            <li>A/D Mover hacia los laterales</li>
+                            <li>W/S Mover arriba - abajo</li>
+                            <li>Doble presion en rota el cubo</li>
+                        </ul>
+                        <ul>
+                            <li>Anclar bloque</li>
+                        </ul>
 
-                        </section>
+                    </section>
 
-                    </article>
+                </article>
             </section>
         </section>
         <!--submergeBlock comments-->
@@ -372,106 +377,116 @@
         </section>
 
         <!--submergeBlock comment reviews-->
-       <section class="submergeBlock-comment-review-container">
-           <h2>
-               Comentarios
-           </h2>
-           <section class="comments-submergeBlock">
-               <!--comment 1-->
-               <article class="comments">
-                   <section class="submergeBlock-user-data">
-                       <div class="submergeBlock-comment-review-photo">
-                           <img src="img/Avatar-1.png" alt="avatar comentario 1">
-                       </div>
-                       <div class="submergeBlock-comment-label">
-                           <div>
-                               <p>Richard Smith</p>
-                           </div>
-                           <div>
-                               <p>PUBLICADO 17 DE SEPTIEMBRE</p>
-                           </div>
-                       </div>
-                   </section>
-                   <section class="submergeBlock-comment-review">
-                       <div>
-                           <p>Excelente juego. Me paso horas en el.</p>
-                       </div>
-                       <div class="submergeBlock-comments-votes-container">
-                           <div>
-                            <p class="material-icons md-16">thumb_up</p><p>3</p>
-                           </div>
-                           <div>
-                            <p class="material-icons md-16">thumb_down</p><p>3</p>
-                           </div>
-                       </div>
-                   </section>
-               </article>
+        <section class="submergeBlock-comment-review-container">
+            <h2>
+                Comentarios
+            </h2>
+            <section class="comments-submergeBlock">
+                <!--comment 1-->
+                <article class="comments">
+                    <section class="submergeBlock-user-data">
+                        <div class="submergeBlock-comment-review-photo">
+                            <img src="img/Avatar-1.png" alt="avatar comentario 1">
+                        </div>
+                        <div class="submergeBlock-comment-label">
+                            <div>
+                                <p>Richard Smith</p>
+                            </div>
+                            <div>
+                                <p>PUBLICADO 17 DE SEPTIEMBRE</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="submergeBlock-comment-review">
+                        <div>
+                            <p>Excelente juego. Me paso horas en el.</p>
+                        </div>
+                        <div class="submergeBlock-comments-votes-container">
+                            <div>
+                                <p class="material-icons md-16">thumb_up</p>
+                                <p>3</p>
+                            </div>
+                            <div>
+                                <p class="material-icons md-16">thumb_down</p>
+                                <p>3</p>
+                            </div>
+                        </div>
+                    </section>
+                </article>
                 <!--comment 2-->
                 <article class="comments">
-                       <section class="submergeBlock-user-data">
-                           <div class="submergeBlock-comment-review-photo">
-                               <img src="img/Avatar-2.png" alt="avatar comentario 2">
-                           </div>
-                           <div class="submergeBlock-comment-label">
-                               <div>
-                                   <p>Juan Gonzalez</p>
-                               </div>
-                               <div>
-                                   <p>PUBLICADO 1 DE SEPTIEMBRE</p>
-                               </div>
-                           </div>
-                       </section>
-                       <section class="submergeBlock-comment-review">
-                           <div>
-                               <p>Deberia existir la posibilidad de jugar de a dos players de manera online </p>
-                           </div>
-                           <div class="submergeBlock-comments-votes-container">
-                               <div>
-                                   <p class="material-icons md-16">thumb_up</p><p>180</p>
-                               </div>
-                               <div>
-                                   <p class="material-icons md-16">thumb_down</p><p>50</p>
-                               </div>
-                           </div>
-                       </section>
-                   </article>
+                    <section class="submergeBlock-user-data">
+                        <div class="submergeBlock-comment-review-photo">
+                            <img src="img/Avatar-2.png" alt="avatar comentario 2">
+                        </div>
+                        <div class="submergeBlock-comment-label">
+                            <div>
+                                <p>Juan Gonzalez</p>
+                            </div>
+                            <div>
+                                <p>PUBLICADO 1 DE SEPTIEMBRE</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="submergeBlock-comment-review">
+                        <div>
+                            <p>Deberia existir la posibilidad de jugar de a dos players de manera online </p>
+                        </div>
+                        <div class="submergeBlock-comments-votes-container">
+                            <div>
+                                <p class="material-icons md-16">thumb_up</p>
+                                <p>180</p>
+                            </div>
+                            <div>
+                                <p class="material-icons md-16">thumb_down</p>
+                                <p>50</p>
+                            </div>
+                        </div>
+                    </section>
+                </article>
                 <!--comment 3-->
                 <article class="comments">
-                       <section class="submergeBlock-user-data">
-                           <div class="submergeBlock-comment-review-photo">
-                               <img src="img/Avatar-3.png" alt="avatar comentario 3">
-                           </div>
-                           <div class="submergeBlock-comment-label">
-                               <div>
-                                   <p>Maria Jose Guagni</p>
-                               </div>
-                               <div>
-                                   <p>PUBLICADO 2 DE JUNIO</p>
-                               </div>
-                           </div>
-                       </section>
-                       <section class="submergeBlock-comment-review">
-                           <div>
-                               <p>Una joyita. Las partidas son siempre diferentes cuando perdes una vida, por ende los niveles que ya has pasado, tenes
-                                   que volver a pensarlo. Eso me parece algo positivo, ya que no pasas los niveles automatizado. De los mejores juegos
-                                   de estrategia que he jugado. Siempre lo juego con mi hermano. Esta bueno que podes guardar la sesion de juego, por
-                                   ende si nos llaman a comer podemos guardala y luego continuar jugando en el nivel que quedamos.
-                                   Estaria bueno que se pueda jugar online con otras personas.
-                                   Agregen mas niveles, que me lo estoy por dar vuelta!!! </p>
-                           </div>
-                           <div class="submergeBlock-comments-votes-container">
-                               <div>
-                                   <p class="material-icons md-16">thumb_up</p><p>129</p>
-                               </div>
-                               <div>
-                                   <p class="material-icons md-16">thumb_down</p><p>63</p>
-                               </div>
-                           </div>
-                       </section>
+                    <section class="submergeBlock-user-data">
+                        <div class="submergeBlock-comment-review-photo">
+                            <img src="img/Avatar-3.png" alt="avatar comentario 3">
+                        </div>
+                        <div class="submergeBlock-comment-label">
+                            <div>
+                                <p>Maria Jose Guagni</p>
+                            </div>
+                            <div>
+                                <p>PUBLICADO 2 DE JUNIO</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="submergeBlock-comment-review">
+                        <div>
+                            <p>Una joyita. Las partidas son siempre diferentes cuando perdes una vida, por ende los
+                                niveles que ya has pasado, tenes
+                                que volver a pensarlo. Eso me parece algo positivo, ya que no pasas los niveles
+                                automatizado. De los mejores juegos
+                                de estrategia que he jugado. Siempre lo juego con mi hermano. Esta bueno que podes
+                                guardar la sesion de juego, por
+                                ende si nos llaman a comer podemos guardala y luego continuar jugando en el nivel que
+                                quedamos.
+                                Estaria bueno que se pueda jugar online con otras personas.
+                                Agregen mas niveles, que me lo estoy por dar vuelta!!! </p>
+                        </div>
+                        <div class="submergeBlock-comments-votes-container">
+                            <div>
+                                <p class="material-icons md-16">thumb_up</p>
+                                <p>129</p>
+                            </div>
+                            <div>
+                                <p class="material-icons md-16">thumb_down</p>
+                                <p>63</p>
+                            </div>
+                        </div>
+                    </section>
 
-                   </article>
-           </section>
-       </section>
+                </article>
+            </section>
+        </section>
     </main>
     <footer>
         <ul class="footer-returns">
@@ -505,20 +520,21 @@
         </ul>
         <div class="footer-reserved">
             <div class="reserve">
-            <div class="logo-container">
-                <div class="logo">
-                    <a href="index.html"> <img src="img/logo-infinity-svg.svg" alt="Infinity games logo"> </a>
+                <div class="logo-container">
+                    <div class="logo">
+                        <a href="index.html"> <img src="img/logo-infinity-svg.svg" alt="Infinity games logo"> </a>
+                    </div>
+                    <div class="label-logo-container">
+                        <h3>Infinity Games</h3>
+                    </div>
                 </div>
-                <div class="label-logo-container">
-                    <h3>Infinity Games</h3>
-                </div>
-            </div>
 
-            <div class="copyrights-footer-container">
-                <h3 class="copyrights-footer">© 2022, Infinity Games, Inc. Todos los derechos reservados. Los derechos
-                    de juegos de Electronic Arts son de sus respectivos propietarios</h3>
+                <div class="copyrights-footer-container">
+                    <h3 class="copyrights-footer">© 2022, Infinity Games, Inc. Todos los derechos reservados. Los
+                        derechos
+                        de juegos de Electronic Arts son de sus respectivos propietarios</h3>
+                </div>
             </div>
-        </div>
         </div>
     </footer>
 
