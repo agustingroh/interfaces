@@ -4,6 +4,10 @@ timer = 0;
 sec = 0;
 minutes = 0;
 timerContainer = document.querySelector("#time");
+gameStatus = document.querySelector("#game-status");
+gameBtnContainer =  document.querySelector("#game-btn-container");
+timerId = null;
+
     constructor(config) {
         this.timerContainer.innerHTML = (this.minutes < 10 ? "0" + this.minutes : this.minutes) + ":" + (this.sec < 10 ? "0" + this.sec : this.sec);
         this.config = config;
@@ -16,7 +20,7 @@ timerContainer = document.querySelector("#time");
     }
 
     async init() {
-        this.timer = setInterval(this.updateTimer,1000,this);
+        this.timerId = setInterval(this.updateTimer,1000,this);
         this.board.init();
         let coinsPlayer1 = this.getCoins(this.config.colorCoinPlayer1);
         this.drawCoinsOnBoard(coinsPlayer1,this.board.getPositionX()  -75);
@@ -39,7 +43,25 @@ timerContainer = document.querySelector("#time");
             sec = game.sec;
             game.minutes = game.minutes + 1;
         }
+
+        if(game.minutes === 1){
+            clearInterval(game.timerId);
+            game.notifyEndTime();
+        }
+
         game.timerContainer.innerHTML = (game.minutes < 10 ? "0" + game.minutes : game.minutes) + ":" + (sec < 10 ? "0" + sec : sec);
+    }
+
+
+    notifyEndTime(){
+        this.gameStatus.innerHTML = "¡El tiempo ha finalizado!";
+        this.showReStartBtn();
+
+    }
+
+    showReStartBtn(){
+        this.gameBtnContainer.classList.remove("hide");
+
     }
 
 
@@ -70,6 +92,12 @@ timerContainer = document.querySelector("#time");
 
     clean(){
         this.config.ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    clear(){
+        this.config.ctx.clearRect(0, 0, canvas.width, canvas.height);
+        clearInterval(this.timerId);
+
     }
 
 

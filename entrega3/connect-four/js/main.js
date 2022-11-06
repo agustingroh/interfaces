@@ -3,7 +3,15 @@
     const ctx = canvas.getContext("2d");
     const configPanel = document.querySelector("#four-in-line-config");
     const startBtn = document.querySelector("#submergeBLock-game-start-btn");
+    const reStartBtn = document.querySelector("#submergeBlock-reStart-btn");
+
+    gameStatus = document.querySelector("#game-status");
+    gameBtnContainer =  document.querySelector("#game-btn-container");
+
+    closeBtn =  document.querySelector("#submergeBLock-close-game");
+
     const game = document.querySelector("#submergeBlock-four-in-line");
+    let submergeBlock = null;
     const coinSizeMapper = {4: 35, 5: 30, 6: 28, 7: 26};
     const coinBoardSpace = {4: 90, 5: 80, 6: 70, 7: 68};
     let gameConfig = {
@@ -36,6 +44,27 @@
         }
     );
 
+    reStartBtn.addEventListener("click",function (e){
+        clean();
+        gameBtnContainer.classList.add("hide");
+        game.classList.add("hide");
+        configPanel.classList.remove("hide");
+
+    });
+
+    closeBtn.addEventListener("click",()=>{
+        clean();
+        gameBtnContainer.classList.add("hide");
+        game.classList.add("hide");
+        configPanel.classList.add("hide");
+        document.querySelector("#submergeBlock-game").classList.remove("hide");
+    });
+
+    function clean(){
+        gameStatus.innerHTML = "";
+        submergeBlock.clear();
+        submergeBlock = null;
+    }
 
     const cantFichas = document.querySelector("#submergeBlock-game-boardConfig-coins");
     cantFichas.addEventListener("change", (e) => {
@@ -65,8 +94,11 @@
         configPanel.classList.add("hide");
         gameConfig.coinSize = coinSizeMapper[gameConfig.boardConfig];
         gameConfig.coinBoardSpace = coinBoardSpace[gameConfig.boardConfig];
-        new Game(gameConfig);
+        submergeBlock = new Game(gameConfig);
     }
+
+
+
 
 
 
