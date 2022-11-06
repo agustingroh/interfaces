@@ -2313,7 +2313,7 @@ form div {
     .submergeBlock-game-btn {
         display: flex;
         width: 65%;
-        align-items: baseline;
+        align-items: flex-start;
         flex-flow: row;
         justify-content: space-evenly;
         height: 2em;

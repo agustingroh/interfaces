@@ -123,7 +123,10 @@ timerContainer = document.querySelector("#time");
             let column =   this.board.getColumn(pos.x,pos.y);
             let hasSpace = this.board.hasPlacesInColumn(column);
          if(column !== null && hasSpace){
-             this.board.addCoin(column,Object.assign(this.selectedCoin));
+             //   pos = {row, column }
+            const pos = this.board.addCoin(column,Object.assign(this.selectedCoin));
+            const winnerPlay =  this.board.isWinnerPlay(pos,this.selectedCoin);
+            console.log(winnerPlay);
               this.reDraw();
               this.selectedCoin = null;
               this.actualPlayer=this.shifter.getNext();

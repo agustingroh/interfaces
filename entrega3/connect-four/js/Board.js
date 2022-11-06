@@ -27,6 +27,12 @@ boundary
         this.board = Array(this.boardConfig).fill(null).map(() => Array(this.boardConfig).fill(null));
     }
 
+    /**
+     * @Brief  insert a coin in the board
+     * @Param column the column where the coin should be inserted
+     * @Param coin The coin co be inserted in the board
+     * @Return The position in the board
+     * */
     addCoin(column,coin){
         if(column<0 || column> this.boundary) return;
         for (let i = this.boundary-1; i >= 0; i--) {
@@ -36,7 +42,7 @@ boundary
                 let yPos = (this.positionY + (i + 1) * (this.config.coinBoardSpace) - (this.config.coinBoardSpace / 2));
                 coin.setY(yPos);
                 this.board[i][column] = coin;
-                return
+                return { row:i , column };
             }
 
         }
@@ -120,5 +126,52 @@ boundary
         }
         return null;
     }
+
+    isWinnerPlay(pos,coin){
+     return   this.isWinnerPlayHorizontally(pos,coin) || this.isWinnerPlayVertically(pos,coin) || this.isWinnerPlayDiagonal(pos,coin);
+
+    }
+
+    isWinnerPlayHorizontally(pos,coin) {
+        let count = 0;
+        for (let i = 0; i < this.config.boardConfig ; i++) {
+            if (this.board[pos.row][i]?.getColor() === coin.getColor()) count++;
+        }
+        return count === this.config.boardConfig;
+    }
+
+    isWinnerPlayVertically(pos,coin){
+        let count = 0;
+        for (let i = 0; i < this.config.boardConfig; i++) {
+            if (this.board[i][pos.column]?.getColor() === coin.getColor()) count++;
+        }
+        return count === this.config.boardConfig;
+    }
+
+    isWinnerPlayDiagonal(pos,coin){
+        return this.isWinnerDiagonalUpRight(pos,coin) || this.isWinnerDiagonalUpLeft(pos,coin);
+    }
+
+    isWinnerDiagonalUpRight(pos,coin){
+        let count = 0;
+        let row = this.config.boardConfig -1;
+        for(let i =0; i< this.config.boardConfig ; i++){
+            if(this.board[row][i]?.getColor() == coin.getColor()) count ++;
+            row = row -1;
+        }
+        return count === this.config.boardConfig;
+    }
+
+    isWinnerDiagonalUpLeft(pos,coin){
+        let count = 0;
+        let row = this.config.boardConfig -1;
+        for(let i = this.config.boardConfig - 1; i>=0; i--){
+            if(this.board[row][i]?.getColor() == coin.getColor()) count ++;
+            row = row -1;
+        }
+        return count === this.config.boardConfig;
+    }
+
+
 
 }
