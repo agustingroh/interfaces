@@ -85,6 +85,7 @@
         if(gameConfig.boardConfig && gameConfig.colorCoinPlayer1 && gameConfig.colorCoinPlayer2){
             startBtn.style.opacity = 1;
             startBtn.disabled=false;
+            startBtn.style.pointerEvents= "visible";
         }
     }
 
