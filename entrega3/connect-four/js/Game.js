@@ -63,7 +63,7 @@ timerContainer = document.querySelector("#time");
             c[i].setInitY(posY);
             c[i].setIndex(i);
             await  c[i].loadImage();
-            c[i].draw(true);
+            c[i].draw();
             posY = posY - 15;
         }
     }
@@ -91,7 +91,7 @@ timerContainer = document.querySelector("#time");
     reDrawCoinsOnBoard(player){
         player.getCoins().forEach((c)=>{
             c.returnToInitPosition();
-            c.draw(true);
+            c.draw();
         });
     }
 
