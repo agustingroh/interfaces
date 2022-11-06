@@ -2865,9 +2865,12 @@ form div {
         background-color: #f3851b;
         width: 200px;
         height: 55px;
+        letter-spacing: 4px;
         font-size: 30px;
         opacity: 0.45;
         color:#e2dddd;
+        pointer-events: none;
+        margin-bottom: 10px;
     }
 
 

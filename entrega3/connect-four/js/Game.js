@@ -12,8 +12,8 @@ timerId = null;
         this.timerContainer.innerHTML = (this.minutes < 10 ? "0" + this.minutes : this.minutes) + ":" + (this.sec < 10 ? "0" + this.sec : this.sec);
         this.config = config;
         this.board = new Board(config.ctx,config);
-        this.player1 = new Player(this.config.namePlayer1,this);
-        this.player2 = new Player(this.config.namePlayer2,this);
+        this.player1 = new Player("Jugador 1");
+        this.player2 = new Player("Jugador 2");
         this.shifter =  new Shifter(this.player1,this.player2,this);
         this.init();
         this.selectedCoin = null;
@@ -45,13 +45,16 @@ timerId = null;
         }
 
         if(game.minutes === 1){
-            clearInterval(game.timerId);
+            game.stopTimer();
             game.notifyEndTime();
         }
 
         game.timerContainer.innerHTML = (game.minutes < 10 ? "0" + game.minutes : game.minutes) + ":" + (sec < 10 ? "0" + sec : sec);
     }
 
+    stopTimer(){
+        clearInterval(this.timerId);
+    }
 
     notifyEndTime(){
         this.gameStatus.innerHTML = "¡El tiempo ha finalizado!";
@@ -61,7 +64,6 @@ timerId = null;
 
     showReStartBtn(){
         this.gameBtnContainer.classList.remove("hide");
-
     }
 
 
@@ -78,7 +80,6 @@ timerId = null;
         let posX = x;
         let posY =  this.board.getPositionY() + this.board.getSize() - 20;
         for ( let i = 0 ; i< c.length ; i ++){
-        
             c[i].setX(posX);
             c[i].setY(posY);
             c[i].setInitX(posX);
@@ -95,17 +96,15 @@ timerId = null;
     }
 
     clear(){
-        this.config.ctx.clearRect(0, 0, canvas.width, canvas.height);
+        this.clean();
         clearInterval(this.timerId);
-
     }
 
 
-    notify(){
-        let text = "Desea jugar una nueva partida?";
-        if (confirm(text) == true){
-            location.reload();
-        }
+    showEmptyCoinMessage(game){
+        game.stopTimer();
+        game.gameStatus.innerHTML = "¡Empate!";
+        game.showReStartBtn();
     }
 
 
@@ -154,15 +153,29 @@ timerId = null;
              //   pos = {row, column }
             const pos = this.board.addCoin(column,Object.assign(this.selectedCoin));
             const winnerPlay =  this.board.isWinnerPlay(pos,this.selectedCoin);
-            console.log(winnerPlay);
-              this.reDraw();
-              this.selectedCoin = null;
-              this.actualPlayer=this.shifter.getNext();
-             if(this.actualPlayer.getCoins().length ===0) setTimeout(this.notify,10);
+           if(winnerPlay){
+               this.reDraw();
+               this.selectedCoin = null;
+               setTimeout(this.showWinnerPlayer, 100, this);
+           }
+           else {
+               this.reDraw();
+               this.selectedCoin = null;
+               this.actualPlayer = this.shifter.getNext();
+               if (this.actualPlayer.getCoins().length === 0) setTimeout(this.showEmptyCoinMessage, 10,this);
+           }
           }else {
               this.returnCoinToInitPosition();
           }
         }
+    }
+
+    showWinnerPlayer(game){
+        game.stopTimer();
+        game.gameStatus.innerHTML = `¡El ${game.actualPlayer.getName()} ha ganado!`;
+        game.showReStartBtn();
+
+
     }
 
     mouseOut(event){
