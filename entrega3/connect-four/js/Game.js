@@ -80,6 +80,7 @@ timerId = null;
         let posX = x;
         let posY =  this.board.getPositionY() + this.board.getSize() - 20;
         for ( let i = 0 ; i< c.length ; i ++){
+        
             c[i].setX(posX);
             c[i].setY(posY);
             c[i].setInitX(posX);
