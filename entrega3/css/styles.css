@@ -2708,7 +2708,20 @@ form div {
         transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
     }
 
-    .modal-content {
+    .modal-winner-player {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.1);
+        transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    }
+
+    .modal-content , .modal-content-winner-play{
         position: absolute;
         display: flex;
         flex-flow: column;
@@ -2722,6 +2735,12 @@ form div {
         width: 40rem;
         border-radius: 0.5rem;
         gap: 1.3em;
+    }
+
+    .modal-content-winner-play {
+        height: 200px;
+        justify-content: flex-start;
+        background-color: #9b5890;
     }
 
     .close-modal-btn-container ,    .share-modal-section{
@@ -2749,7 +2768,7 @@ form div {
     }
 
 
-    .close-button {
+    .close-button, .close-button-winner-player-modal {
         float: right;
         width: 1.5rem;
         line-height: 1.5rem;
@@ -2757,6 +2776,11 @@ form div {
         cursor: pointer;
         border-radius: 100%;
         background-color: #1A4872;
+    }
+
+    .close-button-winner-player-modal{
+        background-color: inherit;
+        font-size: 40px;
     }
 
     .close-button:hover {
@@ -3032,8 +3056,9 @@ form div {
         color: #9b5890;
     }
 
-    .game-status{
-        margin-top: 35px;
+   .modal-content-winner-play .game-status{
+       margin-top: 35px;
+       font-size: 43px;
     }
 
     .game-status-container{
