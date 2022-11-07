@@ -5,6 +5,7 @@ positionX = 0;
 positionY = 0;
 coinThrowHeigh = 90;
 boundary
+canvasContainer =  document.querySelector("#canvas-container");
     constructor(ctx,config) {
         this.ctx = ctx;
         this.boardConfig = config.boardConfig;
@@ -28,8 +29,9 @@ boundary
         const size = this.boardConfig * this.config.coinBoardSpace;
         let canvasHeight = this.config.canvas.height;
         let canvasWidth = this.config.canvas.width;
-        this.positionY = (   canvasHeight/2) - (size/2) + (this.config.coinSize * 2) -25;
-        this.positionX = (canvasWidth/2) - (size/2) ;
+        this.positionY = (   canvasHeight/2) - (size/2) + (this.config.coinSize * 2) - 5;
+        this.positionX = (this.canvasContainer.clientWidth / 2) - (size/2);
+        console.log(this.canvasContainer.clientWidth);
         this.drawBoard();
         this.buildBoard();
     }
@@ -83,7 +85,7 @@ boundary
         let canvasHeight = this.config.canvas.height;
         let canvasWidth = this.config.canvas.width;
         console.log(canvasWidth);
-          this.ctx.drawImage(this.image,0,0,955,this.config.canvas.height);
+          this.ctx.drawImage(this.image,0,0,canvasWidth,this.config.canvas.height);
 
          this.ctx.fillRect (this.positionX ,this.positionY, size, size);
 
