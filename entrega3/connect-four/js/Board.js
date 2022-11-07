@@ -66,7 +66,7 @@ boundary
 
     drawBoard(){
         const size = this.boardConfig * this.config.coinBoardSpace;
-        this.ctx.fillStyle = ("green");
+        this.ctx.fillStyle = ("#314455");
         let canvasHeight = this.config.canvas.height;
         let canvasWidth = this.config.canvas.width;
 
