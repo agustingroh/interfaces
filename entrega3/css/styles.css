@@ -2880,6 +2880,14 @@ form div {
         margin-top: 30px;
     }
 
+    .game-container{
+        display: flex;
+        width: 97%;
+        justify-content: center;
+        margin-left: 1.5em;
+        margin-top: 0.5em;
+    }
+
     .submergeBlock-game-mode select option {
         padding: 30px;
     }
@@ -2905,6 +2913,7 @@ form div {
         flex-flow: row;
         margin-top: 5px;
         border: 0.01em solid #3e4044 ;
+        border-radius: 3px;
     }
 
 
@@ -3006,7 +3015,11 @@ form div {
         justify-content: center;
         align-items: center;
         gap: 10px;
-        filter: blur(2px);
+        opacity: 0.5;
+      /*  box-shadow: rgb(39 112 189) 0px 0px 34px;*/
+        border-radius: 12px;
+        height: 125px;
+        width: 140px;
 
     }
 
