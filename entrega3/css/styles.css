@@ -3030,6 +3030,10 @@ form div {
         color: #b883b0;
     }
 
+    .timer-message h3{
+        font-size: 30px;
+    }
+
     .time-container h1{
         font-size: 70px;
     }
