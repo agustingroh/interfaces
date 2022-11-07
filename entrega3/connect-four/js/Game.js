@@ -7,6 +7,7 @@ timerContainer = document.querySelector("#time");
 gameStatus = document.querySelector("#game-status");
 gameBtnContainer =  document.querySelector("#game-btn-container");
 timerId = null;
+limitTime = 4;
 
     constructor(config) {
         this.timerContainer.innerHTML = (this.minutes < 10 ? "0" + this.minutes : this.minutes) + ":" + (this.sec < 10 ? "0" + this.sec : this.sec);
@@ -21,6 +22,7 @@ timerId = null;
 
     async init() {
         this.timerId = setInterval(this.updateTimer,1000,this);
+        await this.board.loadBoard();
         this.board.init();
         let coinsPlayer1 = this.getCoins(this.config.colorCoinPlayer1);
         this.drawCoinsOnBoard(coinsPlayer1,this.board.getPositionX()  -75);
@@ -44,7 +46,7 @@ timerId = null;
             game.minutes = game.minutes + 1;
         }
 
-        if(game.minutes === 1){
+        if(game.minutes === game.limitTime){
             game.stopTimer();
             game.notifyEndTime();
         }

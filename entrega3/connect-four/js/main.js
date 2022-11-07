@@ -5,6 +5,8 @@
     const startBtn = document.querySelector("#submergeBLock-game-start-btn");
     const reStartBtn = document.querySelector("#submergeBlock-reStart-btn");
 
+    const backToConfigBtn = document.querySelector("#submergeBLock-back-to-config-game");
+
     gameStatus = document.querySelector("#game-status");
     gameBtnContainer =  document.querySelector("#game-btn-container");
 
@@ -27,6 +29,8 @@
     const coinPlayer1 = document.querySelectorAll(".submergeBlock-player1-btn");
     coinPlayer1.forEach(b => {
         b.addEventListener("click", () => {
+            coinPlayer1.forEach((c)=>{c.style.boxShadow = "inherit";});
+            b.style.boxShadow = "4px 3px 9px #2770bd";
             onCoinSelectionPlayer1(b.value);
         })
     });
@@ -34,6 +38,8 @@
     const coinPlayer2 = document.querySelectorAll(".submergeBlock-player2-btn");
     coinPlayer2.forEach(b => {
         b.addEventListener("click", () => {
+            coinPlayer2.forEach((c)=>{c.style.boxShadow = "inherit";});
+            b.style.boxShadow = "4px 3px 9px #2770bd";
             onCoinSelectionPlayer2(b.value);
         })
     });
@@ -49,7 +55,13 @@
         gameBtnContainer.classList.add("hide");
         game.classList.add("hide");
         configPanel.classList.remove("hide");
+    });
 
+    backToConfigBtn.addEventListener("click",()=>{
+        clean();
+        gameBtnContainer.classList.add("hide");
+        game.classList.add("hide");
+        configPanel.classList.remove("hide");
     });
 
     closeBtn.addEventListener("click",()=>{
@@ -61,6 +73,8 @@
     });
 
     function clean(){
+        coinPlayer1.forEach((c)=>{c.style.boxShadow = "inherit";});
+        coinPlayer2.forEach((c)=>{c.style.boxShadow = "inherit";});
         gameStatus.innerHTML = "";
         submergeBlock.clear();
         submergeBlock = null;

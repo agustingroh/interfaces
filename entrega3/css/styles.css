@@ -2885,7 +2885,7 @@ form div {
     .submergeBlock-game-status{
         display: flex;
         flex-flow: column;
-        background-color: #363E4680;
+        background-color: #32373c50;
         border-left:1px solid #3e4044 ;
         width: 30%;
         align-items: center;
@@ -2989,6 +2989,18 @@ form div {
         margin-top: 55px;
     }
 
+    #time{
+        color: #9b5890;
+    }
+
+    .timer-message{
+        margin-top: 30px;
+    }
+
+    .timer-message h3, .player-turn-container h2 {
+        color: #b883b0;
+    }
+
     .time-container h1{
         font-size: 70px;
     }
@@ -3002,17 +3014,18 @@ form div {
 
     .close-game-container-btn{
         display: flex;
-        width: 100%;
+        width: 90%;
         flex-flow: row;
-        justify-content: flex-end;
+        justify-content: space-between;
         padding-top: 4px;
-        padding-right: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .submergeBLock-close-game{
         background-color: inherit;
         font-size: 40px;
-        color: #ba41a5;
+        color: #9b5890;
     }
 
     .game-status{
