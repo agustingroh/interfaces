@@ -85,7 +85,18 @@ canvasContainer =  document.querySelector("#canvas-container");
         let canvasHeight = this.config.canvas.height;
         let canvasWidth = this.config.canvas.width;
         console.log(canvasWidth);
-          this.ctx.drawImage(this.image,0,0,canvasWidth,this.config.canvas.height);
+
+
+        let wrh = 800 / 539;
+        let newWidth = this.canvasContainer.clientWidth;
+        let newHeight = newWidth / wrh;
+        if (newHeight > this.canvasContainer.clientHeight) {
+            newHeight = this.canvasContainer.clientHeight;
+            newWidth = newHeight * wrh;
+        }
+
+
+          this.ctx.drawImage(this.image,0,0,this.canvasContainer.clientWidth,newHeight);
 
          this.ctx.fillRect (this.positionX ,this.positionY, size, size);
 
