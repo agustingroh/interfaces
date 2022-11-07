@@ -91,6 +91,10 @@ class Coin {
     draw(){
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.getRadio(), 0, 2 * Math.PI);
+        ctx.shadowBlur = 5;
+        ctx.shadowColor = "#020b16";
+        ctx.shadowOffsetX = 0.3;
+        ctx.shadowOffsetY = 0.3;
         this.ctx.fill();
         this.ctx.closePath();
         this.ctx.drawImage(this.image,(this.x - this.getRadio()),(this.y - this.getRadio()),this.getRadio() * 2,this.getRadio() * 2);

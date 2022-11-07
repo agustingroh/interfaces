@@ -21,7 +21,7 @@ canvasContainer =  document.querySelector("#canvas-container");
                 this.image.addEventListener('load', () => {
                     resolve(true);
                 });
-                this.image.src = "img/game-canvas.jpg";
+                this.image.src = "img/background-canvas-blur.png";
             });
     }
 
@@ -81,7 +81,8 @@ canvasContainer =  document.querySelector("#canvas-container");
 
     drawBoard(){
         const size = this.boardConfig * this.config.coinBoardSpace;
-        this.ctx.fillStyle = ("#314455");
+      //  "#314455"
+        this.ctx.fillStyle = ("#bec7cc");
         let canvasHeight = this.config.canvas.height;
         let canvasWidth = this.config.canvas.width;
         console.log(canvasWidth);
