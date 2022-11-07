@@ -64,7 +64,6 @@ limitTime = 4;
         this.gameStatus.innerHTML = "¡El tiempo ha finalizado!";
         this.modalWinnerPlayer.classList.toggle("show-modal");
         this.showReStartBtn();
-
     }
 
     showReStartBtn(){
@@ -109,7 +108,7 @@ limitTime = 4;
 
     showEmptyCoinMessage(game){
         game.stopTimer();
-        game.gameStatus.innerHTML = `¡Tiempo terminado!`;
+        game.gameStatus.innerHTML = `¡No hay mas fichas!`;
         game.modalWinnerPlayer.classList.toggle("show-modal");
         game.showReStartBtn();
     }
