@@ -2953,6 +2953,7 @@ form div {
         border-radius: 50%;
         background-size: cover;
         width: 70px;
+        opacity: 0.5;
         height: 70px;
         background-color: inherit;
         margin: 0px 10px 0px 10px;
