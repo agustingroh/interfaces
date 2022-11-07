@@ -6,6 +6,7 @@ minutes = 0;
 timerContainer = document.querySelector("#time");
 gameStatus = document.querySelector("#game-status");
 gameBtnContainer =  document.querySelector("#game-btn-container");
+modalWinnerPlayer =  document.querySelector("#modal-winner-player");
 timerId = null;
 limitTime = 4;
 
@@ -59,7 +60,9 @@ limitTime = 4;
     }
 
     notifyEndTime(){
+        this.stopTimer();
         this.gameStatus.innerHTML = "¡El tiempo ha finalizado!";
+        this.modalWinnerPlayer.classList.toggle("show-modal");
         this.showReStartBtn();
 
     }
@@ -106,7 +109,8 @@ limitTime = 4;
 
     showEmptyCoinMessage(game){
         game.stopTimer();
-        game.gameStatus.innerHTML = "¡Empate!";
+        game.gameStatus.innerHTML = `¡Tiempo terminado!`;
+        game.modalWinnerPlayer.classList.toggle("show-modal");
         game.showReStartBtn();
     }
 
@@ -176,9 +180,8 @@ limitTime = 4;
     showWinnerPlayer(game){
         game.stopTimer();
         game.gameStatus.innerHTML = `¡El ${game.actualPlayer.getName()} ha ganado!`;
+        game.modalWinnerPlayer.classList.toggle("show-modal");
         game.showReStartBtn();
-
-
     }
 
     mouseOut(event){

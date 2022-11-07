@@ -4,6 +4,13 @@
     const configPanel = document.querySelector("#four-in-line-config");
     const startBtn = document.querySelector("#submergeBLock-game-start-btn");
     const reStartBtn = document.querySelector("#submergeBlock-reStart-btn");
+    const modalWinnerPlayer = document.querySelector("#modal-winner-player");
+
+    const modalCloseBtn = document.querySelector("#close-modal-winner-player-btn");
+
+    modalCloseBtn.addEventListener("click",()=>{
+        modalWinnerPlayer.classList.toggle("show-modal");
+    });
 
     const backToConfigBtn = document.querySelector("#submergeBLock-back-to-config-game");
 
