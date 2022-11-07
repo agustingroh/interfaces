@@ -17,16 +17,21 @@ class Shifter {
         this.game = game;
         this.player1Coin.style.backgroundImage = `url(${game.config.colorCoinPlayer1})`;
         this.player2Coin.style.backgroundImage = `url(${game.config.colorCoinPlayer2})`;
-        this.player2CoinContainer.style.filter = "blur(4px)";
-        this.player1CoinContainer.style.filter = "blur(4px)";
-
-
+        this.player2CoinContainer.style.opacity = "0.2";
+        this.player1CoinContainer.style.filter = "0.2";
     }
 
 getInitPlayer(){
    this.turn =   Math.floor(Math.random() * 2);
-    if(this.turn===1) this.player2CoinContainer.style.filter = "blur(0px)";
-    else  this.player1CoinContainer.style.filter = "blur(0px)";
+    if(this.turn===1){
+        this.player2CoinContainer.style.opacity = "1";
+        this.player2CoinContainer.style.boxShadow = "0px 0px 7px #ed08c7";
+
+    }
+    else {
+        this.player1CoinContainer.style.opacity = "1";
+        this.player1CoinContainer.style.boxShadow =  "0px 0px 7px #ed08c7";
+    }
     return this.playerMapper[this.turn];
 }
 
@@ -37,14 +42,18 @@ endTurn(){
 getNext(){
         if(this.turn===1){
             this.turn=0;
-            this.player1CoinContainer.style.filter = "blur(0px)";
-            this.player2CoinContainer.style.filter = "blur(4px)";
+            this.player1CoinContainer.style.opacity = "1";
+            this.player2CoinContainer.style.opacity = "0.2";
+            this.player1CoinContainer.style.boxShadow =  "0px 0px 7px #ed08c7";
+            this.player2CoinContainer.style.boxShadow = "none";
+
         }
         else {
             this.turn = 1;
-            this.player2CoinContainer.style.filter = "blur(0px)";
-            this.player1CoinContainer.style.filter = "blur(4px)";
-
+            this.player2CoinContainer.style.opacity = "1";
+            this.player1CoinContainer.style.opacity = "0.2";
+            this.player2CoinContainer.style.boxShadow = "0px 0px 7px #ed08c7";
+            this.player1CoinContainer.style.boxShadow = "none";
         }
         return this.playerMapper[this.turn];
 }
