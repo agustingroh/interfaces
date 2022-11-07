@@ -44,14 +44,7 @@ class Coin {
         this.y=y;
     }
 
-   async loadImage(){
-        return new Promise((resolve,reject)=>{
-            this.image.onload = () => {
-                this.ctx.drawImage(this.image,this.x,this.y,this.getRadio(),this.getRadio());
-                resolve(true);
-            }
-        });
-    }
+
 
     setInitX(x){
         this.boardX = x;

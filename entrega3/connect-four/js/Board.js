@@ -10,7 +10,18 @@ boundary
         this.boardConfig = config.boardConfig;
         this.boundary =  this.boardConfig;
         this.config = config;
+        this.image = null;
 
+    }
+
+    async loadBoard(){
+            return new  Promise(resolve => {
+                this.image = new Image();
+                this.image.addEventListener('load', () => {
+                    resolve(true);
+                });
+                this.image.src = "img/game-canvas.jpg";
+            });
     }
 
     init() {
@@ -22,6 +33,8 @@ boundary
         this.drawBoard();
         this.buildBoard();
     }
+
+
 
     buildBoard(){
         this.board = Array(this.boardConfig).fill(null).map(() => Array(this.boardConfig).fill(null));
@@ -69,8 +82,11 @@ boundary
         this.ctx.fillStyle = ("#314455");
         let canvasHeight = this.config.canvas.height;
         let canvasWidth = this.config.canvas.width;
+        console.log(canvasWidth);
+          this.ctx.drawImage(this.image,0,0,955,this.config.canvas.height);
 
          this.ctx.fillRect (this.positionX ,this.positionY, size, size);
+
         let posX = this.positionX + (this.config.coinBoardSpace/2);
         for(let i=0 ; i< this.boardConfig ; i++){
             let posY = this.positionY + (this.config.coinBoardSpace/2);
