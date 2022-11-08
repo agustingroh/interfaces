@@ -103,6 +103,12 @@ limitTime = 4;
     clear(){
         this.clean();
         clearInterval(this.timerId);
+        this.config = null;
+        this.board = null;
+        this.player1 = null;
+        this.player2 = null;
+        this.shifter =  null;
+        this.selectedCoin = null;
     }
 
 
