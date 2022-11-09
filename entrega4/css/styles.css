@@ -1046,12 +1046,28 @@ footer{
     padding: 2em 0em 3em 0em;
 }
 
-.newRelease-carousel, .submergeBlock-carousel{
+.submergeBlock-carousel{
     min-width: fit-content;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 5px;
+    flex-flow: row;
+    transform: translate(0px);
+}
+
+@keyframes shrink {
+    from { transform : perspective(3px); }
+    to   { transform : translate(15px); }
+}
+
+.newRelease-carousel {
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+    animation: none;
     flex-flow: row;
     transform: translate(0px);
 }
@@ -1101,6 +1117,22 @@ footer{
 
 }
 
+
+@keyframes wave {
+    0% {
+        transform: translateY(0px);
+    }
+
+    40% {
+        transform: translateY(-24px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
 .newRelease-card{
     background: rgba(20, 36, 59, 0.56);
     display: flex;
@@ -1113,6 +1145,18 @@ footer{
     height: 265px;
     justify-content: space-evenly;
 }
+
+
+/*.newRelease-card-wave-right{
+    animation: wave 800ms ease-in-out;
+    animation-delay: calc(30ms *var(--i));
+}
+
+.newRelease-card-wave-left{
+    animation: wave 1000ms ease-in-out;
+    animation-delay: calc(2000ms *var(--j));
+}*/
+
 
 .newRelease-card-label{
     display: flex;

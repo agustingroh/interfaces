@@ -23,6 +23,18 @@ let btnBackward =document.querySelector("#newRelease-back-btn");
 const GAP = 4; // GAP between game cards
 let v = document.querySelector(".newRelease-characters-container").getBoundingClientRect().width;
 let clickPosition = 0;
+let cards = document.querySelectorAll(".newRelease-card");
+   const animation =  [  {
+        transform: 'translateY(0px)'
+    },
+
+    {
+        transform: 'translateY(-80px)'
+    },
+    {
+        transform: 'translateY(0)'
+    }];
+
 
 
  /**
@@ -46,6 +58,16 @@ let clickPosition = 0;
         positionBullet(clickPosition);
         let visorWidth = document.querySelector(".newRelease-characters-carousel-display").getBoundingClientRect().width;
         carouselPos = ((Math.round(Math.floor( carouselPos + visorWidth)/visorWidth)) * visorWidth) + (GAP * ((Math.round(Math.floor( carouselPos + visorWidth )/visorWidth))));
+
+    // Animation
+        for(let i=0 ; i<cards.length; i++){
+            cards[i].animate(animation,{
+                duration:900,
+                easing: "ease-in-out",
+                delay:  80 * i,
+
+            })
+        }
         if(carouselPos>0){
             btnBackward.classList.remove("btn-disabled");
         }
@@ -53,34 +75,47 @@ let clickPosition = 0;
                 if((carouselPos + visorWidth + GAP) > (carouselWidth)){
                     carouselPos = carouselWidth -  visorWidth;
                     carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
-                    carousel.style.transition=" all 800ms"
+                    carousel.style.transition="ease-out 900ms"
                     btnFordward.classList.add("btn-disabled");
                     return;
                 }else {
                     carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
-                    carousel.style.transition = " all 800ms";
+                    carousel.style.transition = " ease-out 900ms";
                 }
             }
             else{
                 btnFordward.classList.add("btn-disabled");
             }
+
     });
 
     btnBackward.addEventListener('click',()=>{
         clickPosition -=1;
         positionBullet(clickPosition);
 
+        // https://stackdiary.com/css-animations/
+        // Se puede implementar en javascript
+        let delay = 0; //parseInt(Math.round((700 /  i)),10);
+        for(let i= cards.length -1 ; i>= 0; i--){
+            cards[i].animate(animation,{
+                duration:600,
+                easing: "ease-in-out",
+                delay: delay,
+            })
+            delay= delay + 80;
+        }
+
         let visorWidth = document.querySelector(".newRelease-characters-carousel-display").getBoundingClientRect().width;
         carouselPos = carouselPos - visorWidth - GAP;
         if(carouselPos>=0){
             carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
-            carousel.style.transition=" all 800ms"
+            carousel.style.transition="ease-out 900ms";
             if(carouselPos<=0) btnBackward.classList.add("btn-disabled");
         }
         else{
             carouselPos = 0;
             carousel.setAttribute("style", `transform:translate(-${carouselPos}px)`);
-            carousel.style.transition=" all 800ms"
+            carousel.style.transition=" ease-out 900ms"
             btnBackward.classList.add("btn-disabled");
             btnFordward.classList.remove("btn-disabled");
         }
