@@ -1,0 +1,18 @@
+canvas{
+    border: solid 1px white;
+}
+
+.four-in-line-container{
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+
+.four-in-line-config{
+    width: 20%;
+    background-color: #adadad;
+    display: flex;
+    flex-flow: column;
+
+}
