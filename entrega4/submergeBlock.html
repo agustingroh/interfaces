@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubmergeBlock</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-infinity-svg.svg" alt="Infinity games logo"></a>
+            </div>
+            <div class="label-logo-container">
+                <h3>Infinity Games</h3>
+            </div>
+        </div>
+        <nav id="hamburger-menu-container">
+            <button id="menu-btn" class="menu-btn"><span class="material-icons md-38">menu</span></button>
+            <section id="menu" class="menu">
+                <section class="close-container">
+                    <button id="close-menu-btn"><span class="material-icons md-24">close</span></button>
+                </section>
+                    <section class="account-container">
+                        <div class="account">
+                            <div class="account-img-container">
+                                <img src="img/account.jpeg">
+                            </div>
+                            <div>
+                                <div class="user-name-container">
+                                    <h4>Ariel</h4>
+                                </div>
+                                <div class="email-account-container">
+                                    <p>ariel@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="config-account">
+                            <p class="material-icons md-24">settings</p>
+                        </div>
+                    </section>
+                    <div class="menu-section-divider-account"></div>
+           
+                <section class="menu-section">
+                    <h3 class="label-menu">Categorias</h3>
+                    <ul class="menu-categories">
+                        <li>
+                            <h4 class="material-icons md-30">casino</h4><a href="#">Estrategia</a>
+                        </li>
+                        <li>
+                            <h4 class="material-icons md-30">sports_soccer</h4><a href="#">Futbol</a>
+                        </li>
+                        <li>
+                            <h4 class="material-icons md-30">sports_tennis</h4><a href="#">Tennis</a>
+                        </li>
+                        <li>
+                            <h4 class="material-icons md-30">directions_car</h4><a href="#">Carreras</a>
+                        </li>
+                    </ul>
+                    <div class="menu-section-divider"></div>
+                </section>
+                <section class="menu-section">
+                    <h3 class="label-menu">Tienda</h3>
+                    <ul class="menu-categories">
+                        <li>
+                            <h4 class="material-icons md-30">shopping_cart</h4><a href="#">Comprar</a>
+                        </li>
+                        <li>
+                            <h4 class="material-icons md-30">favorite_border</h4><a href="#">Destacados</a>
+                        </li>
+                    </ul>
+                    <div class="menu-section-divider"></div>
+                </section>
+                <section class="menu-section">
+                    <h3 class="label-menu">Redes</h3>
+                    <ul class="menu-categories-social-network">
+                        <li><img src="img/instagram.png" alt="instagram icon"></li>
+                        <li><img src="img/facebook.png" alt="Facebok icon"></li>
+                        <li><img class="youtube-logo" src="img/youtube.png" alt="Youtube  icon"></li>
+                        <li><img src="img/googlePlay.png" alt="Message  icon"></li>
+                    </ul>
+                </section>
+                <section class="close-section-container">
+                    <ul>
+                        <li>Cerrar sesion<p class="material-icons md-24">logout</p>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
+    </header>
+
+    <div id="modal-winner-player" class="modal-winner-player">
+        <div class="modal-content-winner-play">
+            <section class="close-modal-btn-container">
+                <span id="close-modal-winner-player-btn" class="close-button-winner-player-modal">&times;</span>
+            </section>
+            <h2 id="game-status" class="game-status"> </h2>
+        </div>
+
+    </div>
+
+    <!--Modal social media-->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <section class="close-modal-btn-container">
+                <span id="close-modal-btn" class="close-button">&times;</span>
+            </section>
+            <section class="share-modal-section">
+                <span class="material-icons md-35 share-modal">share</span> <h1>Compartir</h1>
+            </section>
+            <section class="modal-social-media-icons">
+                <div>
+                    <img src="img/facebook-logo.png" alt="facebook logo">
+                </div>
+                <div>
+                    <img src="img/instagram-logo.png" alt="instagram logo">
+                </div>
+                <div>
+                    <img src="img/whatsapp-logo.png" alt="whatsapp  logo">
+                </div>
+
+            </section>
+            <section class="modal-web-url">
+                <h2>https://infinitygames.com/game/submergeblock</h2>
+            </section>
+            <section class="copy-url-container-modal">
+                <h2>Copiar enlace</h2>
+            </section>
+
+        </div>
+    </div>
+    <main id="submergeBlock-main" class="submergeBlock-main">
+        <!--breadcrumb-->
+        <section class="breadcrumb">
+            <ul>
+                <li><span><a href="index.html">Infinity Games</a></span></li>
+                <li><span class="material-icons md-24">chevron_right</span></li>
+                <li>Recomendados</li>
+                <li><span class="material-icons md-24">chevron_right</span></li>
+                <li class="breadcrumb-tab-selected">SubmergeBlock</li>
+            </ul>
+        </section>
+        <!--submerge block title-->
+        <section class="submergeBlock-title">
+            <div>
+                <h1 class="name-game">SubmergeBlock</h1>
+            </div>
+            <div>
+                <button id="social-media-btn" class="share-btn"><span class="material-icons">share</span>Compartir</button>
+            </div>
+        </section>
+        <!--Config -->
+        <div id="four-in-line-config" class="four-in-line-config hide">
+            <div class="four-in-line-display">
+                <h3>Modalidad de juego</h3>
+                <div class="submergeBlock-game-config">
+                    <div class="submergeBlock-game-mode">
+                        <select id="submergeBlock-game-boardConfig-coins">
+                            <option value="4">4 en linea</option>
+                            <option value="5">5 en linea</option>
+                            <option value="6">6 en linea</option>
+                            <option value="7">7 en linea</option>
+                        </select>
+                    </div>
+                </div>
+
+            <div class="submergerBlock-game-config-coins">
+                <h3>Jugador 1</h3>
+                <button class="submergeBlock-player1-btn btn1" value="img/verde.png"></button>
+                <button class="submergeBlock-player1-btn btn2" value="img/naranja.png"></button>
+                <button class="submergeBlock-player1-btn btn3" value="img/celeste.png"></button>
+            </div>
+            <div  class="submergerBlock-game-config-coins">
+                <h3>Jugador 2</h3>
+                <button  class="submergeBlock-player2-btn btn4" value="img/amarillo.png"></button>
+                <button  class="submergeBlock-player2-btn btn5" value="img/violeta.png"></button>
+                <button  class="submergeBlock-player2-btn btn6" value="img/rojo.png"></button>
+            </div>
+            <button disabled=true class="submergeBlock-start-game-btn" id="submergeBLock-game-start-btn">Start</button>
+            </div>
+        </div>
+
+        <!--Game -->
+        <section class="game-container">
+        <section  id="submergeBlock-four-in-line" class="submergeBlock-four-in-line hide">
+
+            <!-- Board -->
+            <div id="canvas-container" class="canvas-container">
+                <canvas id="four-in-line"  width="1400" height="600"></canvas>
+            </div>
+
+            <!-- Game Status -->
+            <div id="submergeBlock-game-status" class="submergeBlock-game-status">
+                <div class="close-game-container-btn">
+                    <button id="submergeBLock-back-to-config-game" class="submergeBLock-close-game" ><span class="material-icons md-28 submergeBLock-close-game">arrow_back</span></button>
+                    <button id="submergeBLock-close-game" class="submergeBLock-close-game" >&times;</button>
+                </div>
+
+                <div class="timer-message">
+                    <h3>¡Tienes 4 minutos para escapar!</h3>
+                </div>
+
+                <!--timer-->
+                <div class="time-container">
+                    <h1 id="time"></h1>
+                </div>
+
+                <!--turn container-->
+                <div class="turn-container">
+                    <div class="player-turn-container" id="player-1-coin-container">
+                        <h2>Jugador 1</h2>
+                        <div id="player-1-coin" class="player-1-coin"></div>
+                    </div>
+                    <div class="player-turn-container" id="player-2-coin-container" >
+                            <h2>Jugador 2</h2>
+                            <div id="player-2-coin" class="player-2-coin">
+                        </div>
+                    </div>
+                </div>
+                <!--reset button-->
+                <section class="game-status-container" >
+                   <!-- <h2 id="game-status" class="game-status"> </h2>-->
+                    <div id="game-btn-container" class="game-btn-container hide" >
+                        <ul>
+                            <li id="submergeBlock-reStart-btn">
+                                Volver a jugar
+                                <span></span><span></span><span></span><span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+        </section>
+        <!--submerge game-->
+        <section class="submergeBlock-game" id="submergeBlock-game">
+
+            <div class="submergeBlock-img-container">
+                <div>
+                    <img src="img/submergeBlock-main-2.png">
+                </div>
+            </div>
+            <div>
+                <h1>SubmergeBlock</h1>
+                <div class="submergeBlock-game-btn">
+                    <button>Comprar</button>
+                    <div>
+                        <button id="submergeBlock-play-btn"><span class="material-icons md-24 submergeBlock-play" >play_arrow</span>Jugar</button>
+                        <div>
+                            <p>Proba el juego por 4 dias</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--submerge history-->
+        <section class="submergeBlock-history-container">
+                <h1>Sobre SubmergeBlock</h1>
+                <div>
+                    <p>SubmergeBlock es un juego online sobre estrategia y escape. El personaje se encuentra atrapado en la
+                    cupula del edificio Jardine House, de 50 pisos, ubicado en Hong Kong. Para liberarlo se
+                    deberan superar los niveles necesarios hasta llegar a la base del edificio. En cada nivel se tendra
+                    un contrincante. Cada nivel ganado hara que el personaje
+                    descienda un piso dentro del edificio.</p>
+                </div>
+            </section>
+        <!--submerge carouselCategory-->
+        <section id="submergeBlock-carousel-container" class="submergeBlock-carousel-container">
+            <div class="submergeBlock-carousel-video">
+                <img class="submergeBlock-img-btn-video" src="img/youtube-btn.png">
+                <img class="submergeBlock-img-video" src="img/game-video.png">
+            </div>
+        </section>
+
+
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                         <img src="img/game-one.jpg"  alt="" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                        <img src="img/game-two.jpg"  alt="" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                        <img src="img/game-three.jpg"  alt="" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                        <img src="img/game-four.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                        <img src="img/game-five.jpg"  alt="" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                        <img src="img/game-six.jpg"  alt="" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                     <img src="img/game-seven.jpg"  alt="" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                        <img src="img/game-one.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                        <img src="img/game-two.jpg"  alt="" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                        <img src="img/game-three.jpg"  alt="" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                     <img src="img/game-four.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                        <img src="img/game-five.jpg"  alt="" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                        <img src="img/game-six.jpg"  alt="" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div height="250" width="250" class="carousel-img-container">
+                         <img src="img/game-seven.jpg"  alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--submerge divider-->
+        <div class="submergeBlock-divider">
+            <div></div>
+        </div>
+        <!--submerge instructions-->
+        <section class="submergeBlock-instructions">
+                <h2>Instrucciones</h2>
+                <ul>
+                    <li><span class="material-icons md-26">arrow_right</span>Puede jugarse en modo un solo jugador o por
+                        dos jugadores con la modalidad cooperativa pantalla compartida.</li>
+                    <li><span class="material-icons md-26">arrow_right</span>Cada jugador debera acomodar 4 (cuatro)
+                        bloques en linea, en cualquiera de sus direcciones, para poder pasar al siguiente nivel.</li>
+                    <li><span class="material-icons md-26">arrow_right</span>El jugador que mas rapido acomode los
+                        bloques en linea, ganara la partida del piso. Su recompensa es una vida.</li>
+                    <li><span class="material-icons md-26">arrow_right</span>Para acomodar los bloques debera tener
+                        precaucion de no caer en alguno de los agujeros del tablero, sino perdera una vida. </li>
+                    <li><span class="material-icons md-26">arrow_right</span>El jugador posee hasta 3 vidas por nivel.
+                        Si pierde estas 3 vidas, el juego retrocedera 2 pisos en su juego. Debera volver a realizarlos.
+                    </li>
+                    <li><span class="material-icons md-26">arrow_right</span>Cada jugador tendra 3 intentos de perder la
+                        totalidad de sus vidas por nivel. Si las pierde, volvera a la cupula del edificio. </li>
+                    <li><span class="material-icons md-26">arrow_right</span>Una vez posicionado uno de los bloques
+                        debera agregar nuevos bloques, tanto como le falten para poder completar la linea. </li>
+                    <li><span class="material-icons md-26">arrow_right</span>Cada nivel posee una dificultad diferente
+                        de tiempo, siendo mayor en los primeros niveles y menor acercandose a la salida del edificio.
+                    </li>
+                    <li><span class="material-icons md-26">arrow_right</span>Una vez que uno de los jugadores haya
+                        posicionado 4 bloques en linea, el nivel se desbloqueara a partir de la union generada por los
+                        bloques. El
+                        personaje descendera un piso.</li>
+                </ul>
+            </section>
+        <!--submerge controls-->
+        <section class="submergeBlock-controls-container">
+                <h2>Controles</h2>
+            <section class="submergeBlock-controls">
+                    <article class="submergeBlock-player1">
+                        <div>
+                            <h3>Controles Jugador 1</h3>
+                        </div>
+                        <section class="keyword-controls">
+                            <div>
+                                <img src="img/p1-controls.png">
+                            </div>
+                            <div>
+                                <img src="img/p1-control-2.png">
+                            </div>
+                        </section>
+                        <section class="keyword-instructions">
+                            <ul>
+                                <li>A/D Mover hacia los laterales</li>
+                                <li>W/S Mover arriba - abajo</li>
+                                <li>Doble presion en rota el cubo</li>
+                            </ul>
+                            <ul>
+                                <li>Anclar bloque</li>
+                            </ul>
+                        </section>
+                    </article>
+                    <article class="submergeBlock-player2">
+                        <div>
+                            <h3>Controles Jugador 2</h3>
+                        </div>
+                        <section class="keyword-controls">
+                            <div>
+                                <img src="img/p1-controls.png">
+                            </div>
+                            <div>
+                                <img src="img/p1-control-2.png">
+                            </div>
+                        </section>
+                        <section class="keyword-instructions">
+                            <ul>
+                                <li>A/D Mover hacia los laterales</li>
+                                <li>W/S Mover arriba - abajo</li>
+                                <li>Doble presion en rota el cubo</li>
+                            </ul>
+                            <ul>
+                                <li>Anclar bloque</li>
+                            </ul>
+
+                        </section>
+
+                    </article>
+            </section>
+        </section>
+        <!--submergeBlock comments-->
+        <section class="submergeBlock-comments-container">
+            <h2>
+                Realizar comentario
+            </h2>
+            <article>
+                <ul>
+                    <li>
+                        Escriba su comentario
+                    </li>
+                    <li>460 caracteres</li>
+
+                </ul>
+                <div class="submergeBlock-comment-area">
+                    <textarea></textarea>
+                </div>
+                <section class="submergeBlock-publish-form">
+                    <form>
+                        <button>Publicar</button>
+                    </form>
+                </section>
+            </article>
+
+
+        </section>
+
+        <!--submergeBlock comment reviews-->
+       <section class="submergeBlock-comment-review-container">
+           <h2>
+               Comentarios
+           </h2>
+           <section class="comments-submergeBlock">
+               <!--comment 1-->
+               <article class="comments">
+                   <section class="submergeBlock-user-data">
+                       <div class="submergeBlock-comment-review-photo">
+                           <img src="img/Avatar-1.png" alt="avatar comentario 1">
+                       </div>
+                       <div class="submergeBlock-comment-label">
+                           <div>
+                               <p>Richard Smith</p>
+                           </div>
+                           <div>
+                               <p>PUBLICADO 17 DE SEPTIEMBRE</p>
+                           </div>
+                       </div>
+                   </section>
+                   <section class="submergeBlock-comment-review">
+                       <div>
+                           <p>Excelente juego. Me paso horas en el.</p>
+                       </div>
+                       <div class="submergeBlock-comments-votes-container">
+                           <div>
+                            <p class="material-icons md-16">thumb_up</p><p>3</p>
+                           </div>
+                           <div>
+                            <p class="material-icons md-16">thumb_down</p><p>3</p>
+                           </div>
+                       </div>
+                   </section>
+               </article>
+                <!--comment 2-->
+                <article class="comments">
+                       <section class="submergeBlock-user-data">
+                           <div class="submergeBlock-comment-review-photo">
+                               <img src="img/Avatar-2.png" alt="avatar comentario 2">
+                           </div>
+                           <div class="submergeBlock-comment-label">
+                               <div>
+                                   <p>Juan Gonzalez</p>
+                               </div>
+                               <div>
+                                   <p>PUBLICADO 1 DE SEPTIEMBRE</p>
+                               </div>
+                           </div>
+                       </section>
+                       <section class="submergeBlock-comment-review">
+                           <div>
+                               <p>Deberia existir la posibilidad de jugar de a dos players de manera online </p>
+                           </div>
+                           <div class="submergeBlock-comments-votes-container">
+                               <div>
+                                   <p class="material-icons md-16">thumb_up</p><p>180</p>
+                               </div>
+                               <div>
+                                   <p class="material-icons md-16">thumb_down</p><p>50</p>
+                               </div>
+                           </div>
+                       </section>
+                   </article>
+                <!--comment 3-->
+                <article class="comments">
+                       <section class="submergeBlock-user-data">
+                           <div class="submergeBlock-comment-review-photo">
+                               <img src="img/Avatar-3.png" alt="avatar comentario 3">
+                           </div>
+                           <div class="submergeBlock-comment-label">
+                               <div>
+                                   <p>Maria Jose Guagni</p>
+                               </div>
+                               <div>
+                                   <p>PUBLICADO 2 DE JUNIO</p>
+                               </div>
+                           </div>
+                       </section>
+                       <section class="submergeBlock-comment-review">
+                           <div>
+                               <p>Una joyita. Las partidas son siempre diferentes cuando perdes una vida, por ende los niveles que ya has pasado, tenes
+                                   que volver a pensarlo. Eso me parece algo positivo, ya que no pasas los niveles automatizado. De los mejores juegos
+                                   de estrategia que he jugado. Siempre lo juego con mi hermano. Esta bueno que podes guardar la sesion de juego, por
+                                   ende si nos llaman a comer podemos guardala y luego continuar jugando en el nivel que quedamos.
+                                   Estaria bueno que se pueda jugar online con otras personas.
+                                   Agregen mas niveles, que me lo estoy por dar vuelta!!! </p>
+                           </div>
+                           <div class="submergeBlock-comments-votes-container">
+                               <div>
+                                   <p class="material-icons md-16">thumb_up</p><p>129</p>
+                               </div>
+                               <div>
+                                   <p class="material-icons md-16">thumb_down</p><p>63</p>
+                               </div>
+                           </div>
+                       </section>
+
+                   </article>
+           </section>
+       </section>
+    </main>
+    <footer>
+        <ul class="footer-returns">
+            <li><a href="#">Volver al inicio</a><span class="material-icons md-24">arrow_circle_up</span></li>
+        </ul>
+        <ul class="services">
+            <li><a href="#">Publicar en Infinity Games</a></li>
+            <li><a href="#">Servicios en linea</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Empleo</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Arrepentimiento</a></li>
+        </ul>
+        <ul class="category">
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Nuevos Lanzamientos</a></li>
+            <li><a href="#">Destacados</a></li>
+            <li><a href="#">Soporte</a></li>
+        </ul>
+        <ul class="privacy">
+            <li><a href="#">Terminos de servicio</a></li>
+            <li><a href="#">Politica de privacidad</a></li>
+            <li><a href="#">Seguridad de la cuenta</a></li>
+            <li><a href="#">Politica de reembolso</a></li>
+        </ul>
+        <h2 class="title-social-media">Nuestras redes</h2>
+        <ul class="social-media">
+            <li><img src="img/instagram.png" alt="instagram icon"></li>
+            <li><img src="img/facebook.png" alt="Facebok icon"></li>
+            <li><img src="img/googlePlay.png" alt="Message icon"></li>
+        </ul>
+        <div class="footer-reserved">
+            <div class="reserve">
+            <div class="logo-container">
+                <div class="logo">
+                    <a href="index.html"> <img src="img/logo-infinity-svg.svg" alt="Infinity games logo"> </a>
+                </div>
+                <div class="label-logo-container">
+                    <h3>Infinity Games</h3>
+                </div>
+            </div>
+
+            <div class="copyrights-footer-container">
+                <h3 class="copyrights-footer">© 2022, Infinity Games, Inc. Todos los derechos reservados. Los derechos
+                    de juegos de Electronic Arts son de sus respectivos propietarios</h3>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+
+</body>
+<script src="./js/submergeBlock.js" type="text/javascript"></script>
+
+<script src="./connect-four/js/Shifter.js" type="text/javascript"></script>
+<script src="./connect-four/js/Player.js" type="text/javascript"></script>
+<script src="./connect-four/js/Board.js" type="text/javascript"></script>
+<script src="./connect-four/js/Coin.js" type="text/javascript"></script>
+<script src="./connect-four/js/Game.js" type="text/javascript"></script>
+<script src="./connect-four/js/main.js" type="text/javascript"></script>
+
+
+</html>
