@@ -1498,7 +1498,7 @@ form div {
 }
 
 
-.home-carrousel-card{
+.home-carrousel-card, .home-carrousel-card-recommended {
     width: 126px;
     height: 191px;
     background-color: #14243B;
@@ -1548,19 +1548,19 @@ form div {
     overflow: hidden;
 }
 
-.home-carrousel-card>div{
+.home-carrousel-card>div , .home-carrousel-card-recommended > div{
     display: flex;
     width: 100%;
     justify-content: center;
     height: 91px;
 }
 
-.home-carrousel-card h3{
+.home-carrousel-card h3, .home-carrousel-card-recommended h3{
     position: relative;
     top:33px;
     font-size: 10px;
 }
-.home-carrousel-card h4{
+.home-carrousel-card h4, .home-carrousel-card-recommended h4{
     font-size:8px;
     position:relative;
     top:40px;
@@ -1568,7 +1568,7 @@ form div {
     color:#B3B9BC;
     text-decoration:line-through;
 }
-.home-carrousel-card button{
+.home-carrousel-card button, .home-carrousel-card-recommended button{
     font-size: 10px;
     width: 66px;
     height: 24px;
@@ -1582,20 +1582,20 @@ form div {
     background-color:linear-gradient(93.53deg, rgba(39, 94, 133, 0.96) -11.85%, rgba(95, 170, 225, 0.96) 73.08%, rgba(0, 4, 7, 0.96) 120.55%, rgba(129, 186, 227, 0.96) 140.7%);
 }
 
-.home-carrousel-card h3.free{
+.home-carrousel-card h3.free, .home-carrousel-card-recommended h3.free{
     top: 38px;
 }
 
-.home-carrousel-card button.free {
+.home-carrousel-card button.free , .home-carrousel-card-recommended button.free{
     top: 10px;
     left: 55px;
 }
-.home-carrousel-card h3.more-text{
+.home-carrousel-card h3.more-text, .home-carrousel-card-recommended  h3.more-text{
     top: 32px;
 }
 
 
-.home-carrousel-card button span{
+.home-carrousel-card button span, .home-carrousel-card-recommended button span{
     position: relative;
     left: -13px
 }
@@ -2112,7 +2112,7 @@ form div {
     /*home-latest-realeses button{ //COLOR CUANDO CIRCLE ESTA EN 1 PARA EL BOTON IZQUIERDO, 2 PARA EL BOTON DERECHO.
             background: linear-gradient(258.4deg, rgba(50, 114, 172, 0.15) 9.17%, rgba(2, 33, 63, 0) 220.5%);
     }*/
-    .home-carrousel-card {
+    .home-carrousel-card , .home-carrousel-card-recommended {
         width: 250px;
         height: 325px;
     }
@@ -2123,26 +2123,26 @@ form div {
         overflow: hidden;
     }
 
-    .home-carrousel-card > div {
+    .home-carrousel-card > div , .home-carrousel-card-recommended  > div {
         display: flex;
         width: 100%;
         justify-content: center;
         height: auto;
     }
 
-    .home-carrousel-card h2 {
+    .home-carrousel-card h2, .home-carrousel-card-recommended > h2 {
         position: relative;
         left: 20px;
         top: 8px;
     }
 
-    .home-carrousel-card h3 {
+    .home-carrousel-card h3 , .home-carrousel-card-recommended > h3{
         position: relative;
         top: 46px;
         left: 10px;
     }
 
-    .home-carrousel-card h4 {
+    .home-carrousel-card h4, .home-carrousel-card-recommended > h4 {
         position: relative;
         top: 50px;
         left: 18px;
@@ -2150,7 +2150,7 @@ form div {
         text-decoration: line-through;
     }
 
-    .home-carrousel-card button {
+    .home-carrousel-card button , .home-carrousel-card-recommended button{
         font-size: 20px;
         width: 115px;
         height: 37px;
@@ -2164,7 +2164,7 @@ form div {
         overflow: hidden;
     }
 
-      .home-carrousel-card button::after {
+      .home-carrousel-card button::after, .home-carrousel-card-recommended button::after {
         left: 0;
         right: 0;
         top: 0;
@@ -2180,39 +2180,39 @@ form div {
         transition: all 0.3s ease;
 
       }
-      .home-carrousel-card button:hover::after {
+      .home-carrousel-card button:hover::after, .home-carrousel-card-recommended button:hover::after {
         transform: scale(1,1) rotate(0deg);
         transition: all 0.4s ease-out;
 
 
       }
-      .home-carrousel-card button:hover{
+      .home-carrousel-card button:hover, .home-carrousel-card-recommended button:hover{
         color:#040B14;
         box-shadow: 0 0 8px #f3851b;
       }
 
-    .home-carrousel-card button .material-icons.md-42 {
+    .home-carrousel-card button .material-icons.md-42 , .home-carrousel-card-recommended button .material-cons.md-42{
         font-size: 60px;
     }
 
-    .home-carrousel-card h3.free {
+    .home-carrousel-card h3.free , .home-carrousel-card-recommended h3.free{
         top: 60px;
     }
 
-    .home-carrousel-card button.free {
+    .home-carrousel-card button.free, .home-carrousel-card-recommended  button.free {
         top: 28px;
         left: 129px;
     }
 
-    .home-carrousel-card h3.more-text {
+    .home-carrousel-card h3.more-text, .home-carrousel-card-recommended  h3.more-text {
         top: 32px;
     }
 
-    .home-carrousel-card button.more-text {
+    .home-carrousel-card button.more-text, .home-carrousel-card-recommended button.more-text {
         top: -4px;
     }
 
-    .home-carrousel-card button span {
+    .home-carrousel-card button span, .home-carrousel-card-recommended  button span {
         position: relative;
         left: -13px
     }
