@@ -7,7 +7,19 @@
     const GAP_CAROUSEL_RECOMMENDED = 12; // GAP between game cards
     let visorRecommended = document.querySelector("#home-carousel-recommended-display").getBoundingClientRect().width;
     let clickPositionRecommended = 1;
+    let cardsRecommended = document.getElementsByClassName("home-carrousel-card-recommended");
 
+    const animation =  [  {
+        opacity: "1",
+        scale: '1.0'
+
+    },{
+        opacity: '0.5',
+        scale:'1.3'
+    },{
+        opacity: '1',
+        scale: '1.0'
+    }];
 
     /**
      * @brief build bullets depending on the width of the carousel
@@ -47,6 +59,15 @@
         }
 
         if (carouselPosRecommended <= carouselWidthRecommended) {
+            // Animation
+            for(let i=0 ; i<cardsRecommended.length; i++){
+                cardsRecommended[i].animate(animation,{
+                    duration:100,
+                    easing: "ease-in-out",
+                    delay:  45 * i,
+                })
+            }
+
             if ((carouselPosRecommended + visorWidth + GAP_CAROUSEL_RECOMMENDED) >= (carouselWidthRecommended)) {
                 carouselPosRecommended = carouselWidthRecommended - visorWidth;
                 carouselRecommended.setAttribute("style", `transform:translate(-${carouselPosRecommended}px)`);
@@ -76,10 +97,13 @@
         }
 
         if (carouselPosRecommended >= 0) {
+            animationBack();
             carouselRecommended.setAttribute("style", `transform:translate(-${carouselPosRecommended}px)`);
-            carouselRecommended.style.transition = " all 800ms"
+            carouselRecommended.style.transition = " all 800ms";
           if (carouselPosRecommended <= 0) btnBackwardRecommended.classList.add("btn-disabled");
+
         } else {
+            animationBack();
             carouselPosRecommended = 0;
             carouselRecommended.setAttribute("style", `transform:translate(-${carouselPosRecommended}px)`);
             carouselRecommended.style.transition = " all 800ms"
@@ -88,6 +112,17 @@
         }
     });
 
+    function animationBack(){
+        let delay = 0;
+        for(let i= cardsRecommended.length -1 ; i>= 0; i--){
+            cardsRecommended[i].animate(animation,{
+                duration:100,
+                easing: "ease-in-out",
+                delay: delay,
+            })
+            delay= delay + 60;
+        }
+    }
 
     function positionBulletRecommended(position) {
         // Get the carousel bullets

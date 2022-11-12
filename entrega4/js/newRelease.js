@@ -95,7 +95,7 @@ let cards = document.querySelectorAll(".newRelease-card");
 
         // https://stackdiary.com/css-animations/
         // Se puede implementar en javascript
-        let delay = 0; //parseInt(Math.round((700 /  i)),10);
+        let delay = 0;
         for(let i= cards.length -1 ; i>= 0; i--){
             cards[i].animate(animation,{
                 duration:600,
