@@ -4,9 +4,6 @@
     <list default="true" id="fbbf9a27-c580-44bd-86c0-838413d005db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/home-category.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home-category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/home-recommended.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home-recommended.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/newRelease.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/newRelease.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +29,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/agustin/TUDAI/2do/interfaces/interfaces/entrega4&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/agus/TUDAI/2d0/interfaces/interfaces/entrega4&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -47,6 +44,9 @@
       <updated>1668009332926</updated>
       <workItem from="1668009334078" duration="4419000" />
       <workItem from="1668028106319" duration="6123000" />
+      <workItem from="1668277348850" duration="1794000" />
+      <workItem from="1668344654804" duration="11000" />
+      <workItem from="1668344677740" duration="1197000" />
     </task>
     <servers />
   </component>

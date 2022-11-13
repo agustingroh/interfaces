@@ -24,10 +24,27 @@ const GAP = 4; // GAP between game cards
 let v = document.querySelector(".newRelease-characters-container").getBoundingClientRect().width;
 let clickPosition = 0;
 let cards = document.querySelectorAll(".newRelease-card");
+
+
+    window.addEventListener("scroll", (event) => {
+        let scroll = this.scrollY;
+       if(scroll<1100){
+           cards.forEach((c)=>{
+               c.classList.add("newRelease-card-remove-cards-carousel");
+               c.classList.remove("newRelease-card-move-to-carousel")
+           });
+       }
+        if(scroll > 1100 && scroll < 1800){
+            cards.forEach((c)=>{
+                c.classList.add("newRelease-card-move-to-carousel");
+                c.classList.remove("newRelease-card-remove-cards-carousel");
+            });
+        }
+    });
+
    const animation =  [  {
         transform: 'translateY(0px)'
     },
-
     {
         transform: 'translateY(-80px)'
     },
