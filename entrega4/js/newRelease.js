@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
   * @brief menu actions
   * **/
  document.querySelector('#menu-btn').addEventListener('click',() => {
-            console.log("click");
             let menu = document.querySelector("#menu");
             menu.classList.toggle('show-menu');
  });
@@ -29,15 +28,18 @@ let characterTitle=document.querySelector("#newRelease-sticky-title-characters")
 let historyTitle=document.querySelector("#newRelease-sticky-title-history");
 let featureTitle=document.querySelector("#newRelease-sticky-feature-history");
 let historyContainer=document.querySelector("#newRelease-game-history");
+let historyImages =  document.getElementsByClassName("item");
 
     window.addEventListener("scroll", (event) => {
         let scroll = this.scrollY;
-        let historyTop= historyContainer.offsetTop;
         console.log(scroll);
-        if(scroll>=950 && scroll<=1100){
+        let historyTop= historyContainer.offsetTop;
+        // Move nav bar to history section
+       if(scroll>=950 && scroll<=1100){
             historyTitle.classList.add("newRelease-sticky-underline");
             featureTitle.classList.remove("newRelease-sticky-underline");
             characterTitle.classList.remove("newRelease-sticky-underline");
+           historyImages[0].classList.add("show-history-images");
         }else if(scroll>=1000 && scroll<=1200){
             characterTitle.classList.remove("newRelease-sticky-underline");
             featureTitle.classList.add("newRelease-sticky-underline");
@@ -186,4 +188,28 @@ function positionBullet(position){
             stickyContent.classList.add("hide-sticky");
 		  }
 	};
+
+    /**
+     * @brief shows the images in history section depending on the scroll position
+     * */
+    document.querySelector("#history-img-container").addEventListener('scroll',()=>{
+        let pos = document.querySelector("#history-img-container").scrollTop;
+        if(pos > 900 && pos<2000){
+            historyImages[1].classList.add("show-history-images");
+        }
+        if(pos > 2000 && pos<3150){
+            historyImages[2].classList.add("show-history-images");
+        }
+
+        if(pos > 3550 && pos<3967){
+            historyImages[3].classList.add("show-history-images");
+        }
+
+    })
 });
+
+
+
+
+
+
