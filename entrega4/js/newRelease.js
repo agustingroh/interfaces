@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
             menu.classList.toggle('show-menu');
  });
 
-
+let stickyContent = document.querySelector("#newRelease-sticky-content");
+let imgContainer = document.querySelector("#newRelease-img-container");
 let carousel = document.querySelector("#newRelease-carousel");
 let carouselWidth = carousel.getBoundingClientRect().width;
 let carouselPos =0;
@@ -24,16 +25,37 @@ const GAP = 4; // GAP between game cards
 let v = document.querySelector(".newRelease-characters-container").getBoundingClientRect().width;
 let clickPosition = 0;
 let cards = document.querySelectorAll(".newRelease-card");
-
+let characterTitle=document.querySelector("#newRelease-sticky-title-characters");
+let historyTitle=document.querySelector("#newRelease-sticky-title-history");
+let featureTitle=document.querySelector("#newRelease-sticky-feature-history");
+let historyContainer=document.querySelector("#newRelease-game-history");
 
     window.addEventListener("scroll", (event) => {
         let scroll = this.scrollY;
+        let historyTop= historyContainer.offsetTop;
+        console.log(scroll);
+        if(scroll>=950 && scroll<=1100){
+            historyTitle.classList.add("newRelease-sticky-underline");
+            featureTitle.classList.remove("newRelease-sticky-underline");
+            characterTitle.classList.remove("newRelease-sticky-underline");
+        }else if(scroll>=1000 && scroll<=1200){
+            characterTitle.classList.remove("newRelease-sticky-underline");
+            featureTitle.classList.add("newRelease-sticky-underline");
+            historyTitle.classList.remove("newRelease-sticky-underline");
+        }else if(scroll > 1300 && scroll < 1800){
+            featureTitle.classList.remove("newRelease-sticky-underline");
+            characterTitle.classList.add("newRelease-sticky-underline");
+            historyTitle.classList.remove("newRelease-sticky-underline");
+        }else{
+            historyTitle.classList.remove("newRelease-sticky-underline");
+        }
        if(scroll<1100){
            cards.forEach((c)=>{
                c.classList.add("newRelease-card-remove-cards-carousel");
-               c.classList.remove("newRelease-card-move-to-carousel")
+               c.classList.remove("newRelease-card-move-to-carousel");
            });
        }
+       // Characters section
         if(scroll > 1100 && scroll < 1800){
             cards.forEach((c)=>{
                 c.classList.add("newRelease-card-move-to-carousel");
@@ -149,4 +171,19 @@ function positionBullet(position){
   });
   bullets.item(position).classList.add('bullet-active');
 }
+
+
+    let sticky = imgContainer.offsetTop;
+
+	window.onscroll = function() {
+		
+		if (window.pageYOffset > sticky) {
+			stickyContent.classList.remove("hide-sticky");
+			stickyContent.classList.add("newRelease-sticky-content");
+        //    stickyContent.style.transition = " all 800ms"
+		  } else {
+			stickyContent.classList.remove("newRelease-sticky-content");
+            stickyContent.classList.add("hide-sticky");
+		  }
+	};
 });

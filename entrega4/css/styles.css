@@ -1903,6 +1903,62 @@ form div {
         align-items: center;
         justify-content: center;
     }
+    .hide-sticky{
+        display: none;
+        opacity: 0;
+    }
+
+    @keyframes showMenu {
+        0% {opacity:0
+        }
+        100%{
+            opacity:1
+        }
+    }
+    .newRelease-sticky-content{
+      
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 10;  
+        background-color: #040B1490;
+        padding: 1.7em 1em;
+        animation: showMenu 1500ms ;
+        
+    }
+
+    .newRelease-sticky-content-title{
+        margin:0;
+        color: #E9EFF3;
+        font-size: 19px;
+    }
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-250px * 7))}
+    }
+
+    @keyframes scroll-sticky {
+        0% {
+            transform-origin: bottom right;
+            transform: scaleX(0);
+        }
+        100% {
+            transform-origin: bottom left;
+            text-decoration:  underline;
+            text-decoration-color: #E9EFF360;
+            transform: scaleX(1.0);
+            content: "";
+        }
+    }
+    .newRelease-sticky-underline{
+        animation: scroll-sticky 1s forwards;
+       /* text-decoration-color: #E9EFF360;
+        text-decoration-line: underline;*/
+        text-underline-offset: 8px;
+        text-decoration-thickness:0.12em;
+    }
 
     nav button {
         position: relative;
