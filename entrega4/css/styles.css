@@ -941,17 +941,17 @@ footer{
     flex-flow: row wrap;
 }
 
-.newRelease-game-history h2 , .newRelease-game-history p {
+.newRelease-game-history h2  {
     padding: 2px 10px 0px 10px ;
 }
 
 .newRelease-game-history h2 , .newRelease-game-feature-container h2 {
     padding-bottom: 18px;
     text-decoration:  underline;
-    text-decoration-color: #87B7DA;
+    text-decoration-color: #7a6c02;
     line-height: 1px;
-    text-underline-offset: 6px;
-    text-decoration-thickness:0.05em;
+    text-underline-offset: 11px;
+    text-decoration-thickness:0.09em;
     font-size: 30px;
 }
 
@@ -974,7 +974,7 @@ footer{
 }
 
 .newRelease-game-feature-container section {
-    padding-top: 5px;
+    padding-top: 20px;
     display: flex;
     width: 100%;
     gap:10px;
@@ -2012,22 +2012,24 @@ form div {
 
     }
 
-    .home h1{
+    .home h1 {
         padding: 15px 0px 15px 30px;
     }
 
     .home-advertising {
         display: flex;
         height: 240px;
-        margin-bottom:100px;
+        margin-bottom: 100px;
         position: relative;
         left: 90px;
         top: 51px;
 
     }
-    .home-advertising-container{
+
+    .home-advertising-container {
         overflow: hidden;
     }
+
     .home-advertising > img:first-child {
         width: 61%;
     }
@@ -2038,8 +2040,8 @@ form div {
         width: 39%;
     }
 
-    .home-advertising div:last-child:hover{
-        filter:drop-shadow(2px 4px 15px #579FE0);
+    .home-advertising div:last-child:hover {
+        filter: drop-shadow(2px 4px 15px #579FE0);
     }
 
     .home-latest-releases {
@@ -2107,13 +2109,14 @@ form div {
         gap: 12px;
     }
 
-    .home-latest-releases-display{
+    .home-latest-releases-display {
         overflow: hidden;
         width: 90%;
     }
+
     .home-latest-releases .home-latest-see-more {
         width: 86px;
-        display:flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         height: 36px;
@@ -2122,30 +2125,33 @@ form div {
         margin-right: 6px;
         font-size: 16px;
     }
-    .home-latest-releases .home-latest-see-more a{
+
+    .home-latest-releases .home-latest-see-more a {
         text-decoration: none;
         font-size: 16px;
-        padding:0px;
-        cursor:pointer;
+        padding: 0px;
+        cursor: pointer;
         outline: 2px solid;
         outline-color: #E9EFF380;
         outline-offset: 15px;
         transition: all 600ms cubic-bezier(0.2, 0, 0, 0.8);
     }
 
-    .home-latest-releases .home-latest-see-more a{
+    .home-latest-releases .home-latest-see-more a {
         text-decoration: none;
         font-size: 14px;
         padding: 0px;
         margin: 0px;
-        
+
     }
+
     .home-latest-releases .home-latest-see-more a:hover {
-      color: #f3831bdf;
-      outline-color: rgba(71, 126, 232, 0);
-      outline-offset: 200px;
-      font-size: 25px;
+        color: #f3831bdf;
+        outline-color: rgba(71, 126, 232, 0);
+        outline-offset: 200px;
+        font-size: 25px;
     }
+
     .home .material-icons.md-33 {
         font-size: 33px;
     }
@@ -2189,7 +2195,7 @@ form div {
     /*home-latest-realeses button{ //COLOR CUANDO CIRCLE ESTA EN 1 PARA EL BOTON IZQUIERDO, 2 PARA EL BOTON DERECHO.
             background: linear-gradient(258.4deg, rgba(50, 114, 172, 0.15) 9.17%, rgba(2, 33, 63, 0) 220.5%);
     }*/
-    .home-carrousel-card , .home-carrousel-card-recommended {
+    .home-carrousel-card, .home-carrousel-card-recommended {
         width: 250px;
         height: 325px;
     }
@@ -2200,7 +2206,7 @@ form div {
         overflow: hidden;
     }
 
-    .home-carrousel-card > div , .home-carrousel-card-recommended  > div {
+    .home-carrousel-card > div, .home-carrousel-card-recommended > div {
         display: flex;
         width: 100%;
         justify-content: center;
@@ -2213,7 +2219,7 @@ form div {
         top: 8px;
     }
 
-    .home-carrousel-card h3 , .home-carrousel-card-recommended > h3{
+    .home-carrousel-card h3, .home-carrousel-card-recommended > h3 {
         position: relative;
         top: 46px;
         left: 10px;
@@ -2227,7 +2233,7 @@ form div {
         text-decoration: line-through;
     }
 
-    .home-carrousel-card button , .home-carrousel-card-recommended button{
+    .home-carrousel-card button, .home-carrousel-card-recommended button {
         font-size: 20px;
         width: 115px;
         height: 37px;
@@ -2241,47 +2247,49 @@ form div {
         overflow: hidden;
     }
 
-      .home-carrousel-card button::after, .home-carrousel-card-recommended button::after {
+    .home-carrousel-card button::after, .home-carrousel-card-recommended button::after {
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
-        color:#040B14;
+        color: #040B14;
         transform: scale(0, 0) rotate(-180deg);
         content: "";
-         background: #f3851b;
+        background: #f3851b;
         position: absolute;
         z-index: -1;
         padding: 0.85em 0.75em;
         display: block;
         transition: all 0.3s ease;
 
-      }
-      .home-carrousel-card button:hover::after, .home-carrousel-card-recommended button:hover::after {
-        transform: scale(1,1) rotate(0deg);
+    }
+
+    .home-carrousel-card button:hover::after, .home-carrousel-card-recommended button:hover::after {
+        transform: scale(1, 1) rotate(0deg);
         transition: all 0.4s ease-out;
 
 
-      }
-      .home-carrousel-card button:hover, .home-carrousel-card-recommended button:hover{
-        color:#040B14;
-        box-shadow: 0 0 8px #f3851b;
-      }
+    }
 
-    .home-carrousel-card button .material-icons.md-42 , .home-carrousel-card-recommended button .material-cons.md-42{
+    .home-carrousel-card button:hover, .home-carrousel-card-recommended button:hover {
+        color: #040B14;
+        box-shadow: 0 0 8px #f3851b;
+    }
+
+    .home-carrousel-card button .material-icons.md-42, .home-carrousel-card-recommended button .material-cons.md-42 {
         font-size: 60px;
     }
 
-    .home-carrousel-card h3.free , .home-carrousel-card-recommended h3.free{
+    .home-carrousel-card h3.free, .home-carrousel-card-recommended h3.free {
         top: 60px;
     }
 
-    .home-carrousel-card button.free, .home-carrousel-card-recommended  button.free {
+    .home-carrousel-card button.free, .home-carrousel-card-recommended button.free {
         top: 28px;
         left: 129px;
     }
 
-    .home-carrousel-card h3.more-text, .home-carrousel-card-recommended  h3.more-text {
+    .home-carrousel-card h3.more-text, .home-carrousel-card-recommended h3.more-text {
         top: 32px;
     }
 
@@ -2289,7 +2297,7 @@ form div {
         top: -4px;
     }
 
-    .home-carrousel-card button span, .home-carrousel-card-recommended  button span {
+    .home-carrousel-card button span, .home-carrousel-card-recommended button span {
         position: relative;
         left: -13px
     }
@@ -2301,12 +2309,12 @@ form div {
         left: -1px;
         width: 97px;
         height: 46px;
-        transform:rotate(2deg) skewY(322deg);
+        transform: rotate(2deg) skewY(322deg);
         padding-left: 11px;
-    
+
     }
 
-    .home-card-trial > p, .home-card-new > p{
+    .home-card-trial > p, .home-card-new > p {
         transform: skewX(25deg) rotate(359deg);
         position: absolute;
         left: 14px;
@@ -2315,14 +2323,16 @@ form div {
         letter-spacing: -0.5px;
         line-height: 71px;
     }
-    .home-card-trial > p{
+
+    .home-card-trial > p {
         font-size: 20px;
-        left:19px;
+        left: 19px;
     }
 
-    .home-latest{
-        margin-bottom:95px;
+    .home-latest {
+        margin-bottom: 95px;
     }
+
     .home-carrousel-category, .home-carrousel-recommended {
         margin-bottom: 50px;
     }
@@ -2360,9 +2370,9 @@ form div {
     }
 
     .share-btn:hover {
-        box-shadow: 0 0.5em 0.5em -0.4em  #F3851B;
+        box-shadow: 0 0.5em 0.5em -0.4em #F3851B;
         transform: translateY(-0.25em);
-        transform:scale(1.1);
+        transform: scale(1.1);
     }
 
     .submergeBlock-game {
@@ -2777,20 +2787,20 @@ form div {
         font-size: 14px;
     }
 
-    .home-latest-releases .btn-disabled-latest-realeses{
+    .home-latest-releases .btn-disabled-latest-realeses {
         pointer-events: none;
         color: #353535;
-        background:linear-gradient(258.4deg, rgba(50, 114, 172, 0.15) 9.17%, rgba(2, 33, 63, 0) 220.5%);
+        background: linear-gradient(258.4deg, rgba(50, 114, 172, 0.15) 9.17%, rgba(2, 33, 63, 0) 220.5%);
     }
 
-    .submergeBlock-publish-form{
+    .submergeBlock-publish-form {
         display: flex;
         width: 100%;
         padding-top: 0.3em;
         justify-content: flex-end;
     }
 
-    .submergeBlock-publish-form button{
+    .submergeBlock-publish-form button {
         transition: all 0.5s;
         position: relative;
         display: inline-block;
@@ -2805,9 +2815,9 @@ form div {
         transition: 0.5s;
     }
 
-    .submergeBlock-publish-form button:hover{
+    .submergeBlock-publish-form button:hover {
         padding-right: 24px;
-        padding-left:8px;
+        padding-left: 8px;
         box-shadow: 0.1em 0 0.9em #2364a0;
     }
 
@@ -2842,7 +2852,7 @@ form div {
         transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
     }
 
-    .modal-content , .modal-content-winner-play{
+    .modal-content, .modal-content-winner-play {
         position: absolute;
         display: flex;
         flex-flow: column;
@@ -2864,7 +2874,7 @@ form div {
         background-color: #9b5890;
     }
 
-    .close-modal-btn-container ,    .share-modal-section{
+    .close-modal-btn-container, .share-modal-section {
         display: flex;
         flex-flow: row nowrap;
         justify-content: flex-end;
@@ -2872,19 +2882,19 @@ form div {
         align-items: center;
     }
 
-    .modal-content > section ~ section{
+    .modal-content > section ~ section {
         justify-content: center;
     }
 
-    .modal-content > section ~ section > h1{
-     padding-left: 0.3em;
+    .modal-content > section ~ section > h1 {
+        padding-left: 0.3em;
     }
 
-    .modal-content > section ~ section > h1{
+    .modal-content > section ~ section > h1 {
         color: #1A4872;
     }
 
-    .material-icons.md-35.share-modal{
+    .material-icons.md-35.share-modal {
         color: #1A4872;
     }
 
@@ -2899,7 +2909,7 @@ form div {
         background-color: #1A4872;
     }
 
-    .close-button-winner-player-modal{
+    .close-button-winner-player-modal {
         background-color: inherit;
         font-size: 40px;
     }
@@ -2929,24 +2939,24 @@ form div {
         gap: 1.2em;
     }
 
-    .modal-web-url,  .copy-url-container-modal {
+    .modal-web-url, .copy-url-container-modal {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 98%;
         flex-flow: row;
-        background-color:#14243B;
+        background-color: #14243B;
         height: 3em;
         border-radius: 12px;
     }
 
-    .copy-url-container-modal{
+    .copy-url-container-modal {
         width: 45%;
         border-radius: 15px;
-        background-color:#02213F;
+        background-color: #02213F;
     }
 
-    .game{
+    .game {
         display: flex;
         flex-flow: row;
         border: 0.001em solid #1b1919;
@@ -2955,28 +2965,28 @@ form div {
         margin-top: 0.5em;
     }
 
-    .four-in-line-config{
-        display:flex;
+    .four-in-line-config {
+        display: flex;
         justify-content: center;
         align-items: center;
         padding: 30px 0px 30px 0px;
         flex-flow: column;
-        width:100%;
-        gap:15px;
-        margin-top:0px;
+        width: 100%;
+        gap: 15px;
+        margin-top: 0px;
         text-align: center;
-        border:0.01em solid #3e4044;
-        margin-top:0.5em;
+        border: 0.01em solid #3e4044;
+        margin-top: 0.5em;
     }
 
-    .four-in-line-config h1{
+    .four-in-line-config h1 {
         text-decoration: underline;
         text-decoration-color: #87B7DA;
         text-underline-offset: 0.2em;
         text-decoration-thickness: 0.05em;
     }
 
-    .submergeBlock-game-mode{
+    .submergeBlock-game-mode {
         display: flex;
         justify-content: center;
         position: relative;
@@ -2999,11 +3009,12 @@ form div {
         border-radius: 3px;
         text-align: center;
     }
-    .four-in-line-config div div{
+
+    .four-in-line-config div div {
         margin-top: 30px;
     }
 
-    .game-container{
+    .game-container {
         display: flex;
         width: 97%;
         justify-content: center;
@@ -3015,7 +3026,7 @@ form div {
         padding: 30px;
     }
 
-    .submergeBlock-start-game-btn{
+    .submergeBlock-start-game-btn {
         margin-top: 30px;
         background-color: #ba41a5;
         width: 200px;
@@ -3023,64 +3034,63 @@ form div {
         letter-spacing: 4px;
         font-size: 30px;
         opacity: 0.45;
-        color:#e2dddd;
+        color: #e2dddd;
         pointer-events: none;
         margin-bottom: 10px;
     }
 
 
-    .submergeBlock-four-in-line{
+    .submergeBlock-four-in-line {
         display: flex;
         width: 100%;
         height: 600px;
         flex-flow: row;
         margin-top: 5px;
-        border: 0.01em solid #3e4044 ;
+        border: 0.01em solid #3e4044;
         border-radius: 3px;
     }
 
 
-
-
-    .submergeBlock-game-status{
+    .submergeBlock-game-status {
         display: flex;
         flex-flow: column;
         background-color: #32373c30;
-        border-left:1px solid #3e4044 ;
+        border-left: 1px solid #3e4044;
         width: 30%;
         align-items: center;
     }
 
-    
-    .canvas-container{
-        display:flex;
+
+    .canvas-container {
+        display: flex;
         width: 70%;
         overflow: hidden;
     }
 
-    .four-in-line-display{
+    .four-in-line-display {
         background-color: #091829BF;
         width: 30%;
         height: 68%;
         text-decoration: #E9EFF3;
         border-radius: 16px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-       
+
     }
-    .submergeBlock-start-game-btn:hover{
+
+    .submergeBlock-start-game-btn:hover {
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         background-color: #ba41a5;
-        color:#f7fafb;
+        color: #f7fafb;
         text-decoration: double;
         font-size: 36px;
-      /*  opacity: 1;*/
+        /*  opacity: 1;*/
         transform: scale(1.1);
         animation: glowing 20s linear infinite;
 
 
     }
 
-    .submergerBlock-game-config-coins .submergeBlock-player1-btn,.submergerBlock-game-config-coins .submergeBlock-player2-btn{
+    .submergerBlock-game-config-coins .submergeBlock-player1-btn, .submergerBlock-game-config-coins .submergeBlock-player2-btn {
         border-radius: 50%;
         background-size: cover;
         width: 70px;
@@ -3089,43 +3099,50 @@ form div {
         background-color: inherit;
         margin: 0px 10px 0px 10px;
     }
-    .four-in-line-config-config{
+
+    .four-in-line-config-config {
         margin: 19px 0px 24px 0px;
     }
 
-    .four-in-line-config h3{
+    .four-in-line-config h3 {
         margin: 25px 0px 16px 0px;
         font-weight: bold;
         font-size: 24px;
-      
+
     }
 
-    .btn1{
+    .btn1 {
         background-image: url("../img/verde.png");
-        transition:box-shadow .2s;
+        transition: box-shadow .2s;
     }
-    .btn2{
+
+    .btn2 {
         background-image: url("../img/naranja.png");
     }
-    .btn3{
+
+    .btn3 {
         background-image: url("../img/celeste.png");
     }
-    .btn4{
+
+    .btn4 {
         background-image: url("../img/amarillo.png");
     }
-    .btn5{
+
+    .btn5 {
         background-image: url("../img/violeta.png");
     }
-    .btn6{
+
+    .btn6 {
         background-image: url("../img/rojo.png");
     }
-    .bt1:active{
+
+    .bt1:active {
         box-shadow: inset 5px 5px 10px 0 #424242,
         inset 0 0 100px 0 #424242;
     }
 
 
-    .turn-container{
+    .turn-container {
         display: flex;
         width: 100%;
         flex-flow: row nowrap;
@@ -3133,21 +3150,21 @@ form div {
         margin-top: 50px;
     }
 
-    .player-turn-container{
+    .player-turn-container {
         display: flex;
         flex-flow: column;
         justify-content: center;
         align-items: center;
         gap: 10px;
         opacity: 0.5;
-      /*  box-shadow: rgb(39 112 189) 0px 0px 34px;*/
+        /*  box-shadow: rgb(39 112 189) 0px 0px 34px;*/
         border-radius: 12px;
         height: 125px;
         width: 140px;
 
     }
 
-    .time-container{
+    .time-container {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -3155,39 +3172,40 @@ form div {
         margin-top: 55px;
     }
 
-    #time{
+    #time {
         color: #f179dd;
-        text-shadow:
-        0 1px 1px #b883b0,
+        text-shadow: 0 1px 1px #b883b0,
         0 0.1px 2.5px #b883b0;
     }
 
-    .timer-message{
+    .timer-message {
         margin-top: 55px;
     }
 
-    .timer-message h3{
+    .timer-message h3 {
         color: #b883b0;
     }
+
     .player-turn-container h2 {
-        color:#f179dd;
+        color: #f179dd;
     }
-    .timer-message h3{
+
+    .timer-message h3 {
         font-size: 26px;
     }
 
-    .time-container h1{
+    .time-container h1 {
         font-size: 70px;
     }
 
-    .player-1-coin , .player-2-coin{
+    .player-1-coin, .player-2-coin {
         width: 60px;
         height: 60px;
-        border-radius:50%;
+        border-radius: 50%;
         background-size: cover;
     }
 
-    .close-game-container-btn{
+    .close-game-container-btn {
         display: flex;
         width: 90%;
         flex-flow: row;
@@ -3197,18 +3215,18 @@ form div {
         padding-right: 15px;
     }
 
-    .submergeBLock-close-game{
+    .submergeBLock-close-game {
         background-color: inherit;
         font-size: 40px;
         color: #9b5890;
     }
 
-   .modal-content-winner-play .game-status{
-       margin-top: 35px;
-       font-size: 43px;
+    .modal-content-winner-play .game-status {
+        margin-top: 35px;
+        font-size: 43px;
     }
 
-    .game-status-container{
+    .game-status-container {
         display: flex;
         flex-flow: column;
         align-items: center;
@@ -3284,57 +3302,57 @@ form div {
         --n: 4;
     }
 
-  /*  @mixin white-gradient {
-        background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-    }*/
-
-
-
-
+    /*  @mixin white-gradient {
+          background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+      }*/
     @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-250px * 7))}
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-250px * 7))
+        }
     }
 
 
 
-   .slider {
-       background: inherit;
-       box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-       height: 150px;
-       margin: auto;
-       overflow: hidden;
-       position: relative;
-       width: 960px;
-   }
+    .slider {
+        background: inherit;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+        height: 150px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 960px;
+    }
 
-.slider::before{
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-}
+    .slider::before {
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+    }
 
 
-.slider::after {
-     content: "";
-     height: 100px;
-     position: absolute;
-     width: 200px;
-     z-index: 2;
- }
+    .slider::after {
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+    }
 
-.slider::after {
-     right: 0;
-     top: 0;
-     transform: rotateZ(180deg);
- }
+    .slider::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
 
-.slider::before {
-     left: 0;
-     top: 0;
- }
+    .slider::before {
+        left: 0;
+        top: 0;
+    }
 
     .slide-track {
         animation: scroll 40s linear infinite;
@@ -3349,15 +3367,82 @@ form div {
 
     }
 
-    .carousel-img-container img{
+    .carousel-img-container img {
         max-width: 100%;
         max-height: 100%;
 
     }
 
-    .hide{
+    .hide {
         display: none;
     }
 
+    .newRelease-game-history > article{
+        display: flex;
+        flex-flow: column;
+        gap: 25px;
+        overflow: scroll;
+        max-height: 35em;
+        -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        scrollbar-width: none; /* for Firefox */
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding-top: 10px;
+        margin-top: 0.9em;
+    }
 
+    .item {
+        opacity: 0;
+        position: relative;
+        padding-left: 4px;
+        padding-right: 4px;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent 50px);
+    }
+
+    @keyframes showImage {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+    .show-history-images{
+        animation: showImage ease-in 800ms forwards;
+    }
+
+    .item .image-holder {
+        position: sticky;
+        top: 0;
+        float: left;
+        overflow: hidden;
+        border-radius: 4px;
+        width: 50%;
+        height: 34em;
+        border: solid 0.01em rgb(118 106 0 / 50%);
+        box-shadow: 1px 0px 12px 1px rgb(118 106 0 / 50%);
+    }
+    .item .image-holder img {
+        position: relative;
+        height: 100%;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .item .text-holder {
+        display: flex;
+        flex-flow: column;
+        gap: 20px;
+        min-height: 120vh;
+        margin-left: 52%;
+        padding-top: 14em;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
 }
+
+
+
+
+
