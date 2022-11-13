@@ -1141,21 +1141,42 @@ footer{
     border-radius: 3px;
     align-items: center;
     border: 0.003em solid #2c2b2b;
+    opacity: 0;
     gap: 5px;
     height: 265px;
     justify-content: space-evenly;
 }
 
-
-/*.newRelease-card-wave-right{
-    animation: wave 800ms ease-in-out;
-    animation-delay: calc(30ms *var(--i));
+@keyframes moveCardToCarousel {
+    from{
+    opacity: 0;
+    scale: 0.2;
+   }
+  to{
+    opacity: 1;
+      scale: 1.0;
+    }
 }
 
-.newRelease-card-wave-left{
-    animation: wave 1000ms ease-in-out;
-    animation-delay: calc(2000ms *var(--j));
-}*/
+@keyframes removeCarousel {
+    from{
+        opacity: 1;
+        scale: 1.0;
+    }
+    to{
+        opacity: 0;
+        scale: 0.2;
+    }
+}
+
+.newRelease-card-move-to-carousel{
+    animation: moveCardToCarousel ease-in-out 2s forwards ;
+}
+
+.newRelease-card-remove-cards-carousel{
+    animation: removeCarousel ease-in-out 2s forwards ;
+}
+
 
 
 .newRelease-card-label{
