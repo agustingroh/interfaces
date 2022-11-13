@@ -53,6 +53,10 @@
 			btnForwardLatestReleases.classList.remove("btn-disabled-latest-realeses");
 		}
 	});
+	
+	
+
+
 
 
 
