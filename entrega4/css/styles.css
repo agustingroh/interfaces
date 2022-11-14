@@ -1684,6 +1684,7 @@ form div {
         top:80px;
     }
 
+
     /*footer*/
     footer {
         grid-template-columns: 263px 183px 200px 180px;
@@ -1742,6 +1743,93 @@ form div {
         height: 680px;
     }
 
+    @keyframes hamburgerMenuRotateClockwise{
+       from {
+        transform: translate(0px,0px) rotate(0);
+       } 
+       to {
+        transform: translate(0px,-9px) rotate(-45deg);
+       }
+    }
+    @keyframes hamburgerMenuCloseClockwise{
+        from {
+         transform: rotate(-45deg);
+        } 
+        to {
+         transform: rotate(0);
+        }
+     }
+    @keyframes hamburgerMenuRotateAntiClockwise{
+        from {
+         transform: rotate(0);
+        } 
+        to {
+         transform: rotate(45deg);
+        }
+     }
+     @keyframes hamburgerMenuCloseAntiClockwise{
+        from {
+         transform: rotate(45deg);
+        } 
+        to {
+         transform: rotate(0deg);
+        }
+     }
+     @keyframes hamburgerMenuCenterLineOpen{
+        from{
+            opacity: 1;
+        }to{
+            opacity: 0;
+        }
+     }
+     @keyframes hamburgerMenuCenterLine {
+        from{
+            opacity: 0;
+        }to{
+            opacity: 1;
+        }
+     }
+    .hamburger-menu-line{
+        transform-origin: center;
+        display:block;
+        height:2px;
+        width:30px;
+        background-color: rgb(190, 189, 189);
+       /* background-color:linear-gradient(270deg, #B3B9BC -1.95%, #FFFFFF 140.62%); */
+    }
+    .rotate-clockwise{
+        animation:hamburgerMenuRotateClockwise ease-out 500ms forwards;
+    }
+    .rotate-Anticlockwise{
+        animation:hamburgerMenuRotateAntiClockwise ease-out 500ms forwards;
+    }
+    .rotate-clockwise-close{
+        animation:hamburgerMenuCloseClockwise ease-in 300ms forwards;
+        
+    }
+    .rotate-Anticlockwise-close{
+        animation:hamburgerMenuCloseAntiClockwise ease-in 300ms forwards;
+    
+    }
+    .menu-center-line-open{
+        display:none;
+        animation:hamburgerMenuCenterLineOpen ease-in 500ms forwards;
+    }
+    .menu-center-line{
+        animation:hamburgerMenuCenterLine ease-in 300ms forwards;
+        /* animation-delay: 500ms; */
+    }
+    
+    .hamburger-menu{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        gap: 8px;
+        position: absolute;
+        right: 34px;
+    }
     .logo-container {
         width: 12%;
     }

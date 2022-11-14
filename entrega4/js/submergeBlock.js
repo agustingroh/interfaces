@@ -14,16 +14,32 @@ document.addEventListener("DOMContentLoaded", function(){
     window.addEventListener("click", windowOnClick);
 
 
-document.querySelector("#submergeBlock-carousel").classList.add("submergeBlock-carousel-slide");
+// document.querySelector("#submergeBlock-carousel").classList.add("submergeBlock-carousel-slide");
 
- document.querySelector('#menu-btn').addEventListener('click',() => {
-    let menu = document.querySelector("#menu");
-     menu.classList.toggle('show-menu');
- });
-
- document.querySelector('#close-menu-btn').addEventListener('click',() => {
-    let menu = document.querySelector("#menu");
-        menu.classList.toggle('show-menu');
+let menuLines=document.querySelectorAll(".hamburger-menu-line");
+let menuHamburger=document.querySelector('#hamburger-menu');
+ /**
+  * @brief menu actions
+  * **/
+ 
+ menuHamburger.addEventListener('click',() => {
+            let menu = document.querySelector("#menu");
+            if(!menu.classList.contains('show-menu')){
+                menu.classList.toggle('show-menu');
+                menuLines[2].classList.remove("rotate-clockwise-close");
+                menuLines[0].classList.remove("rotate-Anticlockwise-close");
+                menuLines[1].classList.add("menu-center-line-open");
+                menuLines[2].classList.add("rotate-clockwise");
+                menuLines[0].classList.add("rotate-Anticlockwise");
+            }else{
+                menu.classList.toggle('show-menu');
+                menuLines[2].classList.remove("rotate-clockwise");
+                menuLines[0].classList.remove("rotate-Anticlockwise");
+                menuLines[2].classList.add("rotate-clockwise-close");
+                menuLines[0].classList.add("rotate-Anticlockwise-close");
+                menuLines[1].classList.add("menu-center-line");
+                menuLines[1].classList.remove("menu-center-line-open");
+            }
  });
 
 
