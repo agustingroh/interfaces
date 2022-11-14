@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbbf9a27-c580-44bd-86c0-838413d005db" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/hogwarts-legacy-story" beforeDir="false" afterPath="$PROJECT_DIR$/img/hogwarts-legacy-story.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/hogwarts-legacy-story2" beforeDir="false" afterPath="$PROJECT_DIR$/img/hogwarts-legacy-story2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/hogwarts-legacy-story3" beforeDir="false" afterPath="$PROJECT_DIR$/img/hogwarts-legacy-story3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/hogwarts-legacy-story4" beforeDir="false" afterPath="$PROJECT_DIR$/img/hogwarts-legacy-story4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/newRelease.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/newRelease.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/newGameRelease.html" beforeDir="false" afterPath="$PROJECT_DIR$/newGameRelease.html" afterDir="false" />
     </list>
