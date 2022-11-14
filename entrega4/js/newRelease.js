@@ -22,6 +22,8 @@ let menuHamburger=document.querySelector('#hamburger-menu');
                 menuLines[0].classList.add("rotate-Anticlockwise-close");
                 menuLines[1].classList.add("menu-center-line");
                 menuLines[1].classList.remove("menu-center-line-open");
+
+
             }
  });
 
