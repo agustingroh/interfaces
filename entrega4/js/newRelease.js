@@ -30,11 +30,19 @@ let featureTitle=document.querySelector("#newRelease-sticky-feature-history");
 let historyContainer=document.querySelector("#newRelease-game-history");
 let historyImages =  document.getElementsByClassName("item");
 
+let newReleaseNewSale =  document.querySelector("#newRelease-new-sale");
+let newReleaseBtnWish = document.querySelector("#newRelease-btn-wish");
+
     window.addEventListener("scroll", (event) => {
         let scroll = this.scrollY;
         console.log(scroll);
         let historyTop= historyContainer.offsetTop;
         // Move nav bar to history section
+        if(scroll>=345) {
+            newReleaseNewSale.classList.add("newRelease-sale-move");
+            newReleaseBtnWish.classList.add("newRelease-btn-wish-animate");
+
+        }
        if(scroll>=950 && scroll<=1100){
             historyTitle.classList.add("newRelease-sticky-underline");
             featureTitle.classList.remove("newRelease-sticky-underline");
