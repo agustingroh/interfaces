@@ -1,5 +1,6 @@
 # Default ignored files
 /shelf/
-/entrega4/.idea/*
+entrega4/.idea
+
 # Editor-based HTTP Client requests
 /httpRequests/
