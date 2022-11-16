@@ -1037,7 +1037,42 @@ footer{
     flex-flow: column;
     justify-content: center;
     align-items: center;
+}
 
+.newRelease-feature1{
+    position: relative;
+    transform: translateX(-1250px);
+}
+
+.newRelease-feature2{
+    position: relative;
+    transform: translateX(-800px);
+}
+
+.newRelease-feature3{
+    position: relative;
+    transform: translateX(-700px);
+}
+
+.newRelease-feature4{
+    position: relative;
+    transform: translateX(1800px);
+}
+
+.newRelease-feature5{
+    position: relative;
+    transform: translateX(1950px);
+}
+
+@keyframes newReleaseMove {
+    from { transform: rotate(0deg); } /* Safari needs a 'from' */
+    to {  transform: rotate(360deg);
+            left: 0
+    }
+}
+
+.newReleaseFeatureMove{
+    animation: newReleaseMove ease-in-out 2s forwards;
 }
 
 .newRelease-feature:hover{
