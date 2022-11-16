@@ -49,15 +49,34 @@ let historyTitle=document.querySelector("#newRelease-sticky-title-history");
 let featureTitle=document.querySelector("#newRelease-sticky-feature-history");
 let historyContainer=document.querySelector("#newRelease-game-history");
 let historyImages =  document.getElementsByClassName("item");
-
+let featuresCards =  document.querySelectorAll(".newRelease-feature");
 let newReleaseNewSale =  document.querySelector("#newRelease-new-sale");
 let newReleaseBtnWish = document.querySelector("#newRelease-btn-wish");
+let cardsPositionMapper = {
+    0: -1250,
+    1: -800,
+    2: -700,
+    3:1800,
+    4:1950
+}
+
+    const animation =  [  {
+        transform: 'translateY(0px)'
+    },
+        {
+            transform: 'translateY(-80px)'
+        },
+        {
+            transform: 'translateY(0)'
+        }];
+
+
 
     window.addEventListener("scroll", (event) => {
         let scroll = this.scrollY;
-        console.log(scroll);
         let historyTop= historyContainer.offsetTop;
         // Move nav bar to history section
+        console.log(scroll);
         if(scroll>=345) {
             newReleaseNewSale.classList.add("newRelease-sale-move");
             newReleaseBtnWish.classList.add("newRelease-btn-wish-animate");
@@ -79,32 +98,54 @@ let newReleaseBtnWish = document.querySelector("#newRelease-btn-wish");
         }else{
             historyTitle.classList.remove("newRelease-sticky-underline");
         }
-       if(scroll<1100){
+       if(scroll<=1200){
            cards.forEach((c)=>{
                c.classList.add("newRelease-card-remove-cards-carousel");
                c.classList.remove("newRelease-card-move-to-carousel");
            });
        }
+
+
+    moveFeaturesCards(scroll);
+
+
+
        // Characters section
         if(scroll > 1100 && scroll < 1800){
-            cards.forEach((c)=>{
+             cards.forEach((c)=>{
                 c.classList.add("newRelease-card-move-to-carousel");
                 c.classList.remove("newRelease-card-remove-cards-carousel");
             });
         }
     });
 
-   const animation =  [  {
-        transform: 'translateY(0px)'
-    },
-    {
-        transform: 'translateY(-80px)'
-    },
-    {
-        transform: 'translateY(0)'
-    }];
 
-
+function moveFeaturesCards(scroll){
+    if(scroll>=1050){
+        featuresCards.forEach((c)=>{
+            if(scroll>=1050 && scroll <=1150){
+                c.setAttribute("style", `transform:translate(-90px)  rotate(55deg)`);
+                c.style.transition="ease-out 1200ms";
+            }
+            if(scroll > 1225 && scroll<= 1300){
+                c.setAttribute("style", `transform:translate(-35px) rotate(35deg)`);
+                c.style.transition="ease-out 1200ms";
+            }
+            if(scroll > 1300 && scroll< 1310){
+                c.setAttribute("style", `transform:translate(-15px) rotate(15deg)`);
+                c.style.transition="ease-out 1200ms";
+            }
+            if(scroll > 1310){
+                c.setAttribute("style", `transform:translate(0px) rotate(0deg)`);
+                c.style.transition="ease-out 1200ms"
+            }           });
+    }else{
+        featuresCards.forEach((c,i)=> {
+            c.setAttribute("style", `transform:translate(${cardsPositionMapper[i]}px) rotate(360deg)`);
+            c.style.transition = "ease-out 1200ms";
+        });
+    }
+}
 
  /**
   * @brief build bullets depending on the width of the carousel
@@ -122,6 +163,7 @@ let newReleaseBtnWish = document.querySelector("#newRelease-btn-wish");
  buildBullets();
  positionBullet(clickPosition); //start first bullet with class active
 
+    // move fordward
     btnFordward.addEventListener('click',()=>{
         clickPosition +=1;
         positionBullet(clickPosition);
@@ -158,6 +200,7 @@ let newReleaseBtnWish = document.querySelector("#newRelease-btn-wish");
 
     });
 
+    // Move backward
     btnBackward.addEventListener('click',()=>{
         clickPosition -=1;
         positionBullet(clickPosition);
@@ -204,7 +247,6 @@ function positionBullet(position){
 
 
     let sticky = imgContainer.offsetTop;
-
 	window.onscroll = function() {
 		
 		if (window.pageYOffset > sticky) {
