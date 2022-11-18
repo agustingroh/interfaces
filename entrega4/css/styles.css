@@ -1274,6 +1274,7 @@ footer{
     font-size: 13px;
 }
 
+
 .newRelease-character-card-container{
     height: 95px;
     display: flex;
@@ -1281,6 +1282,24 @@ footer{
     justify-content: center;
     align-items: center;
     width: 95%;
+}
+
+@keyframes move {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:1264px }
+}
+
+
+#norbert{
+    width:198px;
+    height:168px;
+    margin-left: 1.6em;
+    background:url("../img/Wyvern-Monarch-modified.png") repeat-x;
+    animation:move .8s steps(6) infinite;
+    /* Posicionamos el personaje sobre el camino de madera */
+
 }
 
 .newRelease-character-description{
@@ -2030,10 +2049,10 @@ form div {
     }
 
     .newRelease-card:hover > .newRelease-character-card-container {
-        width: 60%;
         position: relative;
-        bottom: -2.2em;
         transition: all 300ms;
+        bottom: -1.2em;
+        height: 9em;
         z-index: 4;
     }
 
