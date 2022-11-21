@@ -11,6 +11,7 @@ body{
     color: #E9EFF3;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .material-icons{
@@ -707,6 +708,103 @@ footer{
     text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.25);
 }
 
+#newRelease-hogwarts-back{
+    z-index: -1;
+    position: relative;
+}
+
+@keyframes lateralMoveMouse {
+    0%, 100% {
+        left: -12em;
+    }
+    50% {
+        left: -9em;
+    }
+
+
+}
+
+.lateral-mouse-movement{
+    position: absolute;
+    scale: 0.07;
+    top: 30em;
+    left: -12em;
+    border-radius: 10px;
+    background-color: #beaeae;
+    animation: lateralMoveMouse 4s linear infinite ;
+}
+
+@keyframes moveRight {
+    from{
+        transform: translate(0px,0);
+    }
+    to{
+        transform: translate(10px,0px);
+    }
+}
+
+@keyframes moveLeft {
+    from{
+        transform: translate(0px,0);
+    }
+    to{
+        transform: translate(-10px,0px);
+    }
+}
+
+@keyframes moveHeroRightToLeft {
+    from{
+        transform: translate(0px,0);
+    }
+    to{
+        transform: translate(12px,0px);
+    }
+}
+
+@keyframes moveHeroRightToRight {
+    from{
+        transform: translate(0px,0);
+    }
+    to{
+        transform: translate(-12px,0px);
+    }
+}
+
+.move-hero-right-to-right{
+    animation: moveHeroRightToRight 0.5s ease-in forwards;
+}
+
+
+.move-hero-right-to-left{
+    animation: moveHeroRightToLeft 0.5s ease-in forwards;
+}
+
+.move-hero-front-right{
+    animation: moveRight 1s ease-in-out forwards;
+}
+
+.move-hero-front-right-remove{
+    animation: moveRight 1s ease-in-out reverse forwards;
+}
+
+
+.move-hero-front-left{
+    animation: moveLeft 1s ease-in-out forwards;
+}
+
+#newRelease-hogwarts-front{
+    z-index: 9;
+    position:relative;
+    bottom: -14em;
+    left: 7em;
+}
+#newRelease-hogwarts-right{
+    z-index: 9;
+    position:relative;
+    bottom: 21em;
+    left: -18em;
+}
+
 .newRelease-img-container img {
     min-height: 100%;
     min-width: 100%;
@@ -1013,7 +1111,7 @@ footer{
 }
 
 .newRelease-game-history {
-    padding-top: 55px;
+    padding-top: 7em;
     gap: 0.5em;
     display: flex;
     justify-content: flex-start;
@@ -2161,18 +2259,33 @@ form div {
         }
     }
     .newRelease-sticky-content{
-      
         display: flex;
         justify-content: space-evenly;
         width: 100%;
+        align-items: center;
         position: fixed;
         top: 0;
         z-index: 10;  
-        background-color: #040B1490;
+        background-color: #040b14;
         padding: 1.7em 1em;
         animation: showMenu 1500ms ;
-        
     }
+
+.sticky-section-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.logo-container-sticky-nav{
+        width: 9%;
+        flex-flow: column;
+        height: 50px;
+        justify-content: center;
+    align-items: center;
+
+}
+
 
     .newRelease-sticky-content-title{
         margin:0;
@@ -3622,6 +3735,10 @@ form div {
         display: none;
     }
 
+    .newRelease-game-history > article::-webkit-scrollbar {
+        display: none;  /* Safari and Chrome */
+    }
+
     .newRelease-game-history > article{
         display: flex;
         flex-flow: column;
@@ -3657,6 +3774,7 @@ form div {
         animation: showImage ease-in 800ms forwards;
     }
 
+
     .item .image-holder {
         position: sticky;
         top: 0;
@@ -3685,6 +3803,9 @@ form div {
         padding-left: 2em;
         padding-right: 2em;
     }
+
+
+
 }
 
 

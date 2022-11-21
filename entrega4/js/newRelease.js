@@ -30,7 +30,30 @@ let cardsPositionMapper = {
 }
 const animation =  [{transform: 'translateY(0px)'},{transform: 'translateY(-80px)'},{transform: 'translateY(0)'}];
 let menuSections = document.querySelectorAll(".menu-section");
+let heroFront = document.querySelector("#newRelease-hogwarts-back");
+let heroRight = document.querySelector("#newRelease-hogwarts-right");
 
+window.addEventListener("mousemove",(e)=>{
+    if(e.screenY<600 &&  e.screenY>130){
+      if(e.screenX>=500){
+          heroFront.classList.add("move-hero-front-left");
+          heroRight.classList.add("move-hero-right-to-right");
+          heroRight.classList.remove("move-hero-right-to-left");
+
+      }else{
+          heroFront.classList.add("move-hero-front-right");
+          heroFront.classList.remove("move-hero-front-left");
+          heroRight.classList.add("move-hero-right-to-left");
+          heroRight.classList.remove("move-hero-right-to-right");
+
+      }
+    }else{
+        heroRight.classList.remove("move-hero-right-to-left");
+        heroRight.classList.remove("move-hero-right-to-right");
+        heroFront.classList.remove("move-hero-front-right");
+        heroFront.classList.remove("move-hero-front-left");
+    }
+});
 
     /**
      * @brief handle menu actions
@@ -87,16 +110,16 @@ let menuSections = document.querySelectorAll(".menu-section");
             newReleaseBtnWish.classList.add("newRelease-btn-wish-animate");
 
         }
-       if(scroll>=950 && scroll<=1100){
+       if(scroll>=950 && scroll<=1800){
             historyTitle.classList.add("newRelease-sticky-underline");
             featureTitle.classList.remove("newRelease-sticky-underline");
             characterTitleHeader.classList.remove("newRelease-sticky-underline");
            historyImages[0].classList.add("show-history-images");
-        }else if(scroll>=1000 && scroll<=1200){
+        }else if(scroll>1800 && scroll<=2000){
             characterTitleHeader.classList.remove("newRelease-sticky-underline");
             featureTitle.classList.add("newRelease-sticky-underline");
             historyTitle.classList.remove("newRelease-sticky-underline");
-        }else if(scroll > 1300 && scroll < 1800){
+        }else if(scroll > 2000 && scroll < 2450){
             featureTitle.classList.remove("newRelease-sticky-underline");
             characterTitleHeader.classList.add("newRelease-sticky-underline");
             historyTitle.classList.remove("newRelease-sticky-underline");
