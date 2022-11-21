@@ -12,7 +12,7 @@ const GAP = 4; // GAP between game cards
 let v = document.querySelector(".newRelease-characters-container").getBoundingClientRect().width;
 let clickPosition = 0;
 let cards = document.querySelectorAll(".newRelease-card");
-let characterTitle=document.querySelector("#newRelease-sticky-title-characters");
+let characterTitleHeader=document.querySelector("#newRelease-sticky-title-characters");
 let historyTitle=document.querySelector("#newRelease-sticky-title-history");
 let featureTitle=document.querySelector("#newRelease-sticky-feature-history");
 let historyContainer=document.querySelector("#newRelease-game-history");
@@ -20,6 +20,7 @@ let historyImages =  document.getElementsByClassName("item");
 let featuresCards =  document.querySelectorAll(".newRelease-feature");
 let newReleaseNewSale =  document.querySelector("#newRelease-new-sale");
 let newReleaseBtnWish = document.querySelector("#newRelease-btn-wish");
+let characterTitle = document.querySelector("#newRelease-character-title");
 let cardsPositionMapper = {
     0: -1250,
     1: -800,
@@ -89,15 +90,15 @@ let menuSections = document.querySelectorAll(".menu-section");
        if(scroll>=950 && scroll<=1100){
             historyTitle.classList.add("newRelease-sticky-underline");
             featureTitle.classList.remove("newRelease-sticky-underline");
-            characterTitle.classList.remove("newRelease-sticky-underline");
+            characterTitleHeader.classList.remove("newRelease-sticky-underline");
            historyImages[0].classList.add("show-history-images");
         }else if(scroll>=1000 && scroll<=1200){
-            characterTitle.classList.remove("newRelease-sticky-underline");
+            characterTitleHeader.classList.remove("newRelease-sticky-underline");
             featureTitle.classList.add("newRelease-sticky-underline");
             historyTitle.classList.remove("newRelease-sticky-underline");
         }else if(scroll > 1300 && scroll < 1800){
             featureTitle.classList.remove("newRelease-sticky-underline");
-            characterTitle.classList.add("newRelease-sticky-underline");
+            characterTitleHeader.classList.add("newRelease-sticky-underline");
             historyTitle.classList.remove("newRelease-sticky-underline");
         }else{
             historyTitle.classList.remove("newRelease-sticky-underline");
@@ -109,14 +110,81 @@ let menuSections = document.querySelectorAll(".menu-section");
            });
        }
     moveFeaturesCards(scroll);
-       // Characters section
+    moveCharacterTitle(scroll);
+    showCardsInCarousel(scroll);
+
+    });
+
+
+    /**
+     * @Brief Shows cards into the carousel
+     * */
+    function showCardsInCarousel(scroll){
         if(scroll > 1100 && scroll < 1800){
-             cards.forEach((c)=>{
+            cards.forEach((c)=>{
                 c.classList.add("newRelease-card-move-to-carousel");
                 c.classList.remove("newRelease-card-remove-cards-carousel");
             });
         }
-    });
+    }
+
+    /**
+     * @Brief Animates character title
+     * */
+    function moveCharacterTitle(scroll){
+        if(scroll>1650) {
+            if(scroll > 1375 && scroll < 1399) {
+                characterTitle.setAttribute("style", `transform:translateY(-900px)`);
+                characterTitle.style.opacity = '0';
+                characterTitle.style.transition = "ease-out 1200ms";
+            }
+            if(scroll > 1400 && scroll < 1415) {
+                characterTitle.setAttribute("style", `transform:translateY(-750px)`);
+                characterTitle.style.opacity = '0';
+                characterTitle.style.transition = "ease-out 1200ms";
+            }
+            if(scroll > 1500 && scroll < 1520) {
+                characterTitle.setAttribute("style", `transform:translateY(-500px)`);
+                characterTitle.style.opacity = '0';
+                characterTitle.style.transition = "ease-out 1200ms";
+            }
+            if(scroll > 1520 && scroll < 1580) {
+                characterTitle.setAttribute("style", `transform:translateY(-350px)`);
+                characterTitle.style.opacity = '0';
+                characterTitle.style.transition = "ease-out 1200ms";
+            }
+
+            if(scroll > 1600 && scroll < 1630) {
+                characterTitle.setAttribute("style", `transform:translateY(-300px) `);
+                characterTitle.style.opacity = '0.1';
+                characterTitle.style.transition = "ease-out 1200ms";
+            }
+
+            if(scroll > 1630 && scroll < 1690) {
+                characterTitle.setAttribute("style", `transform:translateY(-200px) scale(0.1) `);
+                characterTitle.style.opacity = '0';
+                characterTitle.style.transition = "ease-out 1200ms";
+            }
+            if(scroll > 1700 && scroll < 1750) {
+                characterTitle.setAttribute("style", `transform:translateY(-100px) scale(0.5)`);
+                characterTitle.style.opacity = '0.1';
+                characterTitle.style.transition = "ease-out 1200ms";
+            }
+
+            if(scroll > 1750 && scroll < 1835) {
+                characterTitle.setAttribute("style", `transform:translateY(-50px) scale(0.8)`);
+                characterTitle.style.opacity = '0.4';
+                characterTitle.style.transition = "ease-out 1200ms";
+            }
+
+            if(scroll > 1835) {
+                characterTitle.setAttribute("style", `transform:translateY(0px)`);
+                characterTitle.style.opacity = '1.0';
+                characterTitle.style.transition = "ease-out 1200ms";
+            }
+
+        }
+    }
 
     /**
      * @Brief Applies wave effect in the character cards
