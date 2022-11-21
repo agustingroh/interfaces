@@ -1,38 +1,6 @@
 document.addEventListener("DOMContentLoaded", ()=>{
 let menuLines=document.querySelectorAll(".hamburger-menu-line");
 let menuHamburger=document.querySelector('#hamburger-menu');
- /**
-  * @brief menu actions
-  * **/
- 
- menuHamburger.addEventListener('click',() => {
-            let menu = document.querySelector("#menu");
-            if(!menu.classList.contains('show-menu')){
-                menu.classList.toggle('show-menu');
-                menuLines[2].classList.remove("rotate-clockwise-close");
-                menuLines[0].classList.remove("rotate-Anticlockwise-close");
-                menuLines[1].classList.add("menu-center-line-open");
-                menuLines[2].classList.add("rotate-clockwise");
-                menuLines[0].classList.add("rotate-Anticlockwise");
-            }else{
-                menu.classList.toggle('show-menu');
-                menuLines[2].classList.remove("rotate-clockwise");
-                menuLines[0].classList.remove("rotate-Anticlockwise");
-                menuLines[2].classList.add("rotate-clockwise-close");
-                menuLines[0].classList.add("rotate-Anticlockwise-close");
-                menuLines[1].classList.add("menu-center-line");
-                menuLines[1].classList.remove("menu-center-line-open");
-
-
-            }
- });
-
-//  document.querySelector('#close-menu-btn').addEventListener('click',() => {
-//             let menu = document.querySelector("#menu");
-//             
-            
-//  });
-
 let stickyContent = document.querySelector("#newRelease-sticky-content");
 let imgContainer = document.querySelector("#newRelease-img-container");
 let carousel = document.querySelector("#newRelease-carousel");
@@ -59,19 +27,55 @@ let cardsPositionMapper = {
     3:1800,
     4:1950
 }
-
-    const animation =  [  {
-        transform: 'translateY(0px)'
-    },
-        {
-            transform: 'translateY(-80px)'
-        },
-        {
-            transform: 'translateY(0)'
-        }];
+const animation =  [{transform: 'translateY(0px)'},{transform: 'translateY(-80px)'},{transform: 'translateY(0)'}];
+let menuSections = document.querySelectorAll(".menu-section");
 
 
+    /**
+     * @brief handle menu actions
+     */
+    menuHamburger.addEventListener('click',() => {
+        let menu = document.querySelector("#menu");
+        if(!menu.classList.contains('show-menu')){
+            menu.classList.remove("close-menu");
+            menu.classList.add('show-menu');
+            menuLines[2].classList.remove("rotate-clockwise-close");
+            menuLines[0].classList.remove("rotate-Anticlockwise-close");
+            menuLines[1].classList.add("menu-center-line-open");
+            menuLines[2].classList.add("rotate-clockwise");
+            menuLines[0].classList.add("rotate-Anticlockwise");
+           showMenuSections();
+        }else{
+            menu.classList.add("close-menu");
+            menu.classList.remove("show-menu");
+            menuLines[2].classList.remove("rotate-clockwise");
+            menuLines[0].classList.remove("rotate-Anticlockwise");
+            menuLines[2].classList.add("rotate-clockwise-close");
+            menuLines[0].classList.add("rotate-Anticlockwise-close");
+            menuLines[1].classList.add("menu-center-line");
+            menuLines[1].classList.remove("menu-center-line-open");
+            hideMenuSections();
+        }
+    });
 
+    function showMenuSections(){
+        menuSections.forEach((ms,i)=>{
+            setTimeout(() => {
+                ms.classList.add("menu-section-open");
+            }, i * 90);
+
+        });
+    }
+
+    function hideMenuSections(){
+        menuSections.forEach((ms)=>{
+            ms.classList.remove("menu-section-open");
+        });
+    }
+
+    /**
+     * @brief handle scroll events
+     */
     window.addEventListener("scroll", (event) => {
         let scroll = this.scrollY;
         let historyTop= historyContainer.offsetTop;
@@ -104,12 +108,7 @@ let cardsPositionMapper = {
                c.classList.remove("newRelease-card-move-to-carousel");
            });
        }
-
-
     moveFeaturesCards(scroll);
-
-
-
        // Characters section
         if(scroll > 1100 && scroll < 1800){
              cards.forEach((c)=>{
@@ -119,51 +118,55 @@ let cardsPositionMapper = {
         }
     });
 
-
-function moveFeaturesCards(scroll){
-    if(scroll>=1050){
-        featuresCards.forEach((c)=>{
-            if(scroll>=1050 && scroll <=1150){
-                c.setAttribute("style", `transform:translate(-90px)  rotate(55deg)`);
-                c.style.transition="ease-out 1200ms";
-            }
-            if(scroll > 1225 && scroll<= 1300){
-                c.setAttribute("style", `transform:translate(-35px) rotate(35deg)`);
-                c.style.transition="ease-out 1200ms";
-            }
-            if(scroll > 1300 && scroll< 1310){
-                c.setAttribute("style", `transform:translate(-15px) rotate(15deg)`);
-                c.style.transition="ease-out 1200ms";
-            }
-            if(scroll > 1310){
-                c.setAttribute("style", `transform:translate(0px) rotate(0deg)`);
-                c.style.transition="ease-out 1200ms"
-            }           });
-    }else{
-        featuresCards.forEach((c,i)=> {
-            c.setAttribute("style", `transform:translate(${cardsPositionMapper[i]}px) rotate(360deg)`);
-            c.style.transition = "ease-out 1200ms";
-        });
+    /**
+     * @Brief Applies wave effect in the character cards
+     * */
+    function moveFeaturesCards(scroll){
+        if(scroll>=1050){
+            featuresCards.forEach((c)=>{
+                if(scroll>=1050 && scroll <=1150){
+                    c.setAttribute("style", `transform:translate(-90px)  rotate(55deg)`);
+                    c.style.transition="ease-out 1200ms";
+                }
+                if(scroll > 1225 && scroll<= 1300){
+                    c.setAttribute("style", `transform:translate(-35px) rotate(35deg)`);
+                    c.style.transition="ease-out 1200ms";
+                }
+                if(scroll > 1300 && scroll< 1310){
+                    c.setAttribute("style", `transform:translate(-15px) rotate(15deg)`);
+                    c.style.transition="ease-out 1200ms";
+                }
+                if(scroll > 1310){
+                    c.setAttribute("style", `transform:translate(0px) rotate(0deg)`);
+                    c.style.transition="ease-out 1200ms"
+                }           });
+        }else{
+            featuresCards.forEach((c,i)=> {
+                c.setAttribute("style", `transform:translate(${cardsPositionMapper[i]}px) rotate(360deg)`);
+                c.style.transition = "ease-out 1200ms";
+            });
+        }
     }
-}
 
- /**
-  * @brief build bullets depending on the width of the carousel
-   */
- function buildBullets() {
-     let bulletCount = Math.round(Math.ceil(carouselWidth / (v > 0 ? v : 260)));
-     const carouselPositionContainer = document.querySelector("#carousel-pos");
-     for (let i = 0; i < bulletCount; i++) {
-         const div = document.createElement("div");
-         div.classList.add("bullet-carousel-position");
-         div.classList.add("bullet-inactive");
-         carouselPositionContainer.append(div);
+     /**
+      * @brief build bullets depending on the width of the carousel
+       */
+     function buildBullets() {
+         let bulletCount = Math.round(Math.ceil(carouselWidth / (v > 0 ? v : 260)));
+         const carouselPositionContainer = document.querySelector("#carousel-pos");
+         for (let i = 0; i < bulletCount; i++) {
+             const div = document.createElement("div");
+             div.classList.add("bullet-carousel-position");
+             div.classList.add("bullet-inactive");
+             carouselPositionContainer.append(div);
+         }
      }
- }
- buildBullets();
- positionBullet(clickPosition); //start first bullet with class active
+     buildBullets();
+     positionBullet(clickPosition); //start first bullet with class active
 
-    // move fordward
+    /**
+     * @brief Moves the carousel forward
+     */
     btnFordward.addEventListener('click',()=>{
         clickPosition +=1;
         positionBullet(clickPosition);
@@ -200,7 +203,9 @@ function moveFeaturesCards(scroll){
 
     });
 
-    // Move backward
+    /**
+     * @brief Moves the carousel backward
+     */
     btnBackward.addEventListener('click',()=>{
         clickPosition -=1;
         positionBullet(clickPosition);
@@ -233,32 +238,6 @@ function moveFeaturesCards(scroll){
         }
     });
 
-
-function positionBullet(position){
-    // Get the carousel bullets
-    const bullets = document.querySelectorAll(".bullet-carousel-position");
-  bullets.forEach((b)=>{
-      // Be sure we remove the active class
-      b.classList.remove('bullet-active');
-      b.classList.add("bullet-inactive");
-  });
-  bullets.item(position).classList.add('bullet-active');
-}
-
-
-    let sticky = imgContainer.offsetTop;
-	window.onscroll = function() {
-		
-		if (window.pageYOffset > sticky) {
-			stickyContent.classList.remove("hide-sticky");
-			stickyContent.classList.add("newRelease-sticky-content");
-        //    stickyContent.style.transition = " all 800ms"
-		  } else {
-			stickyContent.classList.remove("newRelease-sticky-content");
-            stickyContent.classList.add("hide-sticky");
-		  }
-	};
-
     /**
      * @brief shows the images in history section depending on the scroll position
      * */
@@ -276,6 +255,33 @@ function positionBullet(position){
         }
 
     })
+
+
+    function positionBullet(position){
+    // Get the carousel bullets
+    const bullets = document.querySelectorAll(".bullet-carousel-position");
+  bullets.forEach((b)=>{
+      // Be sure we remove the active class
+      b.classList.remove('bullet-active');
+      b.classList.add("bullet-inactive");
+  });
+  bullets.item(position).classList.add('bullet-active');
+}
+
+
+    let sticky = imgContainer.offsetTop;
+	window.onscroll = function() {
+		if (window.pageYOffset > sticky) {
+			stickyContent.classList.remove("hide-sticky");
+			stickyContent.classList.add("newRelease-sticky-content");
+        //    stickyContent.style.transition = " all 800ms"
+		  } else {
+			stickyContent.classList.remove("newRelease-sticky-content");
+            stickyContent.classList.add("hide-sticky");
+		  }
+	};
+
+
 });
 
 
