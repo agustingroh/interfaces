@@ -1025,7 +1025,7 @@ footer{
     padding: 2px 10px 0px 10px ;
 }
 
-.newRelease-game-history h2 , .newRelease-game-feature-container h2 {
+.newRelease-game-history h2 , .newRelease-game-feature-container h2, .newRelease-character-title {
     padding-bottom: 18px;
     text-decoration:  underline;
     text-decoration-color: #7a6c02;
@@ -1033,6 +1033,14 @@ footer{
     text-underline-offset: 11px;
     text-decoration-thickness:0.09em;
     font-size: 30px;
+}
+
+.newRelease-character-title{
+    position: relative;
+    top: 3.5em;
+    left: 1em;
+    opacity: 0;
+    transform: translateY(-500px);
 }
 
 .newRelease-game-history p {
