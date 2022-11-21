@@ -218,12 +218,12 @@ header{
 .menu{
     width: 100%;
     height: 825px;
-      background-color: transparent;
     position: fixed;
-    z-index: -1;
+    z-index: 10;
     top: 0px;
     right: 0;   
     opacity: 0;
+    background-color: #2B2727;
 }
 
 .menu-btn{
@@ -236,14 +236,35 @@ header{
 	outline: inherit;
 }
 
-.show-menu{   
-    position: absolute;    
-    opacity: 1;
-    z-index: 1;
-    transition: 0.4s ease-in-out;
-    background-color: #2B2727;
+@keyframes showMenu {
+    from{
+        opacity: 0;
+        transform: translateX(900px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
+.show-menu{   
+    animation: showMenu ease-in 1s forwards;
+}
+
+@keyframes closeMenu {
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(500px);
+    }
+}
+
+.close-menu{
+    animation: closeMenu 1s ease-in-out forwards;
+}
 
 li{
     display:flex;
@@ -358,8 +379,22 @@ a{
     width: 80%;
 }
 
-.menu-section{  
+.menu-section{
+    transform: translateX(980px);
     padding-top: 15px;
+}
+
+@keyframes menuSectionOpen {
+    from{
+        transform: translateX(980px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+.menu-section-open{
+    animation: menuSectionOpen ease-in-out 800ms forwards;
 }
 
 .menu-categories-social-network{
