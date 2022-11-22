@@ -1875,7 +1875,7 @@ form div {
     }
     .menu{
         width: 46%;
-        position: absolute;
+       /*position: absolute;*/
         top:80px;
     }
 
@@ -2281,8 +2281,9 @@ form div {
         width: 9%;
         flex-flow: column;
         height: 50px;
+        display: flex;
         justify-content: center;
-    align-items: center;
+        align-items: center;
 
 }
 
@@ -2290,7 +2291,7 @@ form div {
     .newRelease-sticky-content-title{
         margin:0;
         color: #E9EFF3;
-        font-size: 19px;
+        font-size: 22px;
     }
     @keyframes scroll {
         0% { transform: translateX(0); }
@@ -2301,13 +2302,15 @@ form div {
         0% {
             transform-origin: bottom right;
             transform: scaleX(0);
+            text-shadow: none;
         }
         100% {
             transform-origin: bottom left;
             text-decoration:  underline;
-            text-decoration-color: #E9EFF360;
+            text-decoration-color: rgb(44, 106, 94);
             transform: scaleX(1.0);
             content: "";
+           text-shadow: 0 0 5px rgb(231, 236, 232);
         }
     }
     .newRelease-sticky-underline{
