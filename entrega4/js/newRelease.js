@@ -30,28 +30,72 @@ let cardsPositionMapper = {
 }
 const animation =  [{transform: 'translateY(0px)'},{transform: 'translateY(-80px)'},{transform: 'translateY(0)'}];
 let menuSections = document.querySelectorAll(".menu-section");
-let heroFront = document.querySelector("#newRelease-hogwarts-back");
+let heroBack = document.querySelector("#newRelease-hogwarts-back");
 let heroRight = document.querySelector("#newRelease-hogwarts-right");
 
 window.addEventListener("mousemove",(e)=>{
-    if(e.screenY<600 &&  e.screenY>130){
-      if(e.screenX>=500){
-          heroFront.classList.add("move-hero-front-left");
-          heroRight.classList.add("move-hero-right-to-right");
-          heroRight.classList.remove("move-hero-right-to-left");
+console.log(e.screenY);
+    if(e.screenY<1050 &&  e.screenY>240){
+      if(e.screenX>895){
 
-      }else{
-          heroFront.classList.add("move-hero-front-right");
-          heroFront.classList.remove("move-hero-front-left");
-          heroRight.classList.add("move-hero-right-to-left");
-          heroRight.classList.remove("move-hero-right-to-right");
+          if(e.screenX >= 891 && e.screenX <915) {
+              heroBack.setAttribute("style", `transform:translateX(10px)`);
+              heroBack.style.transition = "ease-out 800ms";
+              heroRight.setAttribute("style",`transform:translateX(-5px)`);
+              heroRight.style.transition = "ease-out 800ms";
+          }
 
+          if(e.screenX>=915 && e.screenX<960 ){
+              heroBack.setAttribute("style", `transform:translateX(15px)`);
+                heroBack.style.transition = "ease-out 800ms";
+              heroRight.setAttribute("style",`transform:translateX(-10px)`);
+              heroRight.style.transition = "ease-out 800ms";
+          }
+
+          if(e.screenX>=960 && e.screenX<1020 ){
+              heroBack.setAttribute("style", `transform:translateX(25px)`);
+              heroBack.style.transition = "ease-out 800ms";
+              heroRight.setAttribute("style",`transform:translateX(-30px)`);
+              heroRight.style.transition = "ease-out 800ms";
+          }
+
+
+       /*   heroFront.classList.add("move-hero-front-left");
+          heroRight.classList.add("move-hero-right-to-right");          heroRight.classList.remove("move-hero-right-to-left");*/
+
+      }else {
+
+          if (e.screenX < 890 && e.screenX > 840) {
+              heroBack.setAttribute("style", `transform:translateX(-10px)`);
+              heroBack.style.transition = "ease-out 800ms";
+              heroRight.setAttribute("style",`transform:translateX(5px)`);
+              heroRight.style.transition = "ease-out 800ms";
+          }
+
+          if (e.screenX <= 840 && e.screenX > 800) {
+              heroBack.setAttribute("style", `transform:translateX(-15px)`);
+              heroBack.style.transition = "ease-out 800ms";
+              heroRight.setAttribute("style",`transform:translateX(10px)`);
+              heroRight.style.transition = "ease-out 800ms";
+          }
       }
-    }else{
-        heroRight.classList.remove("move-hero-right-to-left");
+
+
+
+          /*  heroFront.classList.add("move-hero-front-right");
+            heroFront.classList.remove("move-hero-front-left");
+            heroRight.classList.add("move-hero-right-to-left");
+            heroRight.classList.remove("move-hero-right-to-right");*/
+
+
+    }else {
+        heroBack.setAttribute("style", `transform:translateX(0px)`);
+        heroBack.style.transition = "ease-out 800ms";
+
+        /*heroRight.classList.remove("move-hero-right-to-left");
         heroRight.classList.remove("move-hero-right-to-right");
         heroFront.classList.remove("move-hero-front-right");
-        heroFront.classList.remove("move-hero-front-left");
+        heroFront.classList.remove("move-hero-front-left");*/
     }
 });
 
