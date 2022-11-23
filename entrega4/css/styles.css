@@ -11,6 +11,7 @@ body{
     color: #E9EFF3;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .material-icons{
@@ -630,8 +631,8 @@ footer{
     background: url("../img/smoke-right-new-release.png") no-repeat;
     position: absolute;
     width: 80em;
-    top:50em;
-    left: 50em;
+    top:67em;
+    left: 77em;
     z-index: -4;
     height: 80em;
 }
@@ -707,9 +708,112 @@ footer{
     text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.25);
 }
 
+#newRelease-hogwarts-back{
+    z-index: -1;
+    position: relative;
+    left: -4em;
+}
+
+.background-img-container{
+    height: 68em;
+    width: 100%;
+}
+
+@keyframes lateralMoveMouse {
+    0%, 100% {
+        left: -12em;
+    }
+    50% {
+        left: -9em;
+    }
+
+
+}
+
+.lateral-mouse-movement{
+    position: absolute;
+    scale: 0.07;
+    top: 47em;
+    left: -12em;
+    border-radius: 10px;
+    background-color: #beaeae;
+    animation: lateralMoveMouse 4s linear infinite ;
+}
+
+@keyframes moveRight {
+    from{
+        transform: translate(0px,0);
+    }
+    to{
+        transform: translate(10px,0px);
+    }
+}
+
+@keyframes moveLeft {
+    from{
+        transform: translate(0px,0);
+    }
+    to{
+        transform: translate(-10px,0px);
+    }
+}
+
+@keyframes moveHeroRightToLeft {
+    from{
+        transform: translate(0px,0);
+    }
+    to{
+        transform: translate(12px,0px);
+    }
+}
+
+@keyframes moveHeroRightToRight {
+    from{
+        transform: translate(0px,0);
+    }
+    to{
+        transform: translate(-12px,0px);
+    }
+}
+
+.move-hero-right-to-right{
+    animation: moveHeroRightToRight 0.5s ease-in forwards;
+}
+
+
+.move-hero-right-to-left{
+    animation: moveHeroRightToLeft 0.5s ease-in forwards;
+}
+
+.move-hero-front-right{
+    animation: moveRight 1s ease-in-out forwards;
+}
+
+.move-hero-front-right-remove{
+    animation: moveRight 1s ease-in-out reverse forwards;
+}
+
+
+.move-hero-front-left{
+    animation: moveLeft 1s ease-in-out forwards;
+}
+
+#newRelease-hogwarts-front{
+    z-index: 9;
+    position:relative;
+    bottom: -33.1em;
+    left: 17em;
+}
+#newRelease-hogwarts-right{
+    z-index: 9;
+    position:relative;
+    bottom: 4.8em;
+    left: 6em;
+}
+
 .newRelease-img-container img {
     min-height: 100%;
-    min-width: 100%;
+    min-width: 105%;
 }
 
 .newRelease-btn-wish-container{
@@ -767,7 +871,7 @@ footer{
 
 @keyframes newReleaseBtnWishAnimation {
     from{
-        transform: translateX(-900px);
+        transform: translateX(-1280px);
     }
     to{
         transform: translateX(0px);
@@ -799,7 +903,7 @@ footer{
 
 #newRelease-btn-wish{
     position: relative;
-    transform: translateX(-900px);
+    transform: translateX(-1280px);
 }
 
 .newRelease-btn-wish-animate{
@@ -1013,7 +1117,7 @@ footer{
 }
 
 .newRelease-game-history {
-    padding-top: 55px;
+    padding-top: 7em;
     gap: 0.5em;
     display: flex;
     justify-content: flex-start;
@@ -1777,7 +1881,7 @@ form div {
     }
     .menu{
         width: 46%;
-        position: absolute;
+       /*position: absolute;*/
         top:80px;
     }
 
@@ -1838,6 +1942,7 @@ form div {
     .menu {
         width: 30%;
         height: 680px;
+        position: absolute;
     }
 
     @keyframes hamburgerMenuRotateClockwise{
@@ -2161,23 +2266,39 @@ form div {
         }
     }
     .newRelease-sticky-content{
-      
         display: flex;
         justify-content: space-evenly;
         width: 100%;
+        align-items: center;
         position: fixed;
         top: 0;
         z-index: 10;  
-        background-color: #040B1490;
+        background-color: #040b14;
         padding: 1.7em 1em;
         animation: showMenu 1500ms ;
-        
     }
+
+.sticky-section-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.logo-container-sticky-nav{
+        width: 9%;
+        flex-flow: column;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
+
 
     .newRelease-sticky-content-title{
         margin:0;
         color: #E9EFF3;
-        font-size: 19px;
+        font-size: 22px;
     }
     @keyframes scroll {
         0% { transform: translateX(0); }
@@ -2188,13 +2309,15 @@ form div {
         0% {
             transform-origin: bottom right;
             transform: scaleX(0);
+            text-shadow: none;
         }
         100% {
             transform-origin: bottom left;
             text-decoration:  underline;
-            text-decoration-color: #E9EFF360;
+            text-decoration-color: rgb(44, 106, 94);
             transform: scaleX(1.0);
             content: "";
+           text-shadow: 0 0 5px rgb(231, 236, 232);
         }
     }
     .newRelease-sticky-underline{
@@ -3622,6 +3745,10 @@ form div {
         display: none;
     }
 
+    .newRelease-game-history > article::-webkit-scrollbar {
+        display: none;  /* Safari and Chrome */
+    }
+
     .newRelease-game-history > article{
         display: flex;
         flex-flow: column;
@@ -3657,6 +3784,7 @@ form div {
         animation: showImage ease-in 800ms forwards;
     }
 
+
     .item .image-holder {
         position: sticky;
         top: 0;
@@ -3685,6 +3813,9 @@ form div {
         padding-left: 2em;
         padding-right: 2em;
     }
+
+
+
 }
 
 

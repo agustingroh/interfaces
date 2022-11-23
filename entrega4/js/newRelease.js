@@ -30,7 +30,74 @@ let cardsPositionMapper = {
 }
 const animation =  [{transform: 'translateY(0px)'},{transform: 'translateY(-80px)'},{transform: 'translateY(0)'}];
 let menuSections = document.querySelectorAll(".menu-section");
+let heroBack = document.querySelector("#newRelease-hogwarts-back");
+let heroRight = document.querySelector("#newRelease-hogwarts-right");
 
+window.addEventListener("mousemove",(e)=>{
+console.log(e.screenY);
+    if(e.screenY<1050 &&  e.screenY>240){
+      if(e.screenX>895){
+
+          if(e.screenX >= 891 && e.screenX <915) {
+              heroBack.setAttribute("style", `transform:translateX(10px)`);
+              heroBack.style.transition = "ease-out 800ms";
+              heroRight.setAttribute("style",`transform:translateX(-5px)`);
+              heroRight.style.transition = "ease-out 800ms";
+          }
+
+          if(e.screenX>=915 && e.screenX<960 ){
+              heroBack.setAttribute("style", `transform:translateX(15px)`);
+                heroBack.style.transition = "ease-out 800ms";
+              heroRight.setAttribute("style",`transform:translateX(-10px)`);
+              heroRight.style.transition = "ease-out 800ms";
+          }
+
+          if(e.screenX>=960 && e.screenX<1020 ){
+              heroBack.setAttribute("style", `transform:translateX(25px)`);
+              heroBack.style.transition = "ease-out 800ms";
+              heroRight.setAttribute("style",`transform:translateX(-30px)`);
+              heroRight.style.transition = "ease-out 800ms";
+          }
+
+
+       /*   heroFront.classList.add("move-hero-front-left");
+          heroRight.classList.add("move-hero-right-to-right");          heroRight.classList.remove("move-hero-right-to-left");*/
+
+      }else {
+
+          if (e.screenX < 890 && e.screenX > 840) {
+              heroBack.setAttribute("style", `transform:translateX(-10px)`);
+              heroBack.style.transition = "ease-out 800ms";
+              heroRight.setAttribute("style",`transform:translateX(5px)`);
+              heroRight.style.transition = "ease-out 800ms";
+          }
+
+          if (e.screenX <= 840 && e.screenX > 800) {
+              heroBack.setAttribute("style", `transform:translateX(-15px)`);
+              heroBack.style.transition = "ease-out 800ms";
+              heroRight.setAttribute("style",`transform:translateX(10px)`);
+              heroRight.style.transition = "ease-out 800ms";
+          }
+      }
+
+
+
+          /*  heroFront.classList.add("move-hero-front-right");
+            heroFront.classList.remove("move-hero-front-left");
+            heroRight.classList.add("move-hero-right-to-left");
+            heroRight.classList.remove("move-hero-right-to-right");*/
+
+
+    }else {
+        heroBack.setAttribute("style", `transform:translateX(0px)`);
+        heroBack.style.transition = "ease-out 800ms";
+
+        /*heroRight.classList.remove("move-hero-right-to-left");
+        heroRight.classList.remove("move-hero-right-to-right");
+        heroFront.classList.remove("move-hero-front-right");
+        heroFront.classList.remove("move-hero-front-left");*/
+    }
+});
 
     /**
      * @brief handle menu actions
@@ -87,16 +154,16 @@ let menuSections = document.querySelectorAll(".menu-section");
             newReleaseBtnWish.classList.add("newRelease-btn-wish-animate");
 
         }
-       if(scroll>=950 && scroll<=1100){
+       if(scroll>=950 && scroll<=1800){
             historyTitle.classList.add("newRelease-sticky-underline");
             featureTitle.classList.remove("newRelease-sticky-underline");
             characterTitleHeader.classList.remove("newRelease-sticky-underline");
            historyImages[0].classList.add("show-history-images");
-        }else if(scroll>=1000 && scroll<=1200){
+        }else if(scroll>1800 && scroll<=2000){
             characterTitleHeader.classList.remove("newRelease-sticky-underline");
             featureTitle.classList.add("newRelease-sticky-underline");
             historyTitle.classList.remove("newRelease-sticky-underline");
-        }else if(scroll > 1300 && scroll < 1800){
+        }else if(scroll > 2000 && scroll < 2450){
             featureTitle.classList.remove("newRelease-sticky-underline");
             characterTitleHeader.classList.add("newRelease-sticky-underline");
             historyTitle.classList.remove("newRelease-sticky-underline");
