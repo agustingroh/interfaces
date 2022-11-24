@@ -194,6 +194,14 @@ header{
     padding-top:3px;
 }
 
+.material-icons.md-60{
+    font-size: 72px;
+    background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+}
+
 .material-icons.md-30.disabled{
     color: #414141;
 }
@@ -647,16 +655,27 @@ footer{
     height: 80em;
 }
 
-.newRelease-lighting{
-    background: url("../img/lighting.png") no-repeat;
-    position: absolute;
-    width: 80em;
-    top:57em;
-    left: 10em;
-    z-index: -4;
-    height: 48em;
-
+@keyframes lighting{
+  from{
+    opacity:0.0;
+  }to{
+    opacity:0.4;
+  }
 }
+.newRelease-lighting{
+    background: url(../img/pruebarayo.png) no-repeat;
+    position: absolute;
+    width: 46em;
+    top: 105em;
+    left: 82em;
+    z-index: -4;
+    height: 72em;
+    rotate: 235deg;
+    opacity:0.4;
+    animation: lighting 0.06s ease-in-out infinite alternate;
+    animation-delay: 2s;
+}
+
 
 .social-media{
     right: 56px;
@@ -695,8 +714,8 @@ footer{
 
 .newRelease-img-container > div{
     position: absolute;
-    top: 14em;
-    left: 8em;
+    top: 20em;
+    left: 33em;
 }
 
 .newRelease-img-container  h1 {
@@ -801,14 +820,14 @@ footer{
 #newRelease-hogwarts-front{
     z-index: 9;
     position:relative;
-    bottom: -33.1em;
-    left: 17em;
+    bottom: -27.1em;
+    left: -8em;
 }
 #newRelease-hogwarts-right{
     z-index: 9;
     position:relative;
-    bottom: 4.8em;
-    left: 6em;
+    bottom: 10.8em;
+    left: -21em;
 }
 
 .newRelease-img-container img {
@@ -1169,15 +1188,15 @@ footer{
     padding-top: 20px;
     display: flex;
     width: 100%;
-    gap:10px;
+    gap:15px;
     justify-content: flex-start;
     align-items: center;
     flex-flow: row  wrap;
 }
 
 .newRelease-feature{
-    width: 90px;
-    height: 90px;
+    width: 200px;
+    height: 200px;
     background-color: #4D4949;
     border: solid 2px #888282;
     display: flex;
@@ -1225,7 +1244,7 @@ footer{
 .newRelease-feature:hover{
     transition: all 400ms ease-in-out;
     border-color: #F3851B;
-    transform: scale(1.1);
+    font-size:27px;
 }
 
 .newRelease-feature:hover  .material-icons  {
@@ -1241,7 +1260,7 @@ footer{
 }
 
 .newRelease-feature p {
-    font-size: 14px;
+    font-size: 23px;
     text-align: center;
 }
 
@@ -2257,7 +2276,6 @@ form div {
         justify-content: center;
     }
 
-
     .hide-sticky{
         display: none;
         opacity: 0;
@@ -2303,6 +2321,7 @@ form div {
     align-items: center;
     width: 85%;
 }
+
 
     .newRelease-sticky-content-title{
         margin:0;
@@ -3835,7 +3854,95 @@ form div {
         display: block;
     }
 
+    .smoke {
+        position:absolute;
+        top:50%;
+        lefT:50%;
+        transform:translate(-50%,-50%);
+        display: flex;
+        gap:30px;
+    }
 
+    .smoke ul {
+        margin:0;
+        padding:0;
+        display:flex;
+
+    }
+
+    .smoke ul li {
+        list-style:none;
+        font-weight:bold;
+        letter-spacing:12px;
+        color:#fff;
+        font-size:7.2em;
+        display: inline-block;
+    }
+
+
+    .smoke ul:hover li {
+        animation: smoke 2s linear forwards;
+    }
+
+
+    @keyframes smoke {
+        0% {
+            transform: rotate(0deg) translateY(0px);
+            opacity: 1;
+            filter:blur(0px);
+        }
+        100% {
+            transform: rotate(45deg) translateY(-200px);
+            opacity: 0;
+            filter:blur(20px);
+        }
+    }
+
+    .smoke ul li:nth-child(1){
+        animation-delay:0s
+    }
+    .smoke ul li:nth-child(2){
+        animation-delay:.1s
+    }
+    .smoke ul li:nth-child(3){
+        animation-delay:.2s
+    }
+    .smoke ul li:nth-child(4){
+        animation-delay:.3s
+    }
+    .smoke ul li:nth-child(5){
+        animation-delay:.4s
+    }
+    .smoke ul li:nth-child(6){
+        animation-delay:.5s
+    }
+    .smoke ul li:nth-child(7){
+        animation-delay:.6s
+    }
+    .smoke ul li:nth-child(8){
+        animation-delay:.7s
+    }
+    .smoke ul li .smoke-legacy:nth-child(1){
+        animation-delay:.8s
+    }
+    .smoke ul li .smoke-legacy:nth-child(2){
+        animation-delay:.9s
+    }
+    .smoke ul li .smoke-legacy:nth-child(3){
+        animation-delay:1.0s
+    }
+    .smoke ul li .smoke-legacy:nth-child(4){
+        animation-delay:1.1s
+    }
+    .smoke ul li .smoke-legacy:nth-child(5){
+        animation-delay:1.2s
+    }
+    .smoke ul li .smoke-legacy:nth-child(6){
+        animation-delay:1.3s
+    }
+    .smoke ul li .smoke-legacy:nth-child(7){
+        animation-delay:1.4s
+    }
 
 }
 
