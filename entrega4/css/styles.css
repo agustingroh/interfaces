@@ -1929,20 +1929,16 @@ form div {
 }
 
 
-
-
-
-
-
 @media only screen and (min-width: 1024px ) {
     .logo img {
         height: 72px;
     }
 
     .menu {
-        width: 30%;
+        width: 23%;
         height: 680px;
-        position: absolute;
+        position: fixed;
+        display: none;
     }
 
     @keyframes hamburgerMenuRotateClockwise{
@@ -2007,7 +2003,7 @@ form div {
             opacity: 1;
         }
      }
-    .hamburger-menu-line{
+    .hamburger-menu-line, .hamburger-menu-line-sticky{
         transform-origin: center;
         display:block;
         height:2px;
@@ -2037,7 +2033,7 @@ form div {
         animation:hamburgerMenuCenterLine ease-out 1200ms forwards;
     }
     
-    .hamburger-menu{
+    .hamburger-menu, .hamburger-menu-sticky{
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -2047,8 +2043,15 @@ form div {
         position: absolute;
         right: 34px;
     }
+
+    .hamburger-menu-sticky{
+        right: 75px;
+    }
+
+
     .logo-container {
         width: 12%;
+        padding-bottom: 6px;
     }
 
 
@@ -2253,6 +2256,8 @@ form div {
         align-items: center;
         justify-content: center;
     }
+
+
     .hide-sticky{
         display: none;
         opacity: 0;
@@ -2267,14 +2272,13 @@ form div {
     }
     .newRelease-sticky-content{
         display: flex;
-        justify-content: space-evenly;
         width: 100%;
         align-items: center;
         position: fixed;
         top: 0;
         z-index: 10;  
-        background-color: #040b14;
-        padding: 1.7em 1em;
+        background-color: #2B2727;
+        padding: 1.1em 1em;
         animation: showMenu 1500ms ;
     }
 
@@ -2291,9 +2295,14 @@ form div {
         display: flex;
         justify-content: center;
         align-items: center;
-
 }
 
+.menu-sticky-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
 
     .newRelease-sticky-content-title{
         margin:0;
@@ -3812,6 +3821,18 @@ form div {
         padding-top: 14em;
         padding-left: 2em;
         padding-right: 2em;
+    }
+
+    .show-menu-top-nav-bar{
+        top: 80px;
+        display: block;
+    }
+
+    .show-menu-top-nav-bar-sticky{
+        top: 85px;
+        position: fixed;
+        border-top: 0.01em solid #b1b9bc96;
+        display: block;
     }
 
 
