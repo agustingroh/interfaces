@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", ()=>{
 let menuLines=document.querySelectorAll(".hamburger-menu-line");
+let menuLinesSticky = document.querySelectorAll(".hamburger-menu-line-sticky");
 let menuHamburger=document.querySelector('#hamburger-menu');
+let menuHamburgerSticky=document.querySelector('#hamburger-menu-sticky');
 let stickyContent = document.querySelector("#newRelease-sticky-content");
 let imgContainer = document.querySelector("#newRelease-img-container");
 let carousel = document.querySelector("#newRelease-carousel");
@@ -59,10 +61,6 @@ console.log(e.screenY);
               heroRight.style.transition = "ease-out 800ms";
           }
 
-
-       /*   heroFront.classList.add("move-hero-front-left");
-          heroRight.classList.add("move-hero-right-to-right");          heroRight.classList.remove("move-hero-right-to-left");*/
-
       }else {
 
           if (e.screenX < 890 && e.screenX > 840) {
@@ -79,23 +77,9 @@ console.log(e.screenY);
               heroRight.style.transition = "ease-out 800ms";
           }
       }
-
-
-
-          /*  heroFront.classList.add("move-hero-front-right");
-            heroFront.classList.remove("move-hero-front-left");
-            heroRight.classList.add("move-hero-right-to-left");
-            heroRight.classList.remove("move-hero-right-to-right");*/
-
-
     }else {
         heroBack.setAttribute("style", `transform:translateX(0px)`);
         heroBack.style.transition = "ease-out 800ms";
-
-        /*heroRight.classList.remove("move-hero-right-to-left");
-        heroRight.classList.remove("move-hero-right-to-right");
-        heroFront.classList.remove("move-hero-front-right");
-        heroFront.classList.remove("move-hero-front-left");*/
     }
 });
 
@@ -105,6 +89,7 @@ console.log(e.screenY);
     menuHamburger.addEventListener('click',() => {
         let menu = document.querySelector("#menu");
         if(!menu.classList.contains('show-menu')){
+            menu.classList.add("show-menu-top-nav-bar");
             menu.classList.remove("close-menu");
             menu.classList.add('show-menu');
             menuLines[2].classList.remove("rotate-clockwise-close");
@@ -114,14 +99,51 @@ console.log(e.screenY);
             menuLines[0].classList.add("rotate-Anticlockwise");
            showMenuSections();
         }else{
-            menu.classList.add("close-menu");
-            menu.classList.remove("show-menu");
-            menuLines[2].classList.remove("rotate-clockwise");
-            menuLines[0].classList.remove("rotate-Anticlockwise");
-            menuLines[2].classList.add("rotate-clockwise-close");
-            menuLines[0].classList.add("rotate-Anticlockwise-close");
-            menuLines[1].classList.add("menu-center-line");
-            menuLines[1].classList.remove("menu-center-line-open");
+            closeMenuTopNavBar(menu);
+            hideMenuSections();
+        }
+    });
+
+    function closeMenuTopNavBar(menu){
+        menu.classList.add("close-menu");
+        menu.classList.remove("show-menu-top-nav-bar");
+        menu.classList.remove("show-menu");
+        menuLines[2].classList.remove("rotate-clockwise");
+        menuLines[0].classList.remove("rotate-Anticlockwise");
+        menuLines[2].classList.add("rotate-clockwise-close");
+        menuLines[0].classList.add("rotate-Anticlockwise-close");
+        menuLines[1].classList.add("menu-center-line");
+        menuLines[1].classList.remove("menu-center-line-open");
+    }
+
+    function closeStickyMenu(menu){
+        menu.classList.remove("show-menu-top-nav-bar-sticky");
+        menu.classList.add("close-menu");
+        menu.classList.remove("show-menu");
+        menuLinesSticky[2].classList.remove("rotate-clockwise");
+        menuLinesSticky[0].classList.remove("rotate-Anticlockwise");
+        menuLinesSticky[2].classList.add("rotate-clockwise-close");
+        menuLinesSticky[0].classList.add("rotate-Anticlockwise-close");
+        menuLinesSticky[1].classList.add("menu-center-line");
+        menuLinesSticky[1].classList.remove("menu-center-line-open");
+    }
+
+
+    menuHamburgerSticky.addEventListener('click',()=>{
+        console.log("Aca");
+        let menu = document.querySelector("#menu-sticky");
+        if(!menu.classList.contains('show-menu')){
+            menu.classList.remove("close-menu");
+            menu.classList.add('show-menu');
+            menu.classList.add("show-menu-top-nav-bar-sticky");
+            menuLinesSticky[2].classList.remove("rotate-clockwise-close");
+            menuLinesSticky[0].classList.remove("rotate-Anticlockwise-close");
+            menuLinesSticky[1].classList.add("menu-center-line-open");
+            menuLinesSticky[2].classList.add("rotate-clockwise");
+            menuLinesSticky[0].classList.add("rotate-Anticlockwise");
+            showMenuSections();
+        }else{
+            closeStickyMenu(menu);
             hideMenuSections();
         }
     });
@@ -152,7 +174,6 @@ console.log(e.screenY);
         if(scroll>=345) {
             newReleaseNewSale.classList.add("newRelease-sale-move");
             newReleaseBtnWish.classList.add("newRelease-btn-wish-animate");
-
         }
        if(scroll>=950 && scroll<=1800){
             historyTitle.classList.add("newRelease-sticky-underline");
@@ -409,12 +430,31 @@ console.log(e.screenY);
 		if (window.pageYOffset > sticky) {
 			stickyContent.classList.remove("hide-sticky");
 			stickyContent.classList.add("newRelease-sticky-content");
-        //    stickyContent.style.transition = " all 800ms"
+            let menu = document.querySelector("#menu");
+            menu.classList.remove("show-menu");
+            menu.classList.remove("show-menu-top-nav-bar");
+            menuLines[2].classList.remove("rotate-clockwise");
+            menuLines[0].classList.remove("rotate-Anticlockwise");
+            menuLines[2].classList.add("rotate-clockwise-close");
+            menuLines[0].classList.add("rotate-Anticlockwise-close");
+            menuLines[1].classList.add("menu-center-line");
+            menuLines[1].classList.remove("menu-center-line-open");
 		  } else {
 			stickyContent.classList.remove("newRelease-sticky-content");
             stickyContent.classList.add("hide-sticky");
+              let menu = document.querySelector("#menu-sticky");
+            menu.classList.remove("show-menu-top-nav-bar-sticky");
+            menu.classList.remove("show-menu");
+            menuLinesSticky[2].classList.remove("rotate-clockwise");
+            menuLinesSticky[0].classList.remove("rotate-Anticlockwise");
+            menuLinesSticky[2].classList.add("rotate-clockwise-close");
+            menuLinesSticky[0].classList.add("rotate-Anticlockwise-close");
+            menuLinesSticky[1].classList.add("menu-center-line");
+            menuLinesSticky[1].classList.remove("menu-center-line-open");
 		  }
 	};
+
+
 
 
 });
