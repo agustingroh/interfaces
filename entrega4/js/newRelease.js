@@ -180,23 +180,18 @@ console.log(e.screenY);
             featureTitle.classList.remove("newRelease-sticky-underline");
             characterTitleHeader.classList.remove("newRelease-sticky-underline");
            historyImages[0].classList.add("show-history-images");
-        }else if(scroll>1800 && scroll<=2000){
+        }else if(scroll>2050 && scroll<=2300){
             characterTitleHeader.classList.remove("newRelease-sticky-underline");
             featureTitle.classList.add("newRelease-sticky-underline");
             historyTitle.classList.remove("newRelease-sticky-underline");
-        }else if(scroll > 2000 && scroll < 2450){
+        }else if(scroll > 2300 && scroll < 2450){
             featureTitle.classList.remove("newRelease-sticky-underline");
             characterTitleHeader.classList.add("newRelease-sticky-underline");
             historyTitle.classList.remove("newRelease-sticky-underline");
         }else{
             historyTitle.classList.remove("newRelease-sticky-underline");
         }
-       if(scroll<=1200){
-           cards.forEach((c)=>{
-               c.classList.add("newRelease-card-remove-cards-carousel");
-               c.classList.remove("newRelease-card-move-to-carousel");
-           });
-       }
+
     moveFeaturesCards(scroll);
     moveCharacterTitle(scroll);
     showCardsInCarousel(scroll);
@@ -208,12 +203,20 @@ console.log(e.screenY);
      * @Brief Shows cards into the carousel
      * */
     function showCardsInCarousel(scroll){
-        if(scroll > 1100 && scroll < 1800){
+        if(scroll >= 2300 ){
             cards.forEach((c)=>{
                 c.classList.add("newRelease-card-move-to-carousel");
                 c.classList.remove("newRelease-card-remove-cards-carousel");
             });
+        }else{
+            cards.forEach((c)=>{
+                if(c.classList.contains("newRelease-card-move-to-carousel")){
+                    c.classList.remove("newRelease-card-move-to-carousel");
+                    c.classList.add("newRelease-card-remove-cards-carousel");
+                }
+            });
         }
+
     }
 
     /**
