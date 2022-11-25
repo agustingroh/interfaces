@@ -20,9 +20,12 @@ let featureTitle=document.querySelector("#newRelease-sticky-feature-history");
 let historyContainer=document.querySelector("#newRelease-game-history");
 let historyImages =  document.getElementsByClassName("item");
 let featuresCards =  document.querySelectorAll(".newRelease-feature");
+let titleChars =  document.querySelectorAll(".smoke-char");
+let flagTitle=false;
 let newReleaseNewSale =  document.querySelector("#newRelease-new-sale");
 let newReleaseBtnWish = document.querySelector("#newRelease-btn-wish");
 let characterTitle = document.querySelector("#newRelease-character-title");
+let titleHero= document.querySelector("#title-hero");
 let cardsPositionMapper = {
     0: -1250,
     1: -800,
@@ -31,6 +34,8 @@ let cardsPositionMapper = {
     4:1950
 }
 const animation =  [{transform: 'translateY(0px)'},{transform: 'translateY(-80px)'},{transform: 'translateY(0)'}];
+const animationTitleReverse =  [{ transform: 'rotate(45deg) translateY(-200px)',opacity: '0', filter: 'blur(20px)'},{transform: 'rotate(0deg) translateY(0px)',opacity: '1',filter:'blur(0px)'}];
+const animationTitle =  [{transform: 'rotate(0deg) translateY(0px)',opacity:1,filter:'blur(0px)'},{ transform: 'rotate(45deg) translateY(-200px)',opacity:0, filter: 'blur(20px)'}];
 let menuSections = document.querySelectorAll(".menu-section");
 let heroBack = document.querySelector("#newRelease-hogwarts-back");
 let heroRight = document.querySelector("#newRelease-hogwarts-right");
@@ -195,6 +200,7 @@ console.log(e.screenY);
     moveFeaturesCards(scroll);
     moveCharacterTitle(scroll);
     showCardsInCarousel(scroll);
+    titleSmoke(scroll);
 
     });
 
@@ -426,10 +432,41 @@ console.log(e.screenY);
   });
   bullets.item(position).classList.add('bullet-active');
 }
+    function titleSmoke(scroll){        
+        if(scroll>200 && !flagTitle){
+            for(let i=0 ; i<titleChars.length; i++){
+                titleChars[i].animate(animationTitle,{
+                    duration:2000,
+                    fill:"forwards",
+                    easing: "linear",
+                    delay:  0.1 * i,
+    
+                })
+            }
+            flagTitle=true;
+        }
+        if(scroll<200 && flagTitle){
+            flagTitle=false;
+            console.log("entro scroll");
+            for(let i=0 ; i<titleChars.length; i++){
+                titleChars[i].animate(animationTitleReverse,{
+                    duration:1000,
+                    fill:"forwards",
+                    easing: "linear",
+                
 
+                    
+    
+                })
+            }
+          
+        }
+       
+    }
 
     let sticky = imgContainer.offsetTop;
 	window.onscroll = function() {
+        
 		if (window.pageYOffset > sticky) {
 			stickyContent.classList.remove("hide-sticky");
 			stickyContent.classList.add("newRelease-sticky-content");
@@ -456,7 +493,7 @@ console.log(e.screenY);
             menuLinesSticky[1].classList.remove("menu-center-line-open");
 		  }
 	};
-
+     
 
 
 
