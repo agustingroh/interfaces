@@ -820,14 +820,21 @@ footer{
 #newRelease-hogwarts-front{
     z-index: 9;
     position:relative;
-    bottom: -27.1em;
+    bottom: -26.8em;
     left: -8em;
 }
 #newRelease-hogwarts-right{
     z-index: 9;
     position:relative;
-    bottom: 10.8em;
-    left: -21em;
+    bottom: -5.2em;
+    left: 47em;
+}
+
+.newRelease-hogwarts-dementor{
+    z-index: 9;
+    position:relative;
+    left: -6em;
+    top: 23em;
 }
 
 .newRelease-img-container img {
@@ -923,6 +930,7 @@ footer{
 #newRelease-btn-wish{
     position: relative;
     transform: translateX(-1280px);
+
 }
 
 .newRelease-btn-wish-animate{

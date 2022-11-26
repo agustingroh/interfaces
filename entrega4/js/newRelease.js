@@ -39,6 +39,7 @@ const animationTitle =  [{transform: 'rotate(0deg) translateY(0px)',opacity:1,fi
 let menuSections = document.querySelectorAll(".menu-section");
 let heroBack = document.querySelector("#newRelease-hogwarts-back");
 let heroRight = document.querySelector("#newRelease-hogwarts-right");
+let heroDementor = document.querySelector("#newRelease-hogwarts-dementor");
 
 window.addEventListener("mousemove",(e)=>{
 console.log(e.screenY);
@@ -50,6 +51,8 @@ console.log(e.screenY);
               heroBack.style.transition = "ease-out 800ms";
               heroRight.setAttribute("style",`transform:translateX(-5px)`);
               heroRight.style.transition = "ease-out 800ms";
+              heroDementor.setAttribute("style",`transform:translate(30px,-52px)`);
+              heroDementor.style.transition = "ease-out 800ms";
           }
 
           if(e.screenX>=915 && e.screenX<960 ){
@@ -57,6 +60,8 @@ console.log(e.screenY);
                 heroBack.style.transition = "ease-out 800ms";
               heroRight.setAttribute("style",`transform:translateX(-10px)`);
               heroRight.style.transition = "ease-out 800ms";
+              heroDementor.setAttribute("style",`transform:translate(20px,-52px)`);
+              heroDementor.style.transition = "ease-out 800ms";
           }
 
           if(e.screenX>=960 && e.screenX<1020 ){
@@ -64,6 +69,8 @@ console.log(e.screenY);
               heroBack.style.transition = "ease-out 800ms";
               heroRight.setAttribute("style",`transform:translateX(-30px)`);
               heroRight.style.transition = "ease-out 800ms";
+              heroDementor.setAttribute("style",`transform:translate(25px,-52px)`);
+              heroDementor.style.transition = "ease-out 800ms";
           }
 
       }else {
@@ -73,6 +80,8 @@ console.log(e.screenY);
               heroBack.style.transition = "ease-out 800ms";
               heroRight.setAttribute("style",`transform:translateX(5px)`);
               heroRight.style.transition = "ease-out 800ms";
+              heroDementor.setAttribute("style",`transform:translate(15px,-32px)`);
+              heroDementor.style.transition = "ease-out 800ms";
           }
 
           if (e.screenX <= 840 && e.screenX > 800) {
@@ -80,6 +89,9 @@ console.log(e.screenY);
               heroBack.style.transition = "ease-out 800ms";
               heroRight.setAttribute("style",`transform:translateX(10px)`);
               heroRight.style.transition = "ease-out 800ms";
+              heroDementor.setAttribute("style",`transform:translate(5px,-12px)`);
+              heroDementor.style.transition = "ease-out 800ms";
+
           }
       }
     }else {
