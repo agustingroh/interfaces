@@ -1144,7 +1144,7 @@ footer{
 }
 
 .newRelease-game-history {
-    padding-top: 7em;
+    padding: 7em 0em 7em 0em;
     gap: 0.5em;
     display: flex;
     justify-content: flex-start;
@@ -1188,12 +1188,12 @@ footer{
     display: flex;
     flex-flow: column;
     gap: 0.3em;
-    padding-top: 5em;
-    padding-left: 1.6em;
+    padding: 4em 0em 7em 1.6em;
+   
 }
 
 .newRelease-game-feature-container section {
-    padding-top: 20px;
+    padding-top: 35px;
     display: flex;
     width: 100%;
     gap:15px;
@@ -2084,8 +2084,8 @@ form div {
 
     /*footer*/
     footer {
-        grid-template-columns: 278px 200px 220px 180px 160px 307px;
-        grid-template-rows: 30px 230px 80px;
+        grid-template-columns: 278px 200px 220px 180px 160px 550px;
+        grid-template-rows: 30px 230px 100px;
         grid-gap: 15px;
         grid-template-areas:
     ". . . . . returns"
@@ -2099,7 +2099,7 @@ form div {
 
     .footer-returns {
         width: 47%;
-        right: -159px;
+        right: -540px;
         padding-top: 16px;
     }
 
@@ -3850,6 +3850,10 @@ form div {
         padding-right: 2em;
     }
 
+    .item .text-holder h2{
+        padding:10px 0px 20px 0px;
+    }
+
     .show-menu-top-nav-bar{
         top: 80px;
         display: block;
@@ -3910,13 +3914,13 @@ form div {
     .ag-smoke-1 {
         z-index: -1;
         position: absolute;
-        top: 55em;
-        right: 41em;
-
+        top: 69em;
+        right: -10em;
         -webkit-animation: an-smoke-1 6s ease-in-out infinite;
         -moz-animation: an-smoke-1 6s ease-in-out infinite;
         -o-animation: an-smoke-1 6s ease-in-out infinite;
         animation: an-smoke-1 6s ease-in-out infinite;
+        scale: 0.6;
     }
     .ag-smoke-2 {
         width: 57.1em;
