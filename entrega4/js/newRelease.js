@@ -33,7 +33,7 @@ let cardsPositionMapper = {
     3:1800,
     4:1950
 }
-const animation =  [{transform: 'translateY(0px)'},{transform: 'translateY(-80px)'},{transform: 'translateY(0)'}];
+const animation =  [{transform: 'translateY(0px)'},{transform: 'translateY(-15px)'},{transform: 'translateY(0)'}];
 const animationTitleReverse =  [{ transform: 'rotate(45deg) translateY(-200px)',opacity: '0', filter: 'blur(20px)'},{transform: 'rotate(0deg) translateY(0px)',opacity: '1',filter:'blur(0px)'}];
 const animationTitle =  [{transform: 'rotate(0deg) translateY(0px)',opacity:1,filter:'blur(0px)'},{ transform: 'rotate(45deg) translateY(-200px)',opacity:0, filter: 'blur(20px)'}];
 let menuSections = document.querySelectorAll(".menu-section");
@@ -183,8 +183,14 @@ window.addEventListener("mousemove",(e)=>{
      * @brief handle scroll events
      */
     window.addEventListener("scroll", (event) => {
+
         let scroll = this.scrollY;
         let historyTop= historyContainer.offsetTop;
+        if(scroll === 0){
+            characterTitleHeader.classList.remove("newRelease-sticky-underline");
+            featureTitle.classList.remove("newRelease-sticky-underline");
+            historyTitle.classList.remove("newRelease-sticky-underline");
+        }
         // Move nav bar to history section
         if(scroll>=345) {
             newReleaseNewSale.classList.add("newRelease-sale-move");
@@ -199,7 +205,7 @@ window.addEventListener("mousemove",(e)=>{
             characterTitleHeader.classList.remove("newRelease-sticky-underline");
             featureTitle.classList.add("newRelease-sticky-underline");
             historyTitle.classList.remove("newRelease-sticky-underline");
-        }else if(scroll > 2300 && scroll < 2450){
+        }else if(scroll > 2300){
             featureTitle.classList.remove("newRelease-sticky-underline");
             characterTitleHeader.classList.add("newRelease-sticky-underline");
             historyTitle.classList.remove("newRelease-sticky-underline");
@@ -242,26 +248,20 @@ window.addEventListener("mousemove",(e)=>{
         console.log(scroll);
         if(scroll>1650) {
 
-            if(scroll > 1900 && scroll < 1950) {
-                characterTitle.setAttribute("style", `transform:translateY(-200px) scale(0.1) `);
-                characterTitle.style.opacity = '0';
-                characterTitle.style.transition = "ease-out 1200ms";
-            }
-
-            if(scroll > 1950 && scroll < 2000) {
-                characterTitle.setAttribute("style", `transform:translateY(-200px) scale(0.1) `);
+           if(scroll > 1950 && scroll < 2000) {
+                characterTitle.setAttribute("style", `transform:translate(240px,-250px) scale(0.1) `);
                 characterTitle.style.opacity = '0';
                 characterTitle.style.transition = "ease-out 1200ms";
             }
 
             if(scroll > 2000 && scroll < 2050) {
-                characterTitle.setAttribute("style", `transform:translateY(-150px) scale(0.5)`);
+                characterTitle.setAttribute("style", `transform:translate(230px,-200px) scale(0.5)`);
                 characterTitle.style.opacity = '0.1';
                 characterTitle.style.transition = "ease-out 1200ms";
             }
 
             if(scroll > 2050 && scroll < 2100) {
-                characterTitle.setAttribute("style", `transform:translateY(-100px) scale(0.8)`);
+                characterTitle.setAttribute("style", `transform:translate(200px,-120px) scale(0.8)`);
                 characterTitle.style.opacity = '0.4';
                 characterTitle.style.transition = "ease-out 1200ms";
             }
@@ -273,7 +273,7 @@ window.addEventListener("mousemove",(e)=>{
             }
 
             if(scroll > 2120 && scroll < 2200) {
-                characterTitle.setAttribute("style", `transform:translateY(-30px) scale(0.8)`);
+                characterTitle.setAttribute("style", `transform:translate(30px,-30px) scale(0.8)`);
                 characterTitle.style.opacity = '0.8';
                 characterTitle.style.transition = "ease-out 1200ms";
             }

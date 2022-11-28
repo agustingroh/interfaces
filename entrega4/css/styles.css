@@ -1144,7 +1144,7 @@ footer{
 }
 
 .newRelease-game-history {
-    padding: 7em 0em 7em 1em;
+    padding: 8.2em 0em 0em 1em;
     gap: 0.5em;
     display: flex;
     justify-content: flex-start;
@@ -1168,7 +1168,7 @@ footer{
 
 .newRelease-character-title{
     position: relative;
-    top: 3.5em;
+    top: 5.5em;
     left: 1em;
     opacity: 0;
     transform: translateY(-500px);
@@ -1188,7 +1188,7 @@ footer{
     display: flex;
     flex-flow: column;
     gap: 0.3em;
-    padding: 4em 0em 7em 1.6em;
+    padding: 10.3em 0em 0em 1.6em;
    
 }
 
@@ -1200,6 +1200,8 @@ footer{
     justify-content: flex-start;
     align-items: center;
     flex-flow: row  wrap;
+    position: relative;
+    z-index: 8;
 }
 
 .newRelease-feature{
@@ -1275,13 +1277,15 @@ footer{
 
 
 .newRelease-characters-container , .submergeBlock-carousel-container{
-    padding-top: 50px;
+    padding-top: 7.8em;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     flex-flow: row;
     padding-bottom: 14px;
+    z-index: 8;
+    position: relative;
 }
 
 .newRelease-characters-container button{
@@ -2100,7 +2104,7 @@ form div {
     .footer-returns {
         width: 47%;
         right: -540px;
-        padding-top: 16px;
+        padding-top: 20px;
     }
 
     .services {
@@ -3796,7 +3800,7 @@ form div {
         overflow-y: scroll;
         overflow-x: hidden;
         padding-top: 10px;
-        margin-top: 0.9em;
+        margin-top: 1.5em;
         padding-left: 0.3em;
     }
 
@@ -3923,6 +3927,9 @@ form div {
         animation: an-smoke-1 6s ease-in-out infinite;
         scale: 0.6;
     }
+
+
+
     .ag-smoke-2 {
         width: 57.1em;
 
@@ -3958,6 +3965,19 @@ form div {
         -o-animation: an-smoke-3 6s ease-in-out infinite;
         animation: an-smoke-3 6s ease-in-out infinite;
     }
+
+    .ag-smoke-6 {
+        z-index: -1;
+        position: absolute;
+        top: 61em;
+        right: -10em;
+        -webkit-animation: an-smoke-3 4s ease-in-out infinite;
+        -moz-animation: an-smoke-3 4s ease-in-out infinite;
+        -o-animation: an-smoke-3 4s ease-in-out infinite;
+        animation: an-smoke-3 4s ease-in-out infinite;
+        scale: 1.6;
+    }
+
     .ag-smoke__delay-1 {
         -webkit-animation-delay: 2s;
         -moz-animation-delay: 2s;
