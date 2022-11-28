@@ -29,6 +29,7 @@ let menuHamburger=document.querySelector('#hamburger-menu');
     menuHamburger.addEventListener('click',() => {
         let menu = document.querySelector("#menu");
         if(!menu.classList.contains('show-menu')){
+            menu.classList.add("show-menu-top-nav-bar");
             menu.classList.remove("close-menu");
             menu.classList.add('show-menu');
             menuLines[2].classList.remove("rotate-clockwise-close");
@@ -38,17 +39,22 @@ let menuHamburger=document.querySelector('#hamburger-menu');
             menuLines[0].classList.add("rotate-Anticlockwise");
             showMenuSections();
         }else{
-            menu.classList.add("close-menu");
-            menu.classList.remove("show-menu");
-            menuLines[2].classList.remove("rotate-clockwise");
-            menuLines[0].classList.remove("rotate-Anticlockwise");
-            menuLines[2].classList.add("rotate-clockwise-close");
-            menuLines[0].classList.add("rotate-Anticlockwise-close");
-            menuLines[1].classList.add("menu-center-line");
-            menuLines[1].classList.remove("menu-center-line-open");
+            closeMenuTopNavBar(menu);
             hideMenuSections();
         }
     });
+
+    function closeMenuTopNavBar(menu){
+        menu.classList.add("close-menu");
+        menu.classList.remove("show-menu-top-nav-bar");
+        menu.classList.remove("show-menu");
+        menuLines[2].classList.remove("rotate-clockwise");
+        menuLines[0].classList.remove("rotate-Anticlockwise");
+        menuLines[2].classList.add("rotate-clockwise-close");
+        menuLines[0].classList.add("rotate-Anticlockwise-close");
+        menuLines[1].classList.add("menu-center-line");
+        menuLines[1].classList.remove("menu-center-line-open");
+    }
 
     function showMenuSections(){
         menuSections.forEach((ms,i)=>{
