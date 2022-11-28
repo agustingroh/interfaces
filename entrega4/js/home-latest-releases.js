@@ -19,7 +19,6 @@
 		if (carouselPosLatestReleases <= carouselWidthLatestReleases) {
 			if ((carouselPosLatestReleases + visorWidth + GAP_CAROUSEL_LATEST_RELEASE) > (carouselWidthLatestReleases)) {
 				carouselPosLatestReleases = carouselWidthLatestReleases - visorWidth;
-				console.log(carouselPosLatestReleases);
 				carouselLatestReleases.setAttribute("style", `transform:translate(-${carouselPosLatestReleases}px)`);
 				carouselLatestReleases.style.transition = " all 800ms"
 				btnForwardLatestReleases.classList.add("btn-disabled-latest-realeses");

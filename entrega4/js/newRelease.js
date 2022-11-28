@@ -42,9 +42,7 @@ let heroRight = document.querySelector("#newRelease-hogwarts-right");
 let heroDementor = document.querySelector("#newRelease-hogwarts-dementor");
 
 window.addEventListener("mousemove",(e)=>{
-    console.log(e.screenY);
     if(e.screenY<637 &&  e.screenY>235){
-
       if(e.screenX>895){
           if(e.screenX >= 891 && e.screenX <915) {
               heroBack.setAttribute("style", `transform:translateX(10px)`);

@@ -59,7 +59,6 @@
 
 			if ((carouselPosCategory + visorWidth + GAP_CAROUSEL_CATEGORY) > (carouselWidthCategory)) {
 				carouselPosCategory = carouselWidthCategory - visorWidth;
-				console.log(carouselPosCategory);
 				carouselCategory.setAttribute("style", `transform:translate(-${carouselPosCategory}px)`);
 				carouselCategory.style.transition = " all 800ms"
 				btnForwardCategory.classList.add("btn-disabled");
