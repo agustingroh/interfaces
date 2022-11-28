@@ -75,8 +75,6 @@
                 btnForwardRecommended.classList.add("btn-disabled");
                 return;
             } else {
-                console.log("aca");
-                console.log(carouselWidthRecommended);
                 carouselRecommended.setAttribute("style", `transform:translate(-${carouselPosRecommended}px)`);
                 carouselRecommended.style.transition = " all 800ms";
             }
