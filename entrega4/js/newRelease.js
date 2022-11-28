@@ -42,7 +42,6 @@ let heroRight = document.querySelector("#newRelease-hogwarts-right");
 let heroDementor = document.querySelector("#newRelease-hogwarts-dementor");
 
 window.addEventListener("mousemove",(e)=>{
-console.log(e.screenY);
     if(e.screenY<1050 &&  e.screenY>240){
       if(e.screenX>895){
 
@@ -187,7 +186,6 @@ console.log(e.screenY);
         let scroll = this.scrollY;
         let historyTop= historyContainer.offsetTop;
         // Move nav bar to history section
-        console.log(scroll);
         if(scroll>=345) {
             newReleaseNewSale.classList.add("newRelease-sale-move");
             newReleaseBtnWish.classList.add("newRelease-btn-wish-animate");
@@ -299,21 +297,21 @@ console.log(e.screenY);
      * @Brief Applies wave effect in the character cards
      * */
     function moveFeaturesCards(scroll){
-        if(scroll>=1050){
+        if(scroll>=1550){
             featuresCards.forEach((c)=>{
-                if(scroll>=1050 && scroll <=1150){
+                if(scroll>=1600 && scroll <=1650){
                     c.setAttribute("style", `transform:translate(-90px)  rotate(55deg)`);
                     c.style.transition="ease-out 1200ms";
                 }
-                if(scroll > 1225 && scroll<= 1300){
+                if(scroll > 1650 && scroll<= 1680){
                     c.setAttribute("style", `transform:translate(-35px) rotate(35deg)`);
                     c.style.transition="ease-out 1200ms";
                 }
-                if(scroll > 1300 && scroll< 1310){
+                if(scroll > 1680 && scroll< 1700){
                     c.setAttribute("style", `transform:translate(-15px) rotate(15deg)`);
                     c.style.transition="ease-out 1200ms";
                 }
-                if(scroll > 1310){
+                if(scroll > 1700){
                     c.setAttribute("style", `transform:translate(0px) rotate(0deg)`);
                     c.style.transition="ease-out 1200ms"
                 }           });
@@ -459,7 +457,6 @@ console.log(e.screenY);
         }
         if(scroll<200 && flagTitle){
             flagTitle=false;
-            console.log("entro scroll");
             for(let i=0 ; i<titleChars.length; i++){
                 titleChars[i].animate(animationTitleReverse,{
                     duration:1000,

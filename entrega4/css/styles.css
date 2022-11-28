@@ -1144,7 +1144,7 @@ footer{
 }
 
 .newRelease-game-history {
-    padding: 7em 0em 7em 0em;
+    padding: 7em 0em 7em 1em;
     gap: 0.5em;
     display: flex;
     justify-content: flex-start;
@@ -3797,6 +3797,7 @@ form div {
         overflow-x: hidden;
         padding-top: 10px;
         margin-top: 0.9em;
+        padding-left: 0.3em;
     }
 
     .item {
@@ -3817,7 +3818,7 @@ form div {
     }
 
     .show-history-images{
-        animation: showImage ease-in 800ms forwards;
+        animation: showImage ease-in 1200ms forwards;
     }
 
 
