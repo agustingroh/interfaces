@@ -239,52 +239,46 @@ window.addEventListener("mousemove",(e)=>{
      * @Brief Animates character title
      * */
     function moveCharacterTitle(scroll){
+        console.log(scroll);
         if(scroll>1650) {
-            if(scroll > 1375 && scroll < 1399) {
-                characterTitle.setAttribute("style", `transform:translateY(-900px)`);
-                characterTitle.style.opacity = '0';
-                characterTitle.style.transition = "ease-out 1200ms";
-            }
-            if(scroll > 1400 && scroll < 1415) {
-                characterTitle.setAttribute("style", `transform:translateY(-750px)`);
-                characterTitle.style.opacity = '0';
-                characterTitle.style.transition = "ease-out 1200ms";
-            }
-            if(scroll > 1500 && scroll < 1520) {
-                characterTitle.setAttribute("style", `transform:translateY(-500px)`);
-                characterTitle.style.opacity = '0';
-                characterTitle.style.transition = "ease-out 1200ms";
-            }
-            if(scroll > 1520 && scroll < 1580) {
-                characterTitle.setAttribute("style", `transform:translateY(-350px)`);
-                characterTitle.style.opacity = '0';
-                characterTitle.style.transition = "ease-out 1200ms";
-            }
 
-            if(scroll > 1600 && scroll < 1630) {
-                characterTitle.setAttribute("style", `transform:translateY(-300px) `);
-                characterTitle.style.opacity = '0.1';
-                characterTitle.style.transition = "ease-out 1200ms";
-            }
-
-            if(scroll > 1630 && scroll < 1690) {
+            if(scroll > 1900 && scroll < 1950) {
                 characterTitle.setAttribute("style", `transform:translateY(-200px) scale(0.1) `);
                 characterTitle.style.opacity = '0';
                 characterTitle.style.transition = "ease-out 1200ms";
             }
-            if(scroll > 1700 && scroll < 1750) {
-                characterTitle.setAttribute("style", `transform:translateY(-100px) scale(0.5)`);
+
+            if(scroll > 1950 && scroll < 2000) {
+                characterTitle.setAttribute("style", `transform:translateY(-200px) scale(0.1) `);
+                characterTitle.style.opacity = '0';
+                characterTitle.style.transition = "ease-out 1200ms";
+            }
+
+            if(scroll > 2000 && scroll < 2050) {
+                characterTitle.setAttribute("style", `transform:translateY(-150px) scale(0.5)`);
                 characterTitle.style.opacity = '0.1';
                 characterTitle.style.transition = "ease-out 1200ms";
             }
 
-            if(scroll > 1750 && scroll < 1835) {
-                characterTitle.setAttribute("style", `transform:translateY(-50px) scale(0.8)`);
+            if(scroll > 2050 && scroll < 2100) {
+                characterTitle.setAttribute("style", `transform:translateY(-100px) scale(0.8)`);
                 characterTitle.style.opacity = '0.4';
                 characterTitle.style.transition = "ease-out 1200ms";
             }
 
-            if(scroll > 1835) {
+            if(scroll > 2100 && scroll < 2120) {
+                characterTitle.setAttribute("style", `transform:translateY(-50px) scale(0.8)`);
+                characterTitle.style.opacity = '0.8';
+                characterTitle.style.transition = "ease-out 1200ms";
+            }
+
+            if(scroll > 2120 && scroll < 2200) {
+                characterTitle.setAttribute("style", `transform:translateY(-30px) scale(0.8)`);
+                characterTitle.style.opacity = '0.8';
+                characterTitle.style.transition = "ease-out 1200ms";
+            }
+
+            if(scroll > 2300) {
                 characterTitle.setAttribute("style", `transform:translateY(0px)`);
                 characterTitle.style.opacity = '1.0';
                 characterTitle.style.transition = "ease-out 1200ms";
@@ -462,10 +456,6 @@ window.addEventListener("mousemove",(e)=>{
                     duration:1000,
                     fill:"forwards",
                     easing: "linear",
-                
-
-                    
-    
                 })
             }
           
