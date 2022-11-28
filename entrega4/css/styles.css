@@ -844,6 +844,8 @@ footer{
 
 .newRelease-btn-wish-container{
     width: 100%;
+    z-index: 9;
+    position: relative;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -2284,6 +2286,8 @@ form div {
         display: flex;
         padding-top: 1.5em;
         align-items: center;
+        position: relative;
+        z-index: 9;
         justify-content: center;
     }
 
@@ -2490,6 +2494,7 @@ form div {
     .home-latest-releases-image > div > img {
         width: -webkit-fill-available;
         height: -webkit-fill-available;
+        max-width: none;
     }
 
     .home-latest-releases-image-container div img {
@@ -3899,11 +3904,6 @@ form div {
     ag-format-container {
         width: 1142px;
         margin: 0 auto;
-    }
-
-
-    img {
-        max-width: 100%;
     }
 
     body {

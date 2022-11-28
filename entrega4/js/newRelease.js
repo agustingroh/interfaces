@@ -42,9 +42,10 @@ let heroRight = document.querySelector("#newRelease-hogwarts-right");
 let heroDementor = document.querySelector("#newRelease-hogwarts-dementor");
 
 window.addEventListener("mousemove",(e)=>{
-    if(e.screenY<1050 &&  e.screenY>240){
-      if(e.screenX>895){
+    console.log(e.screenY);
+    if(e.screenY<637 &&  e.screenY>235){
 
+      if(e.screenX>895){
           if(e.screenX >= 891 && e.screenX <915) {
               heroBack.setAttribute("style", `transform:translateX(10px)`);
               heroBack.style.transition = "ease-out 800ms";
@@ -146,7 +147,6 @@ window.addEventListener("mousemove",(e)=>{
 
 
     menuHamburgerSticky.addEventListener('click',()=>{
-        console.log("Aca");
         let menu = document.querySelector("#menu-sticky");
         if(!menu.classList.contains('show-menu')){
             menu.classList.remove("close-menu");
@@ -245,7 +245,6 @@ window.addEventListener("mousemove",(e)=>{
      * @Brief Animates character title
      * */
     function moveCharacterTitle(scroll){
-        console.log(scroll);
         if(scroll>1650) {
 
            if(scroll > 1950 && scroll < 2000) {
