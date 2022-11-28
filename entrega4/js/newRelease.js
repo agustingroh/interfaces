@@ -411,7 +411,9 @@ window.addEventListener("mousemove",(e)=>{
      * @brief shows the images in history section depending on the scroll position
      * */
     document.querySelector("#history-img-container").addEventListener('scroll',()=>{
+
         let pos = document.querySelector("#history-img-container").scrollTop;
+
         if(pos > 900 && pos<2000){
             historyImages[1].classList.add("show-history-images");
         }
