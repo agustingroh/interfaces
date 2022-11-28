@@ -3858,6 +3858,7 @@ form div {
     .show-menu-top-nav-bar{
         top: 80px;
         display: block;
+        position: absolute;
     }
 
     .show-menu-top-nav-bar-sticky{
