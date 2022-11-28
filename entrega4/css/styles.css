@@ -3818,7 +3818,7 @@ form div {
     }
 
     .show-history-images{
-        animation: showImage ease-in 1200ms forwards;
+        animation: showImage ease-in 2200ms forwards;
     }
 
 
