@@ -4253,6 +4253,10 @@ form div {
         text-shadow: 1px 1px 9px #f4d800;
     }
 
+    .logo-container-sticky-nav .logo img {
+        height: 55px;
+    }
+
 
 }
 
